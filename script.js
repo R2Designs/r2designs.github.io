@@ -371,7 +371,7 @@ function setupPersonalProjects() {
     video.setAttribute("webkit-playsinline", "true");
     video.preload = "auto";
     video.autoplay = true;
-    video.loop = true;
+    video.loop = !usesVideoSwap;
 
     const updateActive = (index) => {
       if (index === activeIndex && story.style.getPropertyValue("--feature-progress")) {
@@ -505,6 +505,15 @@ function setupPersonalProjects() {
       video.addEventListener("play", syncFromVideoTime);
       video.addEventListener("timeupdate", syncFromVideoTime);
       video.addEventListener("ended", () => {
+        jumpToFeature(0);
+      });
+    } else {
+      video.addEventListener("ended", () => {
+        if (activeIndex < steps.length - 1) {
+          jumpToFeature(activeIndex + 1);
+          return;
+        }
+
         jumpToFeature(0);
       });
     }
