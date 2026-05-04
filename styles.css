@@ -649,13 +649,26 @@ body.is-showcase-mode .button--solid {
   display: grid;
   grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
   gap: 24px;
-  align-items: end;
+  align-items: start;
   margin-bottom: 34px;
 }
 
 .showcase__intro h2,
 .section-heading h2 {
   font-size: clamp(2.2rem, 4.8vw, 5.4rem);
+}
+
+.showcase__intro {
+  grid-template-columns: 150px minmax(0, 720px);
+  gap: 28px;
+  margin-bottom: 42px;
+}
+
+.showcase__intro h2 {
+  max-width: 8.5ch;
+  font-size: clamp(2.6rem, 4.2vw, 4.6rem);
+  line-height: 0.88;
+  text-wrap: balance;
 }
 
 .showcase__grid {
