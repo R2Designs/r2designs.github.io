@@ -301,7 +301,7 @@ function renderPersonalProjects() {
           videoSrc: "./assets/personal-projects/social-mutual.mp4",
         },
         {
-          title: "Investments",
+          title: "Smart mutual funds",
           description:
             "Turn inspiration into a clearer investing flow, with calmer decisions and fewer jumps between education and action.",
           videoSrc: "./assets/personal-projects/investments.mp4",
@@ -313,7 +313,7 @@ function renderPersonalProjects() {
       eyebrow: "Shared expenses / personal product",
       lede:
         "A personal finance side project around calmer friend-to-friend expense tracking, clearer balances, and faster settlement moments.",
-      videoSrc: "./assets/personal-projects/add-expense.mp4",
+      videoSrc: "./assets/personal-projects/tabs-main.mp4",
       ctaLink: "./projects/tabs.html",
       accentClass: "personal-project--violet",
       titleClass: "personal-project__title--script",
@@ -355,6 +355,7 @@ function setupPersonalProjects() {
     const featureVideos = steps.map((step) => step.dataset.featureVideo || "");
     const usesVideoSwap = featureVideos.some(Boolean);
     let activeIndex = 0;
+    let hasInitialized = false;
 
     video.muted = true;
     video.playsInline = true;
@@ -450,10 +451,16 @@ function setupPersonalProjects() {
     };
 
     const syncInitialState = () => {
-      updateActive(0);
+      if (usesVideoSwap && hasInitialized) {
+        playVideo();
+        return;
+      }
+
+      hasInitialized = true;
+      updateActive(activeIndex);
 
       if (usesVideoSwap) {
-        swapVideoSource(featureVideos[0] || video.getAttribute("src") || "");
+        swapVideoSource(featureVideos[activeIndex] || video.getAttribute("src") || "");
         return;
       }
 
@@ -481,7 +488,9 @@ function setupPersonalProjects() {
     });
 
     video.addEventListener("loadedmetadata", syncInitialState);
-    video.addEventListener("loadeddata", syncInitialState);
+    if (!usesVideoSwap) {
+      video.addEventListener("loadeddata", syncInitialState);
+    }
     video.addEventListener("canplay", playVideo);
 
     if (!usesVideoSwap) {
