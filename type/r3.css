@@ -178,6 +178,15 @@ img {
   letter-spacing: -0.02em;
 }
 
+.type-word,
+.specimen-strip,
+.specimen-card__text,
+.preview-output,
+.poster-card__word {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
 .type-hero__lede {
   margin: 22px 0 0;
   max-width: 18ch;
