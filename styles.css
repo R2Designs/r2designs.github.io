@@ -1112,6 +1112,14 @@ body.is-showcase-mode .button--solid {
   transform: translateY(-1px);
 }
 
+.personal-project__product-link--disabled {
+  background: rgba(246, 242, 235, 0.05);
+  border-color: rgba(246, 242, 235, 0.22);
+  color: rgba(246, 242, 235, 0.34);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .personal-project--emerald {
   --project-accent: #70d5bb;
 }

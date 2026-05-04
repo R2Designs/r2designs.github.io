@@ -207,6 +207,7 @@ function PersonalProject({
   lede,
   videoSrc,
   ctaLink,
+  disableProductLink = false,
   features,
   accentClass,
   titleClass = "",
@@ -262,9 +263,15 @@ function PersonalProject({
         </div>
 
         <div class="personal-project__stores" aria-label="${title} app availability">
-          <a class="personal-project__product-link" href="${ctaLink}" data-cursor="open">
+          ${
+            disableProductLink
+              ? `<span class="personal-project__product-link personal-project__product-link--disabled" aria-disabled="true">
             Go to product page
-          </a>
+          </span>`
+              : `<a class="personal-project__product-link" href="${ctaLink}" data-cursor="open">
+            Go to product page
+          </a>`
+          }
           <button class="personal-project__store is-disabled" type="button" disabled aria-disabled="true">
             App Store
           </button>
@@ -315,6 +322,7 @@ function renderPersonalProjects() {
         "A personal finance side project around calmer friend-to-friend expense tracking, clearer balances, and faster settlement moments.",
       videoSrc: "./assets/personal-projects/tabs-main.mp4",
       ctaLink: "./projects/tabs.html",
+      disableProductLink: true,
       accentClass: "personal-project--violet",
       titleClass: "personal-project__title--script",
       features: [
