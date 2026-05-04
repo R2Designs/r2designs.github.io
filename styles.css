@@ -1497,134 +1497,55 @@ body.is-showcase-mode .button--solid {
 
 .experience-board {
   position: relative;
-  overflow: hidden;
-  padding: 22px 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.experience-board::before,
-.experience-board::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: clamp(64px, 9vw, 140px);
-  pointer-events: none;
-  z-index: 3;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-
-.experience-board::before {
-  left: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(246, 242, 235, 1) 0%,
-      rgba(246, 242, 235, 0.94) 26%,
-      rgba(246, 242, 235, 0.56) 54%,
-      rgba(246, 242, 235, 0) 100%
-    );
-}
-
-.experience-board::after {
-  right: 0;
-  background:
-    linear-gradient(
-      270deg,
-      rgba(246, 242, 235, 1) 0%,
-      rgba(246, 242, 235, 0.94) 26%,
-      rgba(246, 242, 235, 0.56) 54%,
-      rgba(246, 242, 235, 0) 100%
-    );
-}
-
-.experience-board__lights span {
-  position: absolute;
-  inset: auto;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  filter: blur(26px);
-  opacity: 0.28;
-  animation: board-light-sway 8s ease-in-out infinite;
-}
-
-.page > .section--experience.section--ink .experience-board__lights {
-  display: none;
-}
-
-.experience-board__lights span:nth-child(1) {
-  top: -120px;
-  right: -80px;
-  background: rgba(171, 143, 255, 0.36);
-  --board-light-rotate: -12deg;
-}
-
-.experience-board__lights span:nth-child(2) {
-  right: 20%;
-  bottom: -140px;
-  background: rgba(136, 232, 183, 0.18);
-  --board-light-rotate: 8deg;
-}
-
-.experience-board__lights span:nth-child(3) {
-  left: -100px;
-  bottom: 10%;
-  background: rgba(239, 209, 137, 0.14);
-  --board-light-rotate: -5deg;
-}
-
-.experience-board__rows {
-  position: relative;
   display: grid;
   gap: 18px;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  padding: clamp(20px, 2vw, 28px);
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  background: rgba(170, 174, 182, 0.08);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
-.experience-board__row {
-  display: flex;
-  width: max-content;
-  gap: 26px;
-  will-change: transform;
-}
-
-.experience-board__row:first-child {
-  animation: board-row-left 18s linear infinite alternate;
-  filter: blur(9px);
-  opacity: 0.46;
-}
-
-.experience-board__row:last-child {
-  animation: board-row-right 22s linear infinite alternate;
+.experience-board__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
 }
 
 .experience-logo {
-  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-height: 64px;
-  padding: 6px 12px;
-  border: 0;
-  background: transparent;
-  backdrop-filter: none;
-  transition: transform 0.28s ease, opacity 0.28s ease;
+  min-height: 92px;
+  padding: 18px 20px;
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  border-radius: 18px;
+  background: rgba(122, 128, 138, 0.14);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    0 12px 30px rgba(16, 16, 16, 0.05);
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease;
 }
 
 .experience-logo:hover,
 .experience-logo:focus-visible {
   transform: translateY(-3px);
   opacity: 1;
+  background: rgba(122, 128, 138, 0.2);
+  border-color: rgba(16, 16, 16, 0.14);
 }
 
 .experience-logo img {
-  max-width: 176px;
-  max-height: 48px;
+  width: 100%;
+  max-width: 170px;
+  max-height: 42px;
   object-fit: contain;
   filter: none;
 }
@@ -1692,8 +1613,8 @@ body.is-showcase-mode .button--solid {
     min-height: 360px;
   }
 
-  .experience-logo {
-    width: 176px;
+  .experience-board__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
@@ -1913,10 +1834,24 @@ body.is-showcase-mode .button--solid {
     display: none;
   }
 
+  .experience-board {
+    padding: 20px;
+  }
+
+  .experience-board__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .experience-logo {
-    width: 156px;
-    min-height: 82px;
-    padding: 14px 18px;
+    min-height: 84px;
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .experience-logo img {
+    max-width: 138px;
+    max-height: 36px;
   }
 
   .contact__email {
