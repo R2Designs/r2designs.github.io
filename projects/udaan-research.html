@@ -3,22 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Udaan Research Exercise | Abhishek Raj</title>
+    <title>Udaan Research | Abhishek Raj</title>
     <link rel="stylesheet" href="./project.css" />
   </head>
   <body>
     <main class="project-page">
-      <a class="project-back" href="../index.html#work">Back to showcase</a>
+      <a class="project-back" href="../index.html#research">Back to research</a>
       <section class="project-hero">
         <div>
-          <span class="project-status">P3 showcase / coming soon</span>
-          <h1 class="project-title">Udaan Research Exercise</h1>
+          <span class="project-status">UX research / PDF</span>
+          <h1 class="project-title">Udaan Research</h1>
         </div>
-        <p class="project-copy">This page is reserved for the research framing, hypotheses, and takeaways behind the Udaan interface and information tests.</p>
+        <p class="project-copy">
+          A detailed UX research document covering the framing, friction points,
+          and product opportunities explored in the Udaan journey.
+        </p>
       </section>
-      <section class="project-frame">
-        <img src="../assets/showcase/udaan-r.png" alt="Udaan research exercise preview" />
-        <p class="project-note">A dedicated page lets the research story breathe separately from the commercial product work.</p>
+      <section class="project-frame project-frame--viewer">
+        <div class="project-viewer-actions">
+          <a
+            class="project-open-link"
+            href="../assets/research/udaan-research.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open PDF in new tab
+          </a>
+        </div>
+        <iframe
+          class="project-pdf-viewer"
+          src="../assets/research/udaan-research.pdf#toolbar=1&navpanes=0&view=FitH"
+          title="Udaan research PDF"
+        ></iframe>
+        <p class="project-note">
+          If the embedded viewer does not load in your browser, use the direct
+          PDF link above.
+        </p>
       </section>
     </main>
   </body>

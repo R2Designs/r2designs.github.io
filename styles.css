@@ -783,6 +783,83 @@ body.is-showcase-mode .button--solid {
   max-width: none;
 }
 
+.research__heading {
+  align-items: start;
+}
+
+.research__grid {
+  display: grid;
+}
+
+.research-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.82fr);
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.32s ease,
+    box-shadow 0.32s ease,
+    border-color 0.32s ease;
+}
+
+.research-card:hover,
+.research-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-strong);
+}
+
+.research-card__copy,
+.research-card__preview {
+  min-width: 0;
+}
+
+.research-card__copy {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 34px;
+}
+
+.research-card__copy h3 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.research-card__copy p {
+  max-width: 34ch;
+  margin: 0;
+}
+
+.research-card__cta {
+  margin-top: auto;
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+}
+
+.research-card__preview {
+  position: relative;
+  min-height: 360px;
+  background:
+    radial-gradient(circle at top right, rgba(195, 177, 150, 0.18), transparent 0 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 54%),
+    #e7dfd4;
+}
+
+.research-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .personal-projects__list {
   display: grid;
   gap: 0;
@@ -1673,6 +1750,7 @@ body.is-showcase-mode .button--solid {
     grid-template-columns: 1fr;
   }
 
+  .research-card,
   .personal-project {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -1687,6 +1765,10 @@ body.is-showcase-mode .button--solid {
 
   .personal-project__phone-shell {
     min-height: auto;
+  }
+
+  .research-card__preview {
+    min-height: 280px;
   }
 
   .personal-project__story {

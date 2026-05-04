@@ -122,6 +122,11 @@ img {
   overflow: hidden;
 }
 
+.project-frame--viewer {
+  display: grid;
+  gap: 0;
+}
+
 .project-frame img {
   width: 100%;
   height: auto;
@@ -141,6 +146,40 @@ img {
   line-height: 1.12;
 }
 
+.project-viewer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-open-link::after {
+  content: "↗";
+}
+
+.project-pdf-viewer {
+  display: block;
+  width: 100%;
+  min-height: 88vh;
+  border: 0;
+  background: #fff;
+}
+
 @media (max-width: 900px) {
   .project-page {
     width: min(100% - 24px, 100%);
@@ -154,5 +193,9 @@ img {
   .project-title,
   .project-copy {
     max-width: 100%;
+  }
+
+  .project-pdf-viewer {
+    min-height: 72vh;
   }
 }
