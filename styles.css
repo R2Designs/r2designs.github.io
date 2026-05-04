@@ -1594,6 +1594,8 @@ body.is-showcase-mode .button--solid {
 
 .experience-board__row:first-child {
   animation: board-row-left 18s linear infinite alternate;
+  filter: blur(9px);
+  opacity: 0.46;
 }
 
 .experience-board__row:last-child {
