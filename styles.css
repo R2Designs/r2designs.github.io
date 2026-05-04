@@ -115,6 +115,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -126,8 +127,12 @@ body {
     var(--paper);
   font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: color 0.45s ease, background 0.75s ease;
+}
+
+.page {
+  overflow-x: clip;
 }
 
 body.is-showcase-mode {
@@ -1789,6 +1794,26 @@ body.is-showcase-mode .button--solid {
   .section--experience,
   .personal-projects {
     padding-top: 64px;
+  }
+
+  .rail {
+    overflow: hidden;
+  }
+
+  .rail__track {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    animation: none;
+    transform: none;
+  }
+
+  .rail__track span {
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
   }
 
   .showcase-tile {
