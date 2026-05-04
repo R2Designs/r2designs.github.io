@@ -262,6 +262,9 @@ function PersonalProject({
         </div>
 
         <div class="personal-project__stores" aria-label="${title} app availability">
+          <a class="personal-project__product-link" href="${ctaLink}" data-cursor="open">
+            Go to product page
+          </a>
           <button class="personal-project__store is-disabled" type="button" disabled aria-disabled="true">
             App Store
           </button>
@@ -269,9 +272,6 @@ function PersonalProject({
             Play Store
           </button>
           <p class="personal-project__store-note">Under review</p>
-          <a class="personal-project__product-link" href="${ctaLink}" data-cursor="open">
-            View product page
-          </a>
         </div>
       </div>
     </article>
