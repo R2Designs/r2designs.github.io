@@ -285,7 +285,7 @@ function renderPersonalProjects() {
 
   const projects = [
     {
-      title: "Social funds",
+      title: "Smart funds",
       eyebrow: "Investing / personal product",
       lede:
         "A personal concept bringing mutual funds and social-media style discovery together, so learning, comparison, and conviction happen in the same product rhythm.",
@@ -301,7 +301,7 @@ function renderPersonalProjects() {
           videoSrc: "./assets/personal-projects/social-mutual.mp4",
         },
         {
-          title: "Smart mutual funds",
+          title: "Investments",
           description:
             "Turn inspiration into a clearer investing flow, with calmer decisions and fewer jumps between education and action.",
           videoSrc: "./assets/personal-projects/investments.mp4",
