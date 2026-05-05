@@ -605,6 +605,7 @@ body.is-showcase-mode .button--solid {
 .chapter__quote {
   max-width: 980px;
   font-size: clamp(2.5rem, 5.4vw, 5.7rem);
+  text-wrap: balance;
 }
 
 .rail {
@@ -794,6 +795,8 @@ body.is-showcase-mode .button--solid {
 
 .research__grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .research-card {
@@ -1501,26 +1504,19 @@ body.is-showcase-mode .button--solid {
 }
 
 .experience-board {
-  position: relative;
-  display: grid;
-  gap: 18px;
-  padding: clamp(24px, 2.4vw, 34px);
-  border: 1px solid rgba(16, 16, 16, 0.1);
-  background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.62), transparent 0 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.16)),
-    rgba(225, 225, 228, 0.3);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.34),
-    0 24px 56px rgba(16, 16, 16, 0.04);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .experience-board__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-template-areas:
+    "smallcase smallcase pagarbook pagarbook gdg jpmc jpmc jpmc jpmc"
+    "lumi lumi cuemath cuemath udaan razorpayx razorpayx aliste aliste";
+  gap: 20px 28px;
   align-content: start;
 }
 
@@ -1528,48 +1524,34 @@ body.is-showcase-mode .button--solid {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 108px;
-  padding: 20px 22px;
-  border: 1px solid rgba(16, 16, 16, 0.08);
-  border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.22)),
-    rgba(148, 154, 165, 0.12);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 14px 32px rgba(16, 16, 16, 0.04);
-  transition:
-    transform 0.28s ease,
-    background 0.28s ease,
-    border-color 0.28s ease,
-    box-shadow 0.28s ease;
-}
-
-.experience-logo--wide {
-  grid-column: span 2;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 .experience-logo:hover,
 .experience-logo:focus-visible {
   transform: translateY(-3px);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.28)),
-    rgba(148, 154, 165, 0.16);
-  border-color: rgba(16, 16, 16, 0.14);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.46),
-    0 18px 36px rgba(16, 16, 16, 0.06);
+  opacity: 0.96;
 }
 
 .experience-logo img {
   width: 100%;
-  max-width: 170px;
-  max-height: 42px;
-  object-fit: contain;
+  height: auto;
   filter: none;
 }
+
+.experience-logo--smallcase { grid-area: smallcase; }
+.experience-logo--pagarbook { grid-area: pagarbook; }
+.experience-logo--gdg { grid-area: gdg; }
+.experience-logo--jpmc { grid-area: jpmc; }
+.experience-logo--lumi { grid-area: lumi; }
+.experience-logo--cuemath { grid-area: cuemath; }
+.experience-logo--udaan { grid-area: udaan; }
+.experience-logo--razorpayx { grid-area: razorpayx; }
+.experience-logo--aliste { grid-area: aliste; }
 
 .section-heading--contact,
 .contact {
@@ -1634,8 +1616,15 @@ body.is-showcase-mode .button--solid {
     min-height: 360px;
   }
 
+  .research__grid {
+    grid-template-columns: 1fr;
+  }
+
   .experience-board__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-areas:
+      "smallcase smallcase pagarbook pagarbook gdg jpmc jpmc jpmc"
+      "lumi lumi cuemath cuemath udaan razorpayx razorpayx aliste";
   }
 }
 
@@ -1729,6 +1718,16 @@ body.is-showcase-mode .button--solid {
 
   .writing-entry__panel {
     padding-left: 0;
+  }
+
+  .experience-board__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-areas:
+      "gdg jpmc jpmc jpmc jpmc"
+      "razorpayx razorpayx razorpayx aliste aliste"
+      "smallcase smallcase pagarbook pagarbook pagarbook"
+      "lumi lumi cuemath cuemath udaan";
+    gap: 16px 18px;
   }
 
   .contact__footer {
@@ -1876,27 +1875,17 @@ body.is-showcase-mode .button--solid {
   }
 
   .experience-board {
-    padding: 20px;
+    padding: 0;
   }
 
   .experience-board__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .experience-logo {
-    min-height: 84px;
-    padding: 14px 16px;
-    border-radius: 14px;
-  }
-
-  .experience-logo--wide {
-    grid-column: span 2;
-  }
-
-  .experience-logo img {
-    max-width: 138px;
-    max-height: 36px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-areas:
+      "gdg jpmc jpmc jpmc jpmc"
+      "razorpayx razorpayx razorpayx aliste aliste"
+      "smallcase smallcase pagarbook pagarbook pagarbook"
+      "lumi lumi cuemath cuemath udaan";
+    gap: 12px 16px;
   }
 
   .contact__email {
