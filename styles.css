@@ -687,6 +687,16 @@ body.is-showcase-mode .button--solid {
   letter-spacing: 0.01em;
 }
 
+.section-heading--type {
+  grid-template-columns: 150px minmax(0, 1040px);
+  gap: 28px;
+}
+
+.section-heading--type h2 {
+  max-width: 14ch;
+  text-wrap: balance;
+}
+
 .showcase__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
