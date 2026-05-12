@@ -688,13 +688,21 @@ body.is-showcase-mode .button--solid {
 }
 
 .section-heading--type {
-  grid-template-columns: 150px minmax(0, 1040px);
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.section-heading--type > div {
+  max-width: 1040px;
 }
 
 .section-heading--type h2 {
-  max-width: 14ch;
+  max-width: 16ch;
   text-wrap: balance;
+}
+
+.section-heading--type p {
+  max-width: 760px;
 }
 
 .showcase__grid {
