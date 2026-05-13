@@ -209,7 +209,10 @@ function PersonalProject({
   imageSrc,
   imageAlt = "",
   ctaLink,
+  readMoreLink = "",
   disableProductLink = false,
+  showStoreLinks = true,
+  staticStory = false,
   features,
   accentClass,
   titleClass = "",
@@ -218,7 +221,7 @@ function PersonalProject({
     .map(
       (feature, index) => `
         <article
-          class="personal-project__step${index === 0 ? " is-active" : ""}"
+          class="personal-project__step${staticStory || index === 0 ? " is-active" : ""}"
           data-feature-index="${index}"
           data-feature-time="${feature.time ?? ""}"
           data-feature-video="${feature.videoSrc ?? ""}"
@@ -231,7 +234,7 @@ function PersonalProject({
     .join("");
 
   return `
-    <article class="personal-project ${accentClass}" data-feature-count="${features.length}">
+    <article class="personal-project ${accentClass}${staticStory ? " personal-project--static-story" : ""}" data-feature-count="${features.length}" data-static-story="${staticStory ? "true" : "false"}">
       <div class="personal-project__media">
         <div class="personal-project__sticky">
           <div class="personal-project__phone-shell">
@@ -283,13 +286,24 @@ function PersonalProject({
             Go to product page
           </a>`
           }
-          <button class="personal-project__store is-disabled" type="button" disabled aria-disabled="true">
+          ${
+            readMoreLink
+              ? `<a class="personal-project__product-link" href="${readMoreLink}" target="_blank" rel="noreferrer" data-cursor="open">
+            Read more
+          </a>`
+              : ""
+          }
+          ${
+            showStoreLinks
+              ? `<button class="personal-project__store is-disabled" type="button" disabled aria-disabled="true">
             App Store
           </button>
           <button class="personal-project__store is-disabled" type="button" disabled aria-disabled="true">
             Play Store
           </button>
-          <p class="personal-project__store-note">Under review</p>
+          <p class="personal-project__store-note">Under review</p>`
+              : ""
+          }
         </div>
       </div>
     </article>
@@ -357,6 +371,9 @@ function renderPersonalProjects() {
       imageSrc: "./assets/personal-projects/rideos/2.png",
       imageAlt: "RideOS booking and ride tracking product preview",
       ctaLink: "./projects/rideos/",
+      readMoreLink: "https://www.notion.so/Ride-OS-2dcf08ffc84a805da605e873b4a8989c",
+      showStoreLinks: false,
+      staticStory: true,
       accentClass: "personal-project--amber",
       features: [
         {
@@ -387,6 +404,7 @@ function setupPersonalProjects() {
     const story = project.querySelector(".personal-project__story");
     const steps = Array.from(project.querySelectorAll(".personal-project__step"));
     const video = project.querySelector(".personal-project__video");
+    const isStaticStory = project.dataset.staticStory === "true";
 
     if (!story || !steps.length) {
       return;
@@ -414,6 +432,15 @@ function setupPersonalProjects() {
       const progress = steps.length > 1 ? (index / (steps.length - 1)) * 100 : 100;
       story.style.setProperty("--feature-progress", `${progress}%`);
     };
+
+    if (isStaticStory) {
+      steps.forEach((step) => {
+        step.classList.add("is-active");
+        step.setAttribute("aria-current", "false");
+      });
+      story.style.setProperty("--feature-progress", "100%");
+      return;
+    }
 
     if (!video) {
       updateActive(0);

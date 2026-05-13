@@ -1288,6 +1288,30 @@ body.is-showcase-mode .button--solid {
   color: rgba(246, 242, 235, 0.66) !important;
 }
 
+.personal-project--static-story .personal-project__story {
+  padding-left: 0;
+  gap: 30px;
+}
+
+.personal-project--static-story .personal-project__story::before,
+.personal-project--static-story .personal-project__story::after,
+.personal-project--static-story .personal-project__step::before {
+  display: none;
+}
+
+.personal-project--static-story .personal-project__step {
+  opacity: 1;
+  cursor: default;
+}
+
+.personal-project--static-story .personal-project__step h3 {
+  color: rgba(246, 242, 235, 1) !important;
+}
+
+.personal-project--static-story .personal-project__step p {
+  color: rgba(246, 242, 235, 0.66) !important;
+}
+
 .personal-project__stores {
   display: flex;
   flex-wrap: wrap;
