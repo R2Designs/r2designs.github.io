@@ -233,14 +233,21 @@ button {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
   align-items: center;
-  gap: 40px;
+  gap: 56px;
+}
+
+.hero-copy {
+  display: grid;
+  align-content: start;
+  gap: 20px;
+  max-width: 38rem;
 }
 
 .eyebrow,
 .section-label {
-  margin: 0 0 14px;
+  margin: 0;
   color: rgba(245, 247, 251, 0.72);
   font-size: 12px;
   font-weight: 700;
@@ -287,13 +294,15 @@ button {
 
 .hero-body {
   max-width: 34rem;
-  margin: 22px 0 0;
+  margin: 0;
   color: rgba(245, 247, 251, 0.78);
+  line-height: 1.62;
 }
 
 .hero-actions {
   flex-wrap: wrap;
-  margin-top: 28px;
+  margin-top: 4px;
+  gap: 18px;
 }
 
 .hero-metrics strong,
@@ -784,7 +793,7 @@ button {
 
   .hero-visual {
     min-height: 560px;
-    margin-top: 8px;
+    margin-top: 0;
   }
 
   .metrics-grid,
@@ -820,6 +829,10 @@ button {
 
   .hero {
     padding: 172px 16px 40px;
+  }
+
+  .hero-copy {
+    gap: 18px;
   }
 
   .logo-band,
@@ -884,6 +897,10 @@ button {
 
   .hero-visual {
     min-height: 360px;
+  }
+
+  .hero-copy {
+    gap: 16px;
   }
 
   .screen-phone {
