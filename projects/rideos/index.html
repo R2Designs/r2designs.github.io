@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RideOS | Booking, tracking, and ops for local ride services</title>
+  <meta
+    name="description"
+    content="A cleaner way for airport cabs, hotel transfers, shuttle teams, and local fleets to handle booking, live trip tracking, and day-to-day operations."
+  />
+  <meta property="og:title" content="RideOS | Booking, tracking, and ops for local ride services" />
+  <meta
+    property="og:description"
+    content="A cleaner way to run bookings, live trips, and everyday dispatch for your own service."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/screenshots/admin-screen.png" />
+  <link rel="stylesheet" href="./site.css?v=3" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-nav">
+      <a class="wordmark" href="#top" aria-label="RideOS home">
+        <span class="wordmark-mark">R</span>
+        <span class="wordmark-copy">
+          <strong>RideOS</strong>
+          <span data-i18n="brand_subtitle">Booking, tracking, ops</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#platform" data-i18n="nav_platform">Platform</a>
+        <a href="#operators" data-i18n="nav_operators">Operators</a>
+        <a href="#onboarding" data-i18n="nav_onboarding">Onboarding</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-button is-active" type="button" data-lang="en" aria-pressed="true">English</button>
+          <button class="lang-button" type="button" data-lang="hi" aria-pressed="false">हिन्दी</button>
+        </div>
+        <a class="button button-primary" href="#contact" data-i18n="cta_book_demo">Book demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow" data-i18n="hero_eyebrow">Built for fleets, airports, hotels, and shuttle operators</p>
+          <h1 data-i18n="hero_title">Put your name on a booking system people will actually want to use.</h1>
+          <p class="hero-body" data-i18n="hero_body">
+            Riders can book without confusion. Your team can see what is moving. And the whole thing can look like your service instead of somebody else's app with your logo taped on top.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact" data-i18n="cta_book_demo">Book demo</a>
+            <a
+              class="button button-link"
+              href="https://www.notion.so/Ride-OS-2dcf08ffc84a805da605e873b4a8989c"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="cta_contact_us"
+            >Read more</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <figure class="screen-laptop">
+            <img
+              src="./assets/screenshots/admin-screen.png"
+              alt="Operations dashboard showing ride counts, booked value, and recent rides."
+              width="1547"
+              height="1259"
+              loading="eager"
+            />
+          </figure>
+
+          <figure class="screen-phone screen-phone-right">
+            <img
+              src="./assets/screenshots/tracking-screen.png"
+              alt="Ride tracking screen with live status, map, driver details, and ETA."
+              width="1280"
+              height="822"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-band">
+      <div class="section-inner">
+        <p class="section-label" data-i18n="trusted_label">Trusted mobility platform</p>
+        <div class="logo-rail" aria-label="Operator types">
+          <span data-i18n="operator_airport_cabs">Airport cabs</span>
+          <span data-i18n="operator_ev_fleets">EV fleets</span>
+          <span data-i18n="operator_corporate_shuttles">Corporate shuttles</span>
+          <span data-i18n="operator_hotel_transfers">Hotel transfers</span>
+          <span data-i18n="operator_city_operators">City operators</span>
+          <span data-i18n="operator_premium_chauffeur">Premium chauffeur</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics-band">
+      <div class="section-inner metrics-grid">
+        <article data-reveal>
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 12h4l2-5 2 10 2-5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="metric_1_title">See every trip clearly</strong>
+          <span data-i18n="metric_1_body">From booking to pickup to drop-off, the status stays easy to follow.</span>
+        </article>
+        <article data-reveal>
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 18h16M7 18V7l5-3 5 3v11M9.5 10h.01M14.5 10h.01M9.5 13h.01M14.5 13h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="metric_2_title">Make it feel like your company</strong>
+          <span data-i18n="metric_2_body">Your name, your pricing, your vehicles, your support number.</span>
+        </article>
+        <article data-reveal>
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7M17 18l3-3-3-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="metric_3_title">Keep the day in one place</strong>
+          <span data-i18n="metric_3_body">Recent rides, live counts, and the basics your team looks for first.</span>
+        </article>
+        <article data-reveal>
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 12l4 4 8-8M12 3a9 9 0 100 18 9 9 0 000-18z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong data-i18n="metric_4_title">Start without a huge setup</strong>
+          <span data-i18n="metric_4_body">You do not need a giant rollout plan just to get your first version live.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-band" id="platform">
+      <div class="section-inner section-grid section-grid-wide">
+        <div class="section-copy" data-reveal>
+          <p class="section-label" data-i18n="platform_label">What people actually use</p>
+          <h2 data-i18n="platform_title">The key screens are simple: book, track, and keep the day moving.</h2>
+          <p data-i18n="platform_body">
+            Instead of stacking giant screenshots on top of each other, here are the main entry points people interact with most. The rider sees a clean booking flow and clear updates. Your team gets a straightforward ops view.
+          </p>
+          <ul class="feature-list">
+            <li data-i18n="platform_list_1">Booking with fare preview, vehicle choice, and phone verification</li>
+            <li data-i18n="platform_list_2">Trip tracking with driver details, map, and ETA</li>
+            <li data-i18n="platform_list_3">Ops screen with live ride counts and recent activity</li>
+            <li data-i18n="platform_list_4">Branding and service details that match the operator using it</li>
+          </ul>
+        </div>
+
+        <div class="showcase-carousel" data-reveal>
+          <div class="carousel-controls" aria-label="Screen chooser">
+            <button class="carousel-chip is-active" type="button" data-slide-target="booking" data-i18n="carousel_booking">Booking</button>
+            <button class="carousel-chip" type="button" data-slide-target="tracking" data-i18n="carousel_tracking">Tracking</button>
+            <button class="carousel-chip" type="button" data-slide-target="ops" data-i18n="carousel_ops">Ops</button>
+          </div>
+
+          <article class="carousel-slide is-active" data-slide="booking">
+            <div class="showcase-copy">
+              <span class="section-label" data-i18n="booking_label">Booking</span>
+              <h3 data-i18n="booking_title">A booking page that feels familiar right away.</h3>
+              <p data-i18n="booking_body">Pickup, airport, vehicle choice, fare estimate, and phone verification are all easy to scan without feeling crowded.</p>
+            </div>
+            <div class="showcase-frame showcase-frame-crop">
+              <img
+                src="./assets/screenshots/booking-screen.png"
+                alt="Booking form with route, date, vehicle options, fare estimate, and mobile verification."
+                width="1280"
+                height="1759"
+                loading="lazy"
+              />
+            </div>
+          </article>
+
+          <article class="carousel-slide" data-slide="tracking">
+            <div class="showcase-copy">
+              <span class="section-label" data-i18n="tracking_label">Tracking</span>
+              <h3 data-i18n="tracking_title">Riders know what is happening without calling support.</h3>
+              <p data-i18n="tracking_body">The trip page keeps the driver, map, ETA, and pickup details in one calm place.</p>
+            </div>
+            <div class="showcase-frame showcase-frame-crop">
+              <img
+                src="./assets/screenshots/tracking-screen.png"
+                alt="Tracking screen with status timeline, driver, map, and trip details."
+                width="1280"
+                height="822"
+                loading="lazy"
+              />
+            </div>
+          </article>
+
+          <article class="carousel-slide" data-slide="ops">
+            <div class="showcase-copy">
+              <span class="section-label" data-i18n="ops_label">Ops</span>
+              <h3 data-i18n="ops_title">Your team sees the basics first, not a wall of noise.</h3>
+              <p data-i18n="ops_body">Live rides, completed trips, booked value, recent requests, and setup details are all there when dispatch opens the day.</p>
+            </div>
+            <div class="showcase-frame showcase-frame-crop showcase-frame-dashboard">
+              <img
+                src="./assets/screenshots/admin-screen.png"
+                alt="Operations dashboard with live rides, booked value, recent rides, and setup details."
+                width="1547"
+                height="1259"
+                loading="lazy"
+              />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-band story-band-dark" id="operators">
+      <div class="section-inner section-grid">
+        <div class="section-media" data-reveal>
+          <div class="showcase-frame showcase-frame-dashboard">
+            <img
+              src="./assets/screenshots/admin-screen.png"
+              alt="Operations dashboard with live rides, booked value, recent rides, and setup details."
+              width="1547"
+              height="1259"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="section-copy section-copy-light" data-reveal>
+          <p class="section-label" data-i18n="operators_label">Why operators choose this</p>
+          <h2 data-i18n="operators_title">Less dispatch chaos. Better rider confidence. A brand that looks like yours.</h2>
+          <p data-i18n="operators_body">
+            This is for teams running real cars and real schedules. Airport operators need dependable pickups. Hotel desks need something they can send to guests without apologizing for it. Local fleets need software that helps the day run smoother, not something that adds another layer of work.
+          </p>
+          <div class="value-grid">
+            <article>
+              <strong data-i18n="value_1_title">Airport and station transfers</strong>
+              <span data-i18n="value_1_body">Pre-scheduled trips, flight references, and premium pickup experience.</span>
+            </article>
+            <article>
+              <strong data-i18n="value_2_title">EV and city fleets</strong>
+              <span data-i18n="value_2_body">Vehicle tiers, live tracking, and cleaner day-of operations.</span>
+            </article>
+            <article>
+              <strong data-i18n="value_3_title">Hotels and concierge teams</strong>
+              <span data-i18n="value_3_body">Brand-ready booking pages that feel polished enough to share with guests.</span>
+            </article>
+            <article>
+              <strong data-i18n="value_4_title">Corporate and shuttle operators</strong>
+              <span data-i18n="value_4_body">Tenant-scoped pricing, support details, and a foundation for account billing later.</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-band">
+      <div class="section-inner section-grid">
+        <div class="section-copy" data-reveal>
+          <p class="section-label" data-i18n="brand_label">Make it yours</p>
+          <h2 data-i18n="brand_title">It should feel like your service, not ours.</h2>
+          <p data-i18n="brand_body">
+            If you run airport cars, hotel transfers, a shuttle desk, or a local fleet, the customer should see your name, your support line, your vehicle choices, and your way of working.
+          </p>
+          <ul class="feature-list">
+            <li data-i18n="brand_list_1">Your name, logo, colors, and support details</li>
+            <li data-i18n="brand_list_2">Your fares, airport settings, and vehicle lineup</li>
+            <li data-i18n="brand_list_3">Your service type, whether that is cabs, shuttles, hotel rides, or EV trips</li>
+            <li data-i18n="brand_list_4">A setup that can start simple and get more sophisticated later</li>
+          </ul>
+        </div>
+
+        <div class="capability-grid" data-reveal>
+          <article>
+            <span class="capability-kicker" data-i18n="cap_1_kicker">Branding</span>
+            <strong data-i18n="cap_1_body">Change the look, tone, and support details for each service.</strong>
+          </article>
+          <article>
+            <span class="capability-kicker" data-i18n="cap_2_kicker">Pricing</span>
+            <strong data-i18n="cap_2_body">Set up fares and vehicle types in a way that matches how you already work.</strong>
+          </article>
+          <article>
+            <span class="capability-kicker" data-i18n="cap_3_kicker">Day one</span>
+            <strong data-i18n="cap_3_body">Start with a simpler setup first instead of overbuilding from the beginning.</strong>
+          </article>
+          <article>
+            <span class="capability-kicker" data-i18n="cap_4_kicker">Growth</span>
+            <strong data-i18n="cap_4_body">Add more regions, more operators, or more service types when you are ready.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-band story-band-soft" id="onboarding">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <p class="section-label" data-i18n="start_label">How teams usually start</p>
+          <h2 data-i18n="start_title">You do not need to roll out everything on day one.</h2>
+          <p data-i18n="start_body">Most teams begin with one city, one route type, or one part of the business. Get the basics right, let people use it, then expand from there.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article data-reveal>
+            <span>01</span>
+            <h3 data-i18n="step_1_title">Pick the first service to launch</h3>
+            <p data-i18n="step_1_body">Airport pickup, hotel transfer, local cab booking, or staff shuttle. Start with one clear use case.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3 data-i18n="step_2_title">Put your brand and rules on it</h3>
+            <p data-i18n="step_2_body">Add your name, fares, support number, vehicles, and the details riders should actually see.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3 data-i18n="step_3_title">Bring in the team</h3>
+            <p data-i18n="step_3_body">Add drivers, vehicles, dispatch notes, and the handful of things your operation needs to function every day.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3 data-i18n="step_4_title">Go live and learn from real trips</h3>
+            <p data-i18n="step_4_body">Once the first version is working well, expand to more routes, more operators, or more regions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-band story-band-soft" id="faq">
+      <div class="section-inner">
+        <div class="section-heading" data-reveal>
+          <p class="section-label">FAQ</p>
+          <h2 data-i18n="faq_title">Common questions from operators.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details data-reveal>
+            <summary data-i18n="faq_1_q">Can this be branded for our company?</summary>
+            <p data-i18n="faq_1_a">Yes. The booking flow, trip page, and ops view can all carry your name, colors, support details, fares, and service setup.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="faq_2_q">Do we need to adopt expensive infrastructure on day one?</summary>
+            <p data-i18n="faq_2_a">No. Start with a simpler setup first. If the operation grows, the underlying services can grow with it.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="faq_3_q">Who is this best suited for right now?</summary>
+            <p data-i18n="faq_3_a">Airport taxi operators, EV fleets, hotel transfer teams, concierge transport desks, local city fleets, and branded shuttle services.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="faq_4_q">Can we request custom flows for our operation?</summary>
+            <p data-i18n="faq_4_a">Yes. If your team handles bookings, vehicles, support, or dispatch in a specific way, that can be shaped around your operation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="section-inner contact-grid">
+        <div class="section-copy section-copy-light" data-reveal>
+          <p class="section-label" data-i18n="contact_label">Book a conversation</p>
+          <h2 data-i18n="contact_title">See what this could look like for your own service.</h2>
+          <p data-i18n="contact_body">
+            We can walk through the product, talk about how you run today, and show what a cleaner version could look like with your branding on it.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:abhishekraj4300@gmail.com">abhishekraj4300@gmail.com</a>
+          </div>
+        </div>
+
+        <form class="contact-card" id="contactForm" data-reveal>
+          <label>
+            <span data-i18n="form_name">Name</span>
+            <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form_name_placeholder" required />
+          </label>
+          <label>
+            <span data-i18n="form_company">Company</span>
+            <input type="text" name="company" placeholder="Company or fleet name" data-i18n-placeholder="form_company_placeholder" required />
+          </label>
+          <label>
+            <span data-i18n="form_email">Email</span>
+            <input type="email" name="email" placeholder="you@company.com" data-i18n-placeholder="form_email_placeholder" required />
+          </label>
+          <label>
+            <span data-i18n="form_launching">What are you launching?</span>
+            <select name="usecase" required>
+              <option value="" data-i18n="form_choose_one">Choose one</option>
+              <option data-i18n="usecase_airport">Airport taxi service</option>
+              <option data-i18n="usecase_ev">EV fleet</option>
+              <option data-i18n="usecase_hotel">Hotel transfers</option>
+              <option data-i18n="usecase_corporate">Corporate shuttle</option>
+              <option data-i18n="usecase_city">City ride-hailing</option>
+              <option data-i18n="usecase_other">Other mobility service</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="form_notes">Notes</span>
+            <textarea name="notes" rows="4" placeholder="Tell us what you need." data-i18n-placeholder="form_notes_placeholder"></textarea>
+          </label>
+          <button class="button button-primary" type="submit" data-i18n="form_submit">Request demo</button>
+          <p class="contact-note" data-i18n="form_note">Submitting opens an email draft so your team can route the inquiry however you like.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div>
+        <strong>RideOS</strong>
+        <p data-i18n="footer_body">Booking, trip tracking, and ops software for teams running real rides in the real world.</p>
+      </div>
+      <div class="footer-links">
+        <a
+          href="https://www.notion.so/Ride-OS-2dcf08ffc84a805da605e873b4a8989c"
+          target="_blank"
+          rel="noreferrer"
+          data-i18n="footer_link_booking"
+        >Read more</a>
+        <a href="../../index.html#personal-projects" data-i18n="footer_link_tracking">Back to portfolio</a>
+        <a href="#contact" data-i18n="footer_link_ops">Contact</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> RideOS</p>
+    </div>
+  </footer>
+
+  <script src="./site.js?v=5"></script>
+</body>
+</html>

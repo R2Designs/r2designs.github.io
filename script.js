@@ -206,6 +206,8 @@ function PersonalProject({
   eyebrow,
   lede,
   videoSrc,
+  imageSrc,
+  imageAlt = "",
   ctaLink,
   disableProductLink = false,
   features,
@@ -235,7 +237,15 @@ function PersonalProject({
           <div class="personal-project__phone-shell">
             <div class="personal-project__phone">
               <div class="personal-project__screen">
-                <video
+                ${
+                  imageSrc
+                    ? `<img
+                  class="personal-project__image"
+                  src="${imageSrc}"
+                  alt="${imageAlt}"
+                  loading="lazy"
+                />`
+                    : `<video
                   class="personal-project__video"
                   src="${videoSrc}"
                   muted
@@ -243,7 +253,8 @@ function PersonalProject({
                   autoplay
                   loop
                   preload="auto"
-                ></video>
+                ></video>`
+                }
               </div>
             </div>
             <div class="personal-project__glow" aria-hidden="true"></div>
@@ -338,6 +349,28 @@ function renderPersonalProjects() {
         },
       ],
     },
+    {
+      title: "RideOS",
+      eyebrow: "Mobility ops / AI-assisted build",
+      lede:
+        "A taxi operations product concept for bookings, live ride tracking, and dispatch clarity across airport cabs, hotel transfers, and local fleets.",
+      imageSrc: "./assets/personal-projects/rideos/2.png",
+      imageAlt: "RideOS booking and ride tracking product preview",
+      ctaLink: "./projects/rideos/",
+      accentClass: "personal-project--amber",
+      features: [
+        {
+          title: "Booking, tracking, and ops in one system",
+          description:
+            "A cleaner mobility product for local fleets, with a calmer rider flow and a more legible dispatch layer for everyday ride operations.",
+        },
+        {
+          title: "Branded for real operators",
+          description:
+            "Built so airport cabs, hotel transfer teams, shuttle services, and local taxi operators can run the same core flow under their own service identity.",
+        },
+      ],
+    },
   ];
 
   personalProjectsList.innerHTML = projects.map(PersonalProject).join("");
@@ -355,7 +388,7 @@ function setupPersonalProjects() {
     const steps = Array.from(project.querySelectorAll(".personal-project__step"));
     const video = project.querySelector(".personal-project__video");
 
-    if (!story || !steps.length || !video) {
+    if (!story || !steps.length) {
       return;
     }
 
@@ -364,14 +397,6 @@ function setupPersonalProjects() {
     const usesVideoSwap = featureVideos.some(Boolean);
     let activeIndex = 0;
     let hasInitialized = false;
-
-    video.muted = true;
-    video.playsInline = true;
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "true");
-    video.preload = "auto";
-    video.autoplay = true;
-    video.loop = !usesVideoSwap;
 
     const updateActive = (index) => {
       if (index === activeIndex && story.style.getPropertyValue("--feature-progress")) {
@@ -389,6 +414,26 @@ function setupPersonalProjects() {
       const progress = steps.length > 1 ? (index / (steps.length - 1)) * 100 : 100;
       story.style.setProperty("--feature-progress", `${progress}%`);
     };
+
+    if (!video) {
+      updateActive(0);
+
+      steps.forEach((step, index) => {
+        step.addEventListener("click", () => {
+          updateActive(index);
+        });
+      });
+
+      return;
+    }
+
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "true");
+    video.preload = "auto";
+    video.autoplay = true;
+    video.loop = !usesVideoSwap;
 
     const getSafeEnd = () => Math.max(0, (video.duration || 0) - 0.06);
 
