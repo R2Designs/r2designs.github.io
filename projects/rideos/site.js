@@ -12,7 +12,7 @@ const translations = {
     nav_onboarding: "Onboarding",
     nav_contact: "Contact",
     cta_book_demo: "Book demo",
-    cta_contact_us: "Read more",
+    cta_contact_us: "Contact us",
     hero_eyebrow: "Built for fleets, airports, hotels, and shuttle operators",
     hero_title: "Your brand. Your bookings. Your rides.",
     hero_body: "Riders can book without confusion. Your team can see what is moving. And the whole thing can look like your service instead of somebody else's app with your logo taped on top.",
@@ -138,7 +138,7 @@ const translations = {
     nav_onboarding: "शुरुआत",
     nav_contact: "संपर्क",
     cta_book_demo: "डेमो बुक करें",
-    cta_contact_us: "और पढ़ें",
+    cta_contact_us: "संपर्क करें",
     hero_eyebrow: "फ्लीट, एयरपोर्ट, होटल और शटल ऑपरेटरों के लिए",
     hero_title: "आपका ब्रांड। आपकी बुकिंग। आपकी राइड्स।",
     hero_body: "राइडर बिना उलझन के बुक कर सकें। आपकी टीम साफ़ देख सके कि क्या चल रहा है। और पूरा अनुभव आपकी अपनी सेवा जैसा लगे, किसी और के ऐप पर आपका लोगो चिपकाया हुआ नहीं।",
@@ -266,7 +266,7 @@ function safeStorage() {
 
 function getPreferredLanguage() {
   const stored = safeStorage() ? safeStorage().getItem(LANGUAGE_KEY) : null;
-  return stored === "hi" ? "hi" : "en";
+  return stored === "en" ? "en" : "hi";
 }
 
 function applyLanguage(lang) {
