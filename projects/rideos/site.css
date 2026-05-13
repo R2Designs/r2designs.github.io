@@ -650,11 +650,32 @@ button {
 
 .capability-kicker {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   color: #667085;
+}
+
+.capability-grid {
+  gap: 16px;
+}
+
+.capability-grid article {
+  padding: 20px 22px;
+  border-radius: 22px;
+}
+
+.capability-grid article strong {
+  font-size: 16px;
+  line-height: 1.28;
+}
+
+.capability-grid article span:last-child {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .steps-grid {
