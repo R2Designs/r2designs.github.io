@@ -206,7 +206,7 @@ button {
 .hero {
   position: relative;
   margin-top: -96px;
-  padding: 156px 20px 40px;
+  padding: 156px 20px 88px;
   min-height: 80vh;
   overflow: hidden;
   background: #0a101b;
@@ -828,7 +828,7 @@ button {
   }
 
   .hero {
-    padding: 172px 16px 40px;
+    padding: 172px 16px 72px;
   }
 
   .hero-copy {
