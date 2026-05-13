@@ -1293,6 +1293,13 @@ body.is-showcase-mode .button--solid {
   gap: 30px;
 }
 
+.personal-project--static-story .personal-project__image {
+  width: 200%;
+  height: 200%;
+  max-width: none;
+  transform: translate(-25%, -25%);
+}
+
 .personal-project--static-story .personal-project__story::before,
 .personal-project--static-story .personal-project__story::after,
 .personal-project--static-story .personal-project__step::before {
