@@ -187,6 +187,10 @@
         </div>
       </section>
 
+      <section class="section section--dark-viewport reveal ai-workflow" id="ai-workflow">
+        <div id="ai-workflow-root" class="ai-workflow__mount" aria-label="AI-Augmented Product Workflow"></div>
+      </section>
+
       <section class="section reveal research" id="research">
         <div class="research__grid" aria-label="UX research documents">
           <a
@@ -601,5 +605,24 @@
     </main>
 
     <script src="./script.js"></script>
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        },
+        theme: {
+          extend: {
+            fontFamily: {
+              barlow: ["Barlow Condensed", "Arial Narrow", "sans-serif"],
+              space: ["Space Mono", "monospace"],
+              r3: ["R3", "Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./ai-workflow.js"></script>
   </body>
 </html>

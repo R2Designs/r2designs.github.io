@@ -817,6 +817,58 @@ body.is-showcase-mode .button--solid {
   max-width: none;
 }
 
+.ai-workflow {
+  position: relative;
+  padding-top: 112px;
+  padding-bottom: 120px;
+  color: var(--paper) !important;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(84, 120, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 84% 18%, rgba(120, 255, 210, 0.12), transparent 22%),
+    linear-gradient(180deg, #05070d 0%, #03050a 100%) !important;
+  overflow: hidden;
+}
+
+.page > #ai-workflow {
+  background:
+    radial-gradient(circle at 12% 22%, rgba(84, 120, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 84% 18%, rgba(120, 255, 210, 0.12), transparent 22%),
+    linear-gradient(180deg, #05070d 0%, #03050a 100%) !important;
+}
+
+.ai-workflow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 10, 1) 0%, rgba(3, 5, 10, 0.12) 18%, rgba(3, 5, 10, 0.12) 82%, rgba(3, 5, 10, 1) 100%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, 36px 36px, 36px 36px;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.ai-workflow::after {
+  content: "";
+  position: absolute;
+  inset: auto 12% -24% auto;
+  width: 36vw;
+  height: 36vw;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(82, 120, 255, 0.18), transparent 68%);
+  filter: blur(36px);
+  pointer-events: none;
+}
+
+.ai-workflow__mount {
+  position: relative;
+  z-index: 1;
+  width: min(1440px, calc(100% - 48px));
+  margin: 0 auto;
+  min-height: 960px;
+}
+
 .research__heading {
   align-items: start;
 }
@@ -2023,8 +2075,13 @@ body.is-showcase-mode .button--solid {
 
   .showcase-shell,
   .section--experience,
-  .personal-projects {
+  .personal-projects,
+  .ai-workflow {
     padding-top: 64px;
+  }
+
+  .ai-workflow {
+    padding-bottom: 72px;
   }
 
   .rail {
@@ -2053,6 +2110,11 @@ body.is-showcase-mode .button--solid {
 
   .community-card__copy {
     padding: 26px;
+  }
+
+  .ai-workflow__mount {
+    width: min(100%, calc(100% - 24px));
+    min-height: 720px;
   }
 
   .personal-project {
