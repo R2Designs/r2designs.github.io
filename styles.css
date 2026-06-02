@@ -2008,58 +2008,28 @@ body.is-showcase-mode .button--solid {
 }
 
 .experience__heading {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .experience-board {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.experience-board__grid {
-  display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-  grid-template-areas:
-    "smallcase smallcase pagarbook pagarbook gdg jpmc jpmc jpmc jpmc"
-    "lumi lumi cuemath cuemath udaan razorpayx razorpayx aliste aliste";
-  gap: 20px 28px;
-  align-content: start;
-}
-
-.experience-logo {
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
-  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
-.experience-logo:hover,
-.experience-logo:focus-visible {
-  transform: translateY(-3px);
-  opacity: 0.96;
+.experience-brand-artwork {
+  display: block;
+  width: min(1180px, 100%);
 }
 
-.experience-logo img {
+.experience-brand-artwork img {
+  display: block;
   width: 100%;
   height: auto;
-  filter: none;
 }
-
-.experience-logo--smallcase { grid-area: smallcase; }
-.experience-logo--pagarbook { grid-area: pagarbook; }
-.experience-logo--gdg { grid-area: gdg; }
-.experience-logo--jpmc { grid-area: jpmc; }
-.experience-logo--lumi { grid-area: lumi; }
-.experience-logo--cuemath { grid-area: cuemath; }
-.experience-logo--udaan { grid-area: udaan; }
-.experience-logo--razorpayx { grid-area: razorpayx; }
-.experience-logo--aliste { grid-area: aliste; }
 
 .section-heading--contact,
 .contact {
@@ -2126,13 +2096,6 @@ body.is-showcase-mode .button--solid {
 
   .research__grid {
     grid-template-columns: 1fr;
-  }
-
-  .experience-board__grid {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    grid-template-areas:
-      "smallcase smallcase pagarbook pagarbook gdg jpmc jpmc jpmc"
-      "lumi lumi cuemath cuemath udaan razorpayx razorpayx aliste";
   }
 
   .smartfunds-mosaic {
@@ -2298,16 +2261,6 @@ body.is-showcase-mode .button--solid {
 
   .writing-entry__panel {
     padding-left: 0;
-  }
-
-  .experience-board__grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-areas:
-      "gdg jpmc jpmc jpmc jpmc"
-      "razorpayx razorpayx razorpayx aliste aliste"
-      "smallcase smallcase pagarbook pagarbook pagarbook"
-      "lumi lumi cuemath cuemath udaan";
-    gap: 16px 18px;
   }
 
   .contact__footer {
@@ -2495,18 +2448,8 @@ body.is-showcase-mode .button--solid {
     display: none;
   }
 
-  .experience-board {
-    padding: 0;
-  }
-
-  .experience-board__grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-areas:
-      "gdg jpmc jpmc jpmc jpmc"
-      "razorpayx razorpayx razorpayx aliste aliste"
-      "smallcase smallcase pagarbook pagarbook pagarbook"
-      "lumi lumi cuemath cuemath udaan";
-    gap: 12px 16px;
+  .experience__heading {
+    margin-bottom: 24px;
   }
 
   .contact__email {
