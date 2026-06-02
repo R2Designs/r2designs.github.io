@@ -307,17 +307,14 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
         </div>
       </div>
 
-      <div class="smartfunds-mobile-hero" aria-label="${title} mobile hero">
+      <a class="smartfunds-mobile-hero" href="${ctaLink}" data-cursor="open" aria-label="${title} mobile hero">
         <img
           class="smartfunds-mobile-hero__image"
           src="${assets.mobileHero}"
           alt="Smart Funds showcase"
           loading="lazy"
         />
-        <a class="button smartfunds-mosaic__cta smartfunds-carousel__cta" href="${ctaLink}" data-cursor="open">
-          Read more
-        </a>
-      </div>
+      </a>
     </article>
   `;
 }

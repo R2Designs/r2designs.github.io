@@ -1426,8 +1426,7 @@ body.is-showcase-mode .button--solid {
   text-decoration: none;
 }
 
-.personal-project--smartfunds .smartfunds-mosaic__cta,
-.personal-project--smartfunds .smartfunds-carousel__cta {
+.personal-project--smartfunds .smartfunds-mosaic__cta {
   background: rgba(246, 242, 235, 0.98);
   color: #0c0d10;
   border-color: transparent;
@@ -1444,10 +1443,6 @@ body.is-showcase-mode .button--solid {
 
 .smartfunds-mosaic__card--investments .smartfunds-mosaic__video {
   object-position: center 18%;
-}
-
-.smartfunds-carousel__cta {
-  margin-top: 20px;
 }
 
 .smartfunds-mobile-hero__image {
@@ -2380,14 +2375,6 @@ body.is-showcase-mode .button--solid {
     max-width: none;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-  }
-
-  .smartfunds-carousel__cta {
-    min-height: 52px;
-    width: calc(100% - 32px);
-    margin: 18px auto 0;
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
   }
 
   .tabs-mobile-hero {
