@@ -322,6 +322,122 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
   `;
 }
 
+function TabsProject({ title, ctaLink, accentClass, assets }) {
+  const imageCard = ({ modifier, src, alt }) => `
+    <article class="tabs-mosaic__tile tabs-mosaic__tile--image ${modifier}">
+      <img class="tabs-mosaic__image" src="${src}" alt="${alt}" loading="lazy" />
+    </article>
+  `;
+
+  const videoCard = ({ modifier, src }) => `
+    <article class="tabs-mosaic__tile tabs-mosaic__tile--video ${modifier}">
+      <div class="tabs-mosaic__device">
+        <div class="tabs-mosaic__device-screen">
+          <video
+            class="tabs-mosaic__video"
+            src="${src}"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="auto"
+          ></video>
+        </div>
+      </div>
+    </article>
+  `;
+
+  return `
+    <article class="personal-project personal-project--mosaic personal-project--tabs ${accentClass}">
+      <div class="tabs-mosaic">
+        <div class="tabs-mosaic__column tabs-mosaic__column--left">
+          ${videoCard({
+            modifier: "tabs-mosaic__card--hero",
+            src: assets.heroVideo,
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--currency",
+            src: assets.currency,
+            alt: "Multi country currency card",
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--summary",
+            src: assets.summary,
+            alt: "Summary card",
+          })}
+        </div>
+
+        <div class="tabs-mosaic__column tabs-mosaic__column--center">
+          ${imageCard({
+            modifier: "tabs-mosaic__card--conversational",
+            src: assets.conversational,
+            alt: "Conversational UI card",
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--brand",
+            src: assets.brand,
+            alt: "Tabs brand tile",
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--friends",
+            src: assets.friends,
+            alt: "Friends reminders and breakup card",
+          })}
+        </div>
+
+        <div class="tabs-mosaic__column tabs-mosaic__column--right">
+          ${imageCard({
+            modifier: "tabs-mosaic__card--settle",
+            src: assets.settle,
+            alt: "Settle up card",
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--recent",
+            src: assets.recent,
+            alt: "Recent transactions card",
+          })}
+          ${imageCard({
+            modifier: "tabs-mosaic__card--accessibility",
+            src: assets.accessibility,
+            alt: "Accessibility standards card",
+          })}
+        </div>
+      </div>
+
+      <div class="tabs-mobile-hero" aria-label="${title} mobile hero">
+        <img
+          class="tabs-mobile-hero__image"
+          src="${assets.mobileHero}"
+          alt="${title} showcase"
+          loading="lazy"
+        />
+      </div>
+    </article>
+  `;
+}
+
+function RideOSProject({ title, readMoreLink, accentClass, assets }) {
+  return `
+    <article class="personal-project personal-project--mosaic personal-project--rideos ${accentClass}">
+      <a
+        class="rideos-poster"
+        href="${readMoreLink}"
+        target="_blank"
+        rel="noreferrer"
+        data-cursor="open"
+        aria-label="${title} showcase"
+      >
+        <img
+          class="rideos-poster__image"
+          src="${assets.poster}"
+          alt="${title} showcase"
+          loading="lazy"
+        />
+      </a>
+    </article>
+  `;
+}
+
 function PersonalProject({
   layout,
   title,
@@ -346,6 +462,24 @@ function PersonalProject({
       eyebrow,
       lede,
       ctaLink,
+      accentClass,
+      assets,
+    });
+  }
+
+  if (layout === "tabs-mosaic") {
+    return TabsProject({
+      title,
+      ctaLink,
+      accentClass,
+      assets,
+    });
+  }
+
+  if (layout === "rideos-mosaic") {
+    return RideOSProject({
+      title,
+      readMoreLink,
       accentClass,
       assets,
     });
@@ -473,52 +607,36 @@ function renderPersonalProjects() {
       },
     },
     {
+      layout: "tabs-mosaic",
       title: "Tabs",
       eyebrow: "Shared expenses / personal product",
       lede:
         "A personal finance side project around calmer friend-to-friend expense tracking, clearer balances, and faster settlement moments.",
-      videoSrc: "./assets/personal-projects/tabs-main.mp4",
       ctaLink: "./projects/tabs.html",
-      disableProductLink: true,
       accentClass: "personal-project--violet",
-      titleClass: "personal-project__title--script",
-      features: [
-        {
-          title: "Track + add expenses",
-          description: "Keep what you owe, what you're owed, and capture a fresh split in one running view.",
-          time: 0.2,
-        },
-        {
-          title: "Conversational UI",
-          description: "Guide repayment and follow-up through a chat-like layer that keeps actions, reminders, and context easy to understand.",
-          time: 9.2,
-        },
-      ],
+      assets: {
+        heroVideo: "./assets/personal-projects/tabs-main.mp4",
+        conversational: "./assets/personal-projects/tabs-grid/conversational-ui.png",
+        settle: "./assets/personal-projects/tabs-grid/settle-up.png",
+        currency: "./assets/personal-projects/tabs-grid/currency.png",
+        brand: "./assets/personal-projects/tabs-grid/tabs-brand.png",
+        recent: "./assets/personal-projects/tabs-grid/recent-transactions.png",
+        summary: "./assets/personal-projects/tabs-grid/summary.png",
+        friends: "./assets/personal-projects/tabs-grid/friends-breakup.png",
+        accessibility: "./assets/personal-projects/tabs-grid/accessibility.png",
+        mobileHero: "./assets/personal-projects/tabs-grid/mobile.png",
+      },
     },
     {
+      layout: "rideos-mosaic",
       title: "RideOS",
-      eyebrow: "Mobility ops / AI-assisted build",
-      lede:
-        "A taxi operations product concept for bookings, live ride tracking, and dispatch clarity across airport cabs, hotel transfers, and local fleets.",
-      imageSrc: "./assets/personal-projects/rideos/2.png",
-      imageAlt: "RideOS booking and ride tracking product preview",
       ctaLink: "./projects/rideos/",
-      readMoreLink: "https://www.notion.so/Ride-OS-2dcf08ffc84a805da605e873b4a8989c",
-      showStoreLinks: false,
-      staticStory: true,
+      readMoreLink:
+        "https://app.notion.com/p/Ride-OS-2dcf08ffc84a805da605e873b4a8989c?assetsVersion=23.13.20260602.0639",
       accentClass: "personal-project--amber",
-      features: [
-        {
-          title: "Booking, tracking, and ops in one system",
-          description:
-            "A cleaner mobility product for local fleets, with a calmer rider flow and a more legible dispatch layer for everyday ride operations.",
-        },
-        {
-          title: "Branded for real operators",
-          description:
-            "Built so airport cabs, hotel transfer teams, shuttle services, and local taxi operators can run the same core flow under their own service identity.",
-        },
-      ],
+      assets: {
+        poster: "./assets/personal-projects/rideos-grid/rideos_main.jpg",
+      },
     },
   ];
 
