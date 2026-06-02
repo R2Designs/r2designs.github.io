@@ -2007,10 +2007,6 @@ body.is-showcase-mode .button--solid {
   padding-bottom: 96px;
 }
 
-.experience__heading {
-  margin-bottom: 32px;
-}
-
 .experience-board {
   display: flex;
   justify-content: center;
@@ -2041,8 +2037,6 @@ body.is-showcase-mode .button--solid {
   gap: 24px;
 }
 
-.section--experience .section-label,
-.section--experience .section-heading p,
 #contact .section-label,
 #contact .section-heading p,
 #contact .contact__email {
@@ -2056,6 +2050,10 @@ body.is-showcase-mode .button--solid {
 .contact__links a {
   color: var(--ink);
   border-color: var(--line-strong);
+}
+
+.contact__phone {
+  white-space: nowrap;
 }
 
 .contact__footer {
@@ -2446,10 +2444,6 @@ body.is-showcase-mode .button--solid {
 
   .writing-entry__toggle {
     display: none;
-  }
-
-  .experience__heading {
-    margin-bottom: 24px;
   }
 
   .contact__email {
