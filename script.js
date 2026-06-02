@@ -201,7 +201,220 @@ function setupCursor() {
   window.requestAnimationFrame(animateCursor);
 }
 
+function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets }) {
+  const imageCard = ({ modifier, src, alt, caption = "" }) => `
+    <article class="smartfunds-mosaic__tile smartfunds-mosaic__tile--image ${modifier}">
+      <img class="smartfunds-mosaic__image" src="${src}" alt="${alt}" loading="lazy" />
+      ${caption ? `<span class="smartfunds-mosaic__tile-caption">${caption}</span>` : ""}
+    </article>
+  `;
+
+  const videoCard = ({ modifier, src }) => `
+    <article class="smartfunds-mosaic__tile smartfunds-mosaic__tile--video ${modifier}">
+      <div class="smartfunds-mosaic__device">
+        <div class="smartfunds-mosaic__device-screen">
+          <video
+            class="smartfunds-mosaic__video"
+            src="${src}"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="auto"
+          ></video>
+        </div>
+      </div>
+    </article>
+  `;
+
+  const desktopTiles = {
+    hero: videoCard({
+      modifier: "smartfunds-mosaic__card--hero",
+      src: assets.heroVideo,
+    }),
+    goal: imageCard({
+      modifier: "smartfunds-mosaic__card--goal",
+      src: assets.goal,
+      alt: "Goal-based mutual funds card",
+    }),
+    stories: imageCard({
+      modifier: "smartfunds-mosaic__card--stories",
+      src: assets.stories,
+      alt: "Social mutual funds stories card",
+    }),
+    strategyAI: imageCard({
+      modifier: "smartfunds-mosaic__card--strategy-ai",
+      src: assets.ai,
+      alt: "AI mutual funds strategy card",
+    }),
+    kinds: imageCard({
+      modifier: "smartfunds-mosaic__card--kinds",
+      src: assets.kinds,
+      alt: "Smart mutual funds recommendation card",
+    }),
+    brand: imageCard({
+      modifier: "smartfunds-mosaic__card--sf",
+      src: assets.sf,
+      alt: "Smart Funds brand card",
+    }),
+    know: imageCard({
+      modifier: "smartfunds-mosaic__card--know",
+      src: assets.read,
+      alt: "Know better mutual funds information card",
+    }),
+    health: imageCard({
+      modifier: "smartfunds-mosaic__card--health",
+      src: assets.health,
+      alt: "Portfolio health card",
+    }),
+    investments: videoCard({
+      modifier: "smartfunds-mosaic__card--investments",
+      src: assets.investmentsVideo,
+    }),
+    strategy: imageCard({
+      modifier: "smartfunds-mosaic__card--strategy",
+      src: assets.strategy,
+      alt: "Mutual funds strategy media card",
+    }),
+  };
+
+  const mobileSlides = [
+    {
+      kind: "video",
+      modifier: "smartfunds-carousel__slide--hero",
+      src: assets.heroVideo,
+      alt: "Smart Funds performance video",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--kinds",
+      src: assets.kinds,
+      alt: "Smart mutual funds recommendation card",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--goal",
+      src: assets.goal,
+      alt: "Goal-based mutual funds card",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--stories",
+      src: assets.stories,
+      alt: "Social mutual funds stories card",
+    },
+    {
+      kind: "video",
+      modifier: "smartfunds-carousel__slide--investments",
+      src: assets.investmentsVideo,
+      alt: "Portfolio health investment video",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--strategy-ai",
+      src: assets.ai,
+      alt: "AI mutual funds strategy card",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--know",
+      src: assets.read,
+      alt: "Know better mutual funds information card",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--health",
+      src: assets.health,
+      alt: "Portfolio health card",
+    },
+    {
+      kind: "image",
+      modifier: "smartfunds-carousel__slide--strategy",
+      src: assets.strategy,
+      alt: "Strategy libraries card",
+    },
+  ];
+
+  const mobileSlideMarkup = mobileSlides
+    .map((slide) => {
+      if (slide.kind === "video") {
+        return `
+          <article class="smartfunds-carousel__slide ${slide.modifier}">
+            <div class="smartfunds-carousel__device">
+              <div class="smartfunds-carousel__device-screen">
+                <video
+                  class="smartfunds-carousel__video"
+                  src="${slide.src}"
+                  aria-label="${slide.alt}"
+                  muted
+                  playsinline
+                  autoplay
+                  loop
+                  preload="auto"
+                ></video>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      return `
+        <article class="smartfunds-carousel__slide ${slide.modifier}">
+          <img class="smartfunds-carousel__image" src="${slide.src}" alt="${slide.alt}" loading="lazy" />
+        </article>
+      `;
+    })
+    .join("");
+
+  return `
+    <article class="personal-project personal-project--mosaic personal-project--smartfunds ${accentClass}">
+      <div class="smartfunds-mosaic">
+        <div class="smartfunds-mosaic__column smartfunds-mosaic__column--left">
+          ${desktopTiles.hero}
+          ${desktopTiles.goal}
+          ${desktopTiles.stories}
+          ${desktopTiles.strategyAI}
+        </div>
+
+        <div class="smartfunds-mosaic__column smartfunds-mosaic__column--center">
+          ${desktopTiles.kinds}
+
+          ${desktopTiles.brand}
+
+          <a class="button smartfunds-mosaic__cta" href="${ctaLink}" data-cursor="open">
+            Read more
+          </a>
+
+          ${desktopTiles.know}
+        </div>
+
+        <div class="smartfunds-mosaic__column smartfunds-mosaic__column--right">
+          ${desktopTiles.health}
+          ${desktopTiles.investments}
+          ${desktopTiles.strategy}
+        </div>
+      </div>
+
+      <div class="smartfunds-carousel" aria-label="${title} mobile carousel">
+        <div class="smartfunds-carousel__heading" aria-hidden="true">
+          <img class="smartfunds-carousel__heading-image" src="${assets.sf}" alt="" loading="lazy" />
+        </div>
+        <div class="smartfunds-carousel__viewport">
+          <div class="smartfunds-carousel__track">
+            ${mobileSlideMarkup}
+            ${mobileSlideMarkup}
+          </div>
+        </div>
+        <a class="button smartfunds-mosaic__cta smartfunds-carousel__cta" href="${ctaLink}" data-cursor="open">
+          Read more
+        </a>
+      </div>
+    </article>
+  `;
+}
+
 function PersonalProject({
+  layout,
   title,
   eyebrow,
   lede,
@@ -216,7 +429,19 @@ function PersonalProject({
   features,
   accentClass,
   titleClass = "",
+  assets = {},
 }) {
+  if (layout === "smartfunds-mosaic") {
+    return SmartFundsProject({
+      title,
+      eyebrow,
+      lede,
+      ctaLink,
+      accentClass,
+      assets,
+    });
+  }
+
   const featureMarkup = features
     .map(
       (feature, index) => `
@@ -317,28 +542,25 @@ function renderPersonalProjects() {
 
   const projects = [
     {
+      layout: "smartfunds-mosaic",
       title: "Smart funds",
       eyebrow: "Investing / personal product",
       lede:
         "A personal concept bringing mutual funds and social-media style discovery together, so learning, comparison, and conviction happen in the same product rhythm.",
-      videoSrc: "./assets/personal-projects/social-mutual.mp4",
       ctaLink: "./projects/social-funds.html",
       accentClass: "personal-project--emerald",
-      titleClass: "personal-project__title--script",
-      features: [
-        {
-          title: "Finance media + smarter mutual funds",
-          description:
-            "Bring editorial discovery, social proof, and fund context closer together so first-time investors can move with more confidence.",
-          videoSrc: "./assets/personal-projects/social-mutual.mp4",
-        },
-        {
-          title: "Investments",
-          description:
-            "Turn inspiration into a clearer investing flow, with calmer decisions and fewer jumps between education and action.",
-          videoSrc: "./assets/personal-projects/investments.mp4",
-        },
-      ],
+      assets: {
+        heroVideo: "./assets/personal-projects/smart-funds/social-mutual-live.mp4",
+        investmentsVideo: "./assets/personal-projects/smart-funds/investments-live.mp4",
+        goal: "./assets/personal-projects/smart-funds/goal-mf.png",
+        health: "./assets/personal-projects/smart-funds/mf-health.png",
+        read: "./assets/personal-projects/smart-funds/mf-read.png",
+        kinds: "./assets/personal-projects/smart-funds/mf-kinds.png",
+        strategy: "./assets/personal-projects/smart-funds/mf-strategy.png",
+        stories: "./assets/personal-projects/smart-funds/stories.png",
+        ai: "./assets/personal-projects/smart-funds/ai-mf.png",
+        sf: "./assets/personal-projects/smart-funds/sf.png",
+      },
     },
     {
       title: "Tabs",

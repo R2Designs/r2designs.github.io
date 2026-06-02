@@ -1428,6 +1428,228 @@ body.is-showcase-mode .button--solid {
   --project-accent: #e6b77a;
 }
 
+.personal-project--mosaic {
+  display: block;
+  min-height: auto;
+  padding: 76px 0 88px;
+}
+
+.smartfunds-mosaic {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.smartfunds-mosaic__column {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+
+.smartfunds-carousel {
+  display: none;
+}
+
+.smartfunds-carousel__heading {
+  display: none;
+}
+
+.smartfunds-mosaic__tile,
+.smartfunds-mosaic__cta {
+  position: relative;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.smartfunds-mosaic__tile:hover,
+.smartfunds-mosaic__tile:focus-within,
+.smartfunds-mosaic__cta:hover,
+.smartfunds-mosaic__cta:focus-visible {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
+}
+
+.smartfunds-mosaic__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 34px;
+}
+
+.smartfunds-mosaic__tile-caption {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: rgba(246, 242, 235, 0.96);
+  font-size: clamp(1.1rem, 1.35vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.smartfunds-mosaic__device {
+  position: relative;
+  overflow: hidden;
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 50% 85%, rgba(94, 214, 186, 0.18), transparent 58%),
+    linear-gradient(180deg, #08090d 0%, #05060a 100%);
+  border: 1px solid rgba(246, 242, 235, 0.14);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 30px 66px rgba(0, 0, 0, 0.42);
+}
+
+.smartfunds-mosaic__tile--video {
+  display: grid;
+  justify-items: center;
+}
+
+.smartfunds-mosaic__device::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 34%;
+  height: 22px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(5, 6, 9, 0.96);
+  z-index: 3;
+}
+
+.smartfunds-mosaic__device-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.62;
+  border-radius: 28px;
+  margin: 10px;
+  background: #040509;
+}
+
+.smartfunds-mosaic__video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.08);
+}
+
+.smartfunds-mosaic__cta {
+  width: 100%;
+  min-height: 58px;
+  text-decoration: none;
+}
+
+.smartfunds-mosaic__card--hero .smartfunds-mosaic__device-screen,
+.smartfunds-mosaic__card--investments .smartfunds-mosaic__device-screen {
+  aspect-ratio: 0.58;
+}
+
+.smartfunds-mosaic__card--hero .smartfunds-mosaic__video {
+  object-position: center 12%;
+}
+
+.smartfunds-mosaic__card--investments .smartfunds-mosaic__video {
+  object-position: center 18%;
+}
+
+.smartfunds-carousel__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.smartfunds-carousel__track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+}
+
+.smartfunds-carousel__slide {
+  flex: 0 0 min(43vw, 188px);
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.smartfunds-carousel__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.smartfunds-carousel__device {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 85%, rgba(94, 214, 186, 0.18), transparent 58%),
+    linear-gradient(180deg, #08090d 0%, #05060a 100%);
+  border: 1px solid rgba(246, 242, 235, 0.14);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 20px 44px rgba(0, 0, 0, 0.34);
+}
+
+.smartfunds-carousel__device::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 38%;
+  height: 16px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(5, 6, 9, 0.96);
+  z-index: 2;
+}
+
+.smartfunds-carousel__device-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.6;
+  border-radius: 20px;
+  margin: 8px;
+  background: #040509;
+}
+
+.smartfunds-carousel__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.08);
+}
+
+.smartfunds-carousel__slide--hero .smartfunds-carousel__video {
+  object-position: center 12%;
+}
+
+.smartfunds-carousel__slide--investments .smartfunds-carousel__video {
+  object-position: center 18%;
+}
+
+.smartfunds-carousel__cta {
+  margin-top: 20px;
+}
+
+@keyframes smartfunds-carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 7px));
+  }
+}
+
 .personal-projects .section-heading,
 .personal-projects > p,
 .personal-projects__inner > p {
@@ -1837,6 +2059,14 @@ body.is-showcase-mode .button--solid {
       "smallcase smallcase pagarbook pagarbook gdg jpmc jpmc jpmc"
       "lumi lumi cuemath cuemath udaan razorpayx razorpayx aliste";
   }
+
+  .smartfunds-mosaic {
+    gap: 22px;
+  }
+
+  .smartfunds-mosaic__column {
+    gap: 22px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -1899,6 +2129,23 @@ body.is-showcase-mode .button--solid {
   .personal-project {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .smartfunds-mosaic {
+    display: none;
+  }
+
+  .smartfunds-carousel {
+    display: block;
+  }
+
+  .smartfunds-carousel__track {
+    animation: smartfunds-carousel-scroll 38s linear infinite;
+    will-change: transform;
+  }
+
+  .smartfunds-carousel__slide {
+    flex-basis: min(42vw, 220px);
   }
 
   .personal-project__sticky {
@@ -2058,6 +2305,53 @@ body.is-showcase-mode .button--solid {
   .personal-project {
     gap: 28px;
     padding: 8px 0 38px;
+  }
+
+  .personal-project--mosaic {
+    padding: 12px 0 32px;
+  }
+
+  .smartfunds-carousel {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .smartfunds-carousel__heading {
+    display: flex;
+    justify-content: center;
+    padding: 0 22px 18px;
+  }
+
+  .smartfunds-carousel__heading-image {
+    display: block;
+    width: min(100%, 228px);
+    height: auto;
+  }
+
+  .smartfunds-carousel__slide {
+    flex-basis: clamp(198px, 46vw, 282px);
+  }
+
+  .smartfunds-carousel__image {
+    border-radius: 18px;
+  }
+
+  .smartfunds-carousel__device {
+    border-radius: 22px;
+  }
+
+  .smartfunds-carousel__device-screen {
+    border-radius: 15px;
+    margin: 6px;
+  }
+
+  .smartfunds-carousel__cta {
+    min-height: 52px;
+    margin-top: 18px;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
   }
 
   .personal-project__content {
