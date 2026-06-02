@@ -278,94 +278,6 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
     }),
   };
 
-  const mobileSlides = [
-    {
-      kind: "video",
-      modifier: "smartfunds-carousel__slide--hero",
-      src: assets.heroVideo,
-      alt: "Smart Funds performance video",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--kinds",
-      src: assets.kinds,
-      alt: "Smart mutual funds recommendation card",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--goal",
-      src: assets.goal,
-      alt: "Goal-based mutual funds card",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--stories",
-      src: assets.stories,
-      alt: "Social mutual funds stories card",
-    },
-    {
-      kind: "video",
-      modifier: "smartfunds-carousel__slide--investments",
-      src: assets.investmentsVideo,
-      alt: "Portfolio health investment video",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--strategy-ai",
-      src: assets.ai,
-      alt: "AI mutual funds strategy card",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--know",
-      src: assets.read,
-      alt: "Know better mutual funds information card",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--health",
-      src: assets.health,
-      alt: "Portfolio health card",
-    },
-    {
-      kind: "image",
-      modifier: "smartfunds-carousel__slide--strategy",
-      src: assets.strategy,
-      alt: "Strategy libraries card",
-    },
-  ];
-
-  const mobileSlideMarkup = mobileSlides
-    .map((slide) => {
-      if (slide.kind === "video") {
-        return `
-          <article class="smartfunds-carousel__slide ${slide.modifier}">
-            <div class="smartfunds-carousel__device">
-              <div class="smartfunds-carousel__device-screen">
-                <video
-                  class="smartfunds-carousel__video"
-                  src="${slide.src}"
-                  aria-label="${slide.alt}"
-                  muted
-                  playsinline
-                  autoplay
-                  loop
-                  preload="auto"
-                ></video>
-              </div>
-            </div>
-          </article>
-        `;
-      }
-
-      return `
-        <article class="smartfunds-carousel__slide ${slide.modifier}">
-          <img class="smartfunds-carousel__image" src="${slide.src}" alt="${slide.alt}" loading="lazy" />
-        </article>
-      `;
-    })
-    .join("");
-
   return `
     <article class="personal-project personal-project--mosaic personal-project--smartfunds ${accentClass}">
       <div class="smartfunds-mosaic">
@@ -395,16 +307,13 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
         </div>
       </div>
 
-      <div class="smartfunds-carousel" aria-label="${title} mobile carousel">
-        <div class="smartfunds-carousel__heading" aria-hidden="true">
-          <img class="smartfunds-carousel__heading-image" src="${assets.sf}" alt="" loading="lazy" />
-        </div>
-        <div class="smartfunds-carousel__viewport">
-          <div class="smartfunds-carousel__track">
-            ${mobileSlideMarkup}
-            ${mobileSlideMarkup}
-          </div>
-        </div>
+      <div class="smartfunds-mobile-hero" aria-label="${title} mobile hero">
+        <img
+          class="smartfunds-mobile-hero__image"
+          src="${assets.mobileHero}"
+          alt="Smart Funds showcase"
+          loading="lazy"
+        />
         <a class="button smartfunds-mosaic__cta smartfunds-carousel__cta" href="${ctaLink}" data-cursor="open">
           Read more
         </a>
@@ -560,6 +469,7 @@ function renderPersonalProjects() {
         stories: "./assets/personal-projects/smart-funds/stories.png",
         ai: "./assets/personal-projects/smart-funds/ai-mf.png",
         sf: "./assets/personal-projects/smart-funds/sf.png",
+        mobileHero: "./assets/personal-projects/smart-funds/smart_funds.png",
       },
     },
     {
