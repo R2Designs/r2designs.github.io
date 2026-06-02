@@ -884,8 +884,13 @@ body.is-showcase-mode .button--solid {
   filter: brightness(1.01);
 }
 
+.community-card picture {
+  display: block;
+  width: 100%;
+}
+
 .community-card__image {
-  width: min(1240px, 100%);
+  width: 100%;
   height: auto;
   display: block;
 }
