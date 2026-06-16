@@ -3141,6 +3141,204 @@ body:not(.is-top-of-page) .hero-dock {
   }
 }
 
+@media (min-width: 721px) and (max-width: 1180px) {
+  .site-header__inner,
+  .hero__inner,
+  .section,
+  .chapter__inner,
+  .showcase__inner,
+  .personal-projects__inner {
+    width: min(1440px, calc(100% - 48px));
+  }
+
+  .site-header__inner {
+    min-height: 64px;
+    gap: 16px;
+    padding: 9px 10px;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
+  .site-header__actions .nav-link[href^="tel"] {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: block;
+  }
+
+  .mobile-menu__panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 30;
+    display: grid;
+    gap: 8px;
+    min-width: 260px;
+    padding: 10px;
+    border: 1px solid rgba(16, 16, 16, 0.1);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 44px rgba(16, 16, 16, 0.12);
+    backdrop-filter: blur(18px);
+  }
+
+  .mobile-menu a {
+    width: 100%;
+    justify-content: flex-start;
+    border-color: rgba(16, 16, 16, 0.1);
+  }
+
+  .hero.home-mosaic {
+    min-height: 315svh;
+  }
+
+  .home-mosaic__grid {
+    top: clamp(86px, 9svh, 112px);
+    width: min(calc(100vw - 64px), calc((100svh - 146px) * 2.204));
+    gap: clamp(5px, 0.7vw, 8px);
+  }
+
+  .home-mosaic__copy--left {
+    left: max(6vw, 42px);
+    top: clamp(286px, 32svh, 360px);
+  }
+
+  .home-mosaic__copy--left p {
+    font-size: clamp(2.55rem, 5.2vw, 3.8rem);
+  }
+
+  .home-mosaic__copy--center {
+    left: 54%;
+    top: clamp(436px, 50svh, 530px);
+    width: min(620px, calc(100vw - 64px));
+  }
+
+  .home-mosaic__copy--center h1 {
+    font-size: clamp(4.6rem, 8.9vw, 6.4rem);
+  }
+
+  .home-mosaic__copy--center p {
+    margin-top: 28px;
+    max-width: 620px;
+    font-size: clamp(1.2rem, 2.45vw, 1.65rem);
+  }
+
+  .section--experience {
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+
+  .experience-brand-artwork {
+    width: min(980px, 92vw);
+  }
+
+  .rail {
+    padding-top: 28px;
+    padding-bottom: 72px;
+  }
+
+  .rail__track {
+    width: min(940px, calc(100% - 48px));
+    margin: 0 auto;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+    transform: none;
+  }
+
+  .rail__track span {
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 0.68rem;
+  }
+
+  .projects-showcase {
+    padding-bottom: 92px;
+  }
+
+  .projects-showcase::before {
+    top: clamp(246px, 27svh, 324px);
+  }
+
+  .projects-showcase__title {
+    top: clamp(112px, 12svh, 160px);
+    left: -18px;
+    font-size: clamp(8.4rem, 20vw, 15.2rem);
+  }
+
+  .projects-showcase__layout {
+    width: min(1440px, calc(100% - 48px));
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: clamp(280px, 31svh, 360px);
+  }
+
+  .projects-showcase__nav {
+    z-index: 5;
+    top: 100px;
+    display: flex;
+    gap: 28px;
+    margin: 0 -24px;
+    padding: 14px 24px;
+    overflow-x: auto;
+    background: rgba(8, 11, 19, 0.78);
+    border-top: 1px solid rgba(246, 242, 235, 0.08);
+    border-bottom: 1px solid rgba(246, 242, 235, 0.08);
+    backdrop-filter: blur(18px);
+    scrollbar-width: none;
+  }
+
+  .projects-showcase__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects-showcase__nav a {
+    flex: 0 0 auto;
+    gap: 9px;
+    min-height: 34px;
+    font-size: clamp(1rem, 2.35vw, 1.28rem);
+  }
+
+  .projects-showcase__nav a::before {
+    width: 7px;
+    height: 7px;
+  }
+
+  .projects-showcase__content {
+    gap: 96px;
+  }
+
+  .projects-showcase .showcase__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .projects-showcase .showcase-tile {
+    aspect-ratio: 1.55 / 1;
+  }
+
+  .projects-showcase .showcase-tile img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .projects-showcase .personal-projects__list {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-left: 1px solid rgba(246, 242, 235, 0.04);
+    border-right: 1px solid rgba(246, 242, 235, 0.04);
+  }
+}
+
 @media (max-width: 720px) {
   .cursor-dot,
   .cursor-ring,
