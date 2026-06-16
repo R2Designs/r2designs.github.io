@@ -25,7 +25,7 @@
       content="Abhishek Raj is a product experience designer and builder shaping fintech, commerce, and growth products with calm, sharp, human-centered experiences."
     />
     <link rel="icon" href="./32x32.png" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=home-synonymous-1" />
   </head>
   <body>
     <div class="cursor-dot" aria-hidden="true"></div>
@@ -122,109 +122,92 @@
         </div>
       </section>
 
-      <section class="showcase-shell section--dark-viewport reveal" id="work">
-        <div class="showcase__inner">
-          <div class="showcase__intro">
-            <span class="section-label">Showcase</span>
-            <div class="showcase__intro-main">
-              <h2>Selected <span>case studies</span></h2>
-              <nav class="showcase-segment" aria-label="Portfolio sections">
-                <a class="showcase-segment__item is-active" href="#work">Commercial projects</a>
-                <a class="showcase-segment__item" href="#personal-projects">Personal projects</a>
-                <a class="showcase-segment__item" href="#research">Research</a>
-              </nav>
-            </div>
+      <section class="projects-showcase section--dark-viewport reveal" id="work">
+        <div class="projects-showcase__title" aria-hidden="true">Showcase</div>
+
+        <div class="projects-showcase__layout">
+          <nav class="projects-showcase__nav" aria-label="Project categories">
+            <a class="is-active" href="#work">Live projects</a>
+            <a href="#personal-projects">Personal</a>
+            <a href="#research">Research</a>
+          </nav>
+
+          <div class="projects-showcase__content">
+            <section class="projects-panel projects-panel--live" aria-labelledby="live-projects-title">
+              <h2 class="projects-panel__label" id="live-projects-title">Live projects</h2>
+
+              <div class="showcase__grid">
+                <a class="showcase-tile showcase-tile--mint" href="./projects/udaan-live.html" data-cursor="open" aria-label="Open udaan live project page">
+                  <img src="./assets/showcase-curated/udaan-live.png" alt="udaan live work preview" loading="lazy" />
+                </a>
+
+                <a class="showcase-tile showcase-tile--navy" href="./projects/razorpay-live.html" data-cursor="open" aria-label="Open RazorpayX live project page">
+                  <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX live work preview" loading="lazy" />
+                </a>
+
+                <a class="showcase-tile showcase-tile--azure" href="./projects/smallcase-live.html" data-cursor="open" aria-label="Open smallcase live project page">
+                  <img src="./assets/showcase-curated/smallcase.png" alt="smallcase live work preview" loading="lazy" />
+                </a>
+
+                <a class="showcase-tile showcase-tile--gold" href="./projects/cuemath-archive.html" data-cursor="open" aria-label="Open Cuemath project page">
+                  <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" loading="lazy" />
+                </a>
+
+                <a class="showcase-tile showcase-tile--rose showcase-tile--pagarbook" href="./projects/pagarbook-live.html?v=pagarbook-case-study" data-project-link="pagarbook" data-cursor="open" aria-label="Open Pagarbook project page">
+                  <img src="./assets/showcase-curated/pagarbook.png" alt="Pagarbook project preview" loading="lazy" />
+                </a>
+
+                <a class="showcase-tile showcase-tile--neutral" href="./projects/jpmorgan-live.html" data-cursor="open" aria-label="Open JPMorgan Chase project page">
+                  <img src="./assets/showcase-curated/jpmorgan.png" alt="JPMorgan Chase project preview" loading="lazy" />
+                </a>
+              </div>
+            </section>
+
+            <section class="projects-panel projects-panel--personal" id="personal-projects" aria-labelledby="personal-projects-title">
+              <div class="personal-projects__header">
+                <span class="projects-panel__label" id="personal-projects-title">Personal projects</span>
+                <h2>Products I am building from ground up.</h2>
+              </div>
+              <div class="personal-projects__list" id="personal-projects-list"></div>
+            </section>
+
+            <section class="projects-panel projects-panel--research" id="research" aria-labelledby="research-projects-title">
+              <div class="research__header">
+                <span class="projects-panel__label" id="research-projects-title">Research</span>
+              </div>
+
+              <div class="research__grid" aria-label="UX research documents">
+                <a
+                  class="research-card"
+                  href="./projects/udaan-research.html"
+                  data-cursor="open"
+                  aria-label="Open Shopkeepers and Homepage research document"
+                >
+                  <img
+                    class="research-card__image"
+                    src="./assets/showcase/udaan-research-card.png"
+                    alt="Shopkeepers and Homepage research preview"
+                    loading="lazy"
+                  />
+                </a>
+
+                <a
+                  class="research-card"
+                  href="./projects/rzp-research.html"
+                  data-cursor="open"
+                  aria-label="Open Razorpay research document"
+                >
+                  <img
+                    class="research-card__image"
+                    src="./assets/showcase/rzp-research-card.png"
+                    alt="Razorpay research preview"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </section>
           </div>
-
-          <div class="showcase__grid">
-            <a class="showcase-tile showcase-tile--mint" href="./projects/udaan-live.html" data-cursor="open" aria-label="Open udaan live project page">
-              <img src="./assets/showcase-curated/udaan-live.png" alt="udaan live work preview" loading="lazy" />
-            </a>
-
-            <a class="showcase-tile showcase-tile--navy" href="./projects/razorpay-live.html" data-cursor="open" aria-label="Open RazorpayX live project page">
-              <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX live work preview" loading="lazy" />
-            </a>
-
-            <a class="showcase-tile showcase-tile--azure" href="./projects/smallcase-live.html" data-cursor="open" aria-label="Open smallcase live project page">
-              <img src="./assets/showcase-curated/smallcase.png" alt="smallcase live work preview" loading="lazy" />
-            </a>
-
-            <a class="showcase-tile showcase-tile--gold" href="./projects/cuemath-archive.html" data-cursor="open" aria-label="Open Cuemath project page">
-              <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" loading="lazy" />
-            </a>
-          </div>
         </div>
-      </section>
-
-      <section class="personal-projects section section--dark-viewport reveal" id="personal-projects">
-        <div class="personal-projects__inner">
-          <div class="personal-projects__header">
-            <span class="section-label">AI Projects</span>
-            <h2>Products I am building from ground up.</h2>
-          </div>
-          <div class="personal-projects__list" id="personal-projects-list"></div>
-        </div>
-      </section>
-
-      <section class="section reveal research" id="research">
-        <div class="research__header">
-          <span class="section-label">Research exercises</span>
-        </div>
-
-        <div class="research__grid" aria-label="UX research documents">
-          <a
-            class="research-card"
-            href="./projects/udaan-research.html"
-            data-cursor="open"
-            aria-label="Open Shopkeepers and Homepage research document"
-          >
-            <img
-              class="research-card__image"
-              src="./assets/showcase/udaan-research-card.png"
-              alt="Shopkeepers and Homepage research preview"
-              loading="lazy"
-            />
-          </a>
-
-          <a
-            class="research-card"
-            href="./projects/rzp-research.html"
-            data-cursor="open"
-            aria-label="Open Razorpay research document"
-          >
-            <img
-              class="research-card__image"
-              src="./assets/showcase/rzp-research-card.png"
-              alt="Razorpay research preview"
-              loading="lazy"
-            />
-          </a>
-        </div>
-      </section>
-
-      <section class="section reveal community" id="community">
-        <div class="personal-projects__header community__header">
-          <span class="section-label">For community</span>
-        </div>
-
-        <a
-          class="community-card"
-          href="https://www.figma.com/files/team/1496706296472899329/resources/community/plugin/1613133647814585684?q_id=f575a261-1ce0-44bc-9021-dd78bca0c5c5"
-          target="_blank"
-          rel="noreferrer"
-          data-cursor="open"
-          aria-label="Open Design Guardian Figma plugin"
-        >
-          <picture>
-            <source media="(max-width: 720px)" srcset="./assets/showcase/figma-community-mobile.png" />
-            <img
-              class="community-card__image"
-              src="./assets/showcase/figma-community-desktop.png"
-              alt="Design Guardian plugin preview"
-              loading="lazy"
-            />
-          </picture>
-        </a>
       </section>
 
       <section class="section reveal" id="type">

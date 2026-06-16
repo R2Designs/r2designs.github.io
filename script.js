@@ -12,6 +12,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 const personalProjectsList = document.getElementById("personal-projects-list");
 const sceneModeButtons = document.querySelectorAll("[data-scene-mode]");
+const projectNavLinks = document.querySelectorAll(".projects-showcase__nav a[href^='#']");
 
 const ctx = heroCanvas.getContext("2d");
 const heroState = {
@@ -170,6 +171,10 @@ function smoothstep(value) {
   return t * t * (3 - 2 * t);
 }
 
+function lerp(start, end, amount) {
+  return start + (end - start) * amount;
+}
+
 function setupHomeMosaic() {
   if (!homeGrid) {
     return;
@@ -216,6 +221,7 @@ function setupHomeMosaic() {
         delay,
         direction,
         index,
+        mobileInitial: key === "3-1" ? 1 : 0,
         levelTwo: levelTwo.has(key) ? 1 : 0,
         levelThree: levelThree.has(key) ? 1 : 0,
       });
@@ -245,7 +251,9 @@ function getHomeMosaicProgress() {
 function getTileTurn(tile, progress) {
   const firstSegment = progress <= 0.5;
   const segmentProgress = firstSegment ? progress / 0.5 : (progress - 0.5) / 0.5;
-  const from = firstSegment ? 0 : tile.levelTwo;
+  const from = firstSegment
+    ? (window.innerWidth <= 720 ? tile.mobileInitial : 0)
+    : tile.levelTwo;
   const to = firstSegment ? tile.levelTwo : tile.levelThree;
 
   if (from === to) {
@@ -261,10 +269,30 @@ function renderHomeMosaic(progress, copyProgress = progress) {
     return;
   }
 
+  if (window.innerWidth <= 720) {
+    const stageOne = { x: 48, y: 118, scale: 1.44 };
+    const stageTwo = { x: 48, y: 118, scale: 1.44 };
+    const stageThree = { x: -514, y: 148, scale: 1.48 };
+    const firstHalf = progress <= 0.52;
+    const stageProgress = firstHalf
+      ? smoothstep(progress / 0.52)
+      : smoothstep((progress - 0.52) / 0.48);
+    const from = firstHalf ? stageOne : stageTwo;
+    const to = firstHalf ? stageTwo : stageThree;
+
+    homeMosaic.style.setProperty("--home-grid-x", `${lerp(from.x, to.x, stageProgress).toFixed(1)}px`);
+    homeMosaic.style.setProperty("--home-grid-y", `${lerp(from.y, to.y, stageProgress).toFixed(1)}px`);
+    homeMosaic.style.setProperty("--home-grid-scale", lerp(from.scale, to.scale, stageProgress).toFixed(3));
+  } else {
+    homeMosaic.style.setProperty("--home-grid-x", "0px");
+    homeMosaic.style.setProperty("--home-grid-y", "0px");
+    homeMosaic.style.setProperty("--home-grid-scale", "1");
+  }
+
   const leftIn = smoothstep((copyProgress - 0.14) / 0.26);
-  const leftOut = smoothstep((copyProgress - 0.64) / 0.22);
+  const leftOut = smoothstep((copyProgress - 0.58) / 0.18);
   const centerIn = smoothstep((copyProgress - 0.62) / 0.28);
-  const leftOpacity = leftIn * (1 - leftOut * 0.88);
+  const leftOpacity = leftIn * (1 - leftOut);
 
   homeMosaic.style.setProperty("--home-left-opacity", leftOpacity.toFixed(3));
   homeMosaic.style.setProperty("--home-center-opacity", centerIn.toFixed(3));
@@ -943,10 +971,65 @@ function setupRevealObserver() {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.05 }
   );
 
   revealNodes.forEach((node) => observer.observe(node));
+}
+
+function setupProjectNav() {
+  if (!projectNavLinks.length) {
+    return;
+  }
+
+  const navItems = Array.from(projectNavLinks)
+    .map((link) => {
+      const href = link.getAttribute("href");
+      const target =
+        href === "#work"
+          ? document.querySelector(".projects-panel--live")
+          : document.querySelector(href);
+
+      return target ? { link, target } : null;
+    })
+    .filter(Boolean);
+
+  if (!navItems.length) {
+    return;
+  }
+
+  let ticking = false;
+
+  const updateActive = () => {
+    const marker = window.scrollY + window.innerHeight * 0.62;
+    let activeItem = navItems[0];
+
+    navItems.forEach((item) => {
+      const top = item.target.getBoundingClientRect().top + window.scrollY;
+      if (top <= marker) {
+        activeItem = item;
+      }
+    });
+
+    navItems.forEach((item) => {
+      item.link.classList.toggle("is-active", item === activeItem);
+    });
+
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(updateActive);
+  };
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  updateActive();
 }
 
 function setupCursor() {
@@ -1218,6 +1301,31 @@ function RideOSProject({ title, readMoreLink, accentClass, assets }) {
   `;
 }
 
+function FigmaPluginProject({ title, ctaLink, assets }) {
+  return `
+    <article class="personal-project personal-project--mosaic personal-project--figma-plugin">
+      <a
+        class="community-card"
+        href="${ctaLink}"
+        target="_blank"
+        rel="noreferrer"
+        data-cursor="open"
+        aria-label="${title}"
+      >
+        <picture>
+          <source media="(max-width: 720px)" srcset="${assets.mobile}" />
+          <img
+            class="community-card__image"
+            src="${assets.desktop}"
+            alt="${title}"
+            loading="lazy"
+          />
+        </picture>
+      </a>
+    </article>
+  `;
+}
+
 function PersonalProject({
   layout,
   title,
@@ -1261,6 +1369,14 @@ function PersonalProject({
       title,
       readMoreLink,
       accentClass,
+      assets,
+    });
+  }
+
+  if (layout === "figma-plugin") {
+    return FigmaPluginProject({
+      title,
+      ctaLink,
       assets,
     });
   }
@@ -1416,6 +1532,16 @@ function renderPersonalProjects() {
       accentClass: "personal-project--amber",
       assets: {
         poster: "./assets/personal-projects/rideos-grid/rideos_main.jpg",
+      },
+    },
+    {
+      layout: "figma-plugin",
+      title: "Design Guardian",
+      ctaLink:
+        "https://www.figma.com/files/team/1496706296472899329/resources/community/plugin/1613133647814585684?q_id=f575a261-1ce0-44bc-9021-dd78bca0c5c5",
+      assets: {
+        desktop: "./assets/showcase/figma-community-desktop.png",
+        mobile: "./assets/showcase/figma-community-mobile.png",
       },
     },
   ];
@@ -1700,6 +1826,7 @@ if (!homeMosaic) {
 setupRevealObserver();
 setupCursor();
 setupPersonalProjects();
+setupProjectNav();
 
 if (homeMosaic) {
   updateHomeMosaic();
