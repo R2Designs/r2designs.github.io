@@ -1069,9 +1069,9 @@ function setupCursor() {
 }
 
 function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets }) {
-  const imageCard = ({ modifier, src, alt, caption = "" }) => `
+  const imageCard = ({ modifier, src, alt, height, caption = "" }) => `
     <article class="smartfunds-mosaic__tile smartfunds-mosaic__tile--image ${modifier}">
-      <img class="smartfunds-mosaic__image" src="${src}" alt="${alt}" loading="lazy" />
+      <img class="smartfunds-mosaic__image" src="${src}" alt="${alt}" width="848" height="${height}" loading="lazy" />
       ${caption ? `<span class="smartfunds-mosaic__tile-caption">${caption}</span>` : ""}
     </article>
   `;
@@ -1085,9 +1085,9 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
             src="${src}"
             muted
             playsinline
-            autoplay
             loop
-            preload="auto"
+            preload="none"
+            data-ambient-video
           ></video>
         </div>
       </div>
@@ -1103,36 +1103,43 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
       modifier: "smartfunds-mosaic__card--goal",
       src: assets.goal,
       alt: "Goal-based mutual funds card",
+      height: 492,
     }),
     stories: imageCard({
       modifier: "smartfunds-mosaic__card--stories",
       src: assets.stories,
       alt: "Social mutual funds stories card",
+      height: 510,
     }),
     strategyAI: imageCard({
       modifier: "smartfunds-mosaic__card--strategy-ai",
       src: assets.ai,
       alt: "AI mutual funds strategy card",
+      height: 1286,
     }),
     kinds: imageCard({
       modifier: "smartfunds-mosaic__card--kinds",
       src: assets.kinds,
       alt: "Smart mutual funds recommendation card",
+      height: 934,
     }),
     brand: imageCard({
       modifier: "smartfunds-mosaic__card--sf",
       src: assets.sf,
       alt: "Smart Funds brand card",
+      height: 510,
     }),
     know: imageCard({
       modifier: "smartfunds-mosaic__card--know",
       src: assets.read,
       alt: "Know better mutual funds information card",
+      height: 1278,
     }),
     health: imageCard({
       modifier: "smartfunds-mosaic__card--health",
       src: assets.health,
       alt: "Portfolio health card",
+      height: 1322,
     }),
     investments: videoCard({
       modifier: "smartfunds-mosaic__card--investments",
@@ -1142,6 +1149,7 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
       modifier: "smartfunds-mosaic__card--strategy",
       src: assets.strategy,
       alt: "Mutual funds strategy media card",
+      height: 1078,
     }),
   };
 
@@ -1179,6 +1187,8 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
           class="smartfunds-mobile-hero__image"
           src="${assets.mobileHero}"
           alt="Smart Funds showcase"
+          width="851"
+          height="1200"
           loading="lazy"
         />
       </a>
@@ -1187,9 +1197,9 @@ function SmartFundsProject({ title, eyebrow, lede, ctaLink, accentClass, assets 
 }
 
 function TabsProject({ title, ctaLink, accentClass, assets }) {
-  const imageCard = ({ modifier, src, alt }) => `
+  const imageCard = ({ modifier, src, alt, height }) => `
     <article class="tabs-mosaic__tile tabs-mosaic__tile--image ${modifier}">
-      <img class="tabs-mosaic__image" src="${src}" alt="${alt}" loading="lazy" />
+      <img class="tabs-mosaic__image" src="${src}" alt="${alt}" width="848" height="${height}" loading="lazy" />
     </article>
   `;
 
@@ -1202,9 +1212,9 @@ function TabsProject({ title, ctaLink, accentClass, assets }) {
             src="${src}"
             muted
             playsinline
-            autoplay
             loop
-            preload="auto"
+            preload="none"
+            data-ambient-video
           ></video>
         </div>
       </div>
@@ -1223,11 +1233,13 @@ function TabsProject({ title, ctaLink, accentClass, assets }) {
             modifier: "tabs-mosaic__card--currency",
             src: assets.currency,
             alt: "Multi country currency card",
+            height: 900,
           })}
           ${imageCard({
             modifier: "tabs-mosaic__card--summary",
             src: assets.summary,
             alt: "Summary card",
+            height: 1134,
           })}
         </div>
 
@@ -1236,16 +1248,19 @@ function TabsProject({ title, ctaLink, accentClass, assets }) {
             modifier: "tabs-mosaic__card--conversational",
             src: assets.conversational,
             alt: "Conversational UI card",
+            height: 1286,
           })}
           ${imageCard({
             modifier: "tabs-mosaic__card--brand",
             src: assets.brand,
             alt: "Tabs brand tile",
+            height: 510,
           })}
           ${imageCard({
             modifier: "tabs-mosaic__card--friends",
             src: assets.friends,
             alt: "Friends reminders and breakup card",
+            height: 1490,
           })}
         </div>
 
@@ -1254,16 +1269,19 @@ function TabsProject({ title, ctaLink, accentClass, assets }) {
             modifier: "tabs-mosaic__card--settle",
             src: assets.settle,
             alt: "Settle up card",
+            height: 1006,
           })}
           ${imageCard({
             modifier: "tabs-mosaic__card--recent",
             src: assets.recent,
             alt: "Recent transactions card",
+            height: 1286,
           })}
           ${imageCard({
             modifier: "tabs-mosaic__card--accessibility",
             src: assets.accessibility,
             alt: "Accessibility standards card",
+            height: 1040,
           })}
         </div>
       </div>
@@ -1273,6 +1291,8 @@ function TabsProject({ title, ctaLink, accentClass, assets }) {
           class="tabs-mobile-hero__image"
           src="${assets.mobileHero}"
           alt="${title} showcase"
+          width="851"
+          height="1200"
           loading="lazy"
         />
       </div>
@@ -1295,6 +1315,8 @@ function RideOSProject({ title, readMoreLink, accentClass, assets }) {
           class="rideos-poster__image"
           src="${assets.poster}"
           alt="${title} showcase"
+          width="1600"
+          height="830"
           loading="lazy"
         />
       </a>
@@ -1319,6 +1341,8 @@ function FigmaPluginProject({ title, ctaLink, assets }) {
             class="community-card__image"
             src="${assets.desktop}"
             alt="${title}"
+            width="1800"
+            height="679"
             loading="lazy"
           />
         </picture>
@@ -1418,9 +1442,8 @@ function PersonalProject({
                   src="${videoSrc}"
                   muted
                   playsinline
-                  autoplay
                   loop
-                  preload="auto"
+                  preload="metadata"
                 ></video>`
                 }
               </div>
@@ -1550,6 +1573,63 @@ function renderPersonalProjects() {
   personalProjectsList.innerHTML = projects.map(PersonalProject).join("");
 }
 
+function setupAmbientProjectVideos() {
+  const videos = Array.from(document.querySelectorAll("[data-ambient-video]"));
+
+  if (!videos.length) {
+    return;
+  }
+
+  videos.forEach((video) => {
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "true");
+    video.preload = "none";
+  });
+
+  const playVideo = (video) => {
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === "function") {
+      playAttempt.catch(() => {});
+    }
+  };
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    videos.forEach((video) => {
+      video.load();
+      if (!reduceMotion) {
+        playVideo(video);
+      }
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+          if (video.readyState === 0) {
+            video.load();
+          }
+          playVideo(video);
+          return;
+        }
+
+        video.pause();
+      });
+    },
+    {
+      rootMargin: "360px 0px",
+      threshold: 0.01,
+    }
+  );
+
+  videos.forEach((video) => observer.observe(video));
+}
+
 function setupPersonalProjects() {
   if (!personalProjectsList) {
     return;
@@ -1615,8 +1695,8 @@ function setupPersonalProjects() {
     video.playsInline = true;
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "true");
-    video.preload = "auto";
-    video.autoplay = true;
+    video.preload = "metadata";
+    video.autoplay = false;
     video.loop = !usesVideoSwap;
 
     const getSafeEnd = () => Math.max(0, (video.duration || 0) - 0.06);
@@ -1826,6 +1906,7 @@ if (!homeMosaic) {
 }
 setupRevealObserver();
 setupCursor();
+setupAmbientProjectVideos();
 setupPersonalProjects();
 setupProjectNav();
 

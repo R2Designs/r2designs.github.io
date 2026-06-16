@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Noe Display";
-  src: url("./assets/fonts/noe-display-bold.ttf") format("truetype");
+  src: url("./assets/fonts/noe-display-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "Noto Sans";
-  src: url("./assets/fonts/NotoSans-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/NotoSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "Noto Sans";
-  src: url("./assets/fonts/NotoSans-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/NotoSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "Noto Sans";
-  src: url("./assets/fonts/NotoSans-SemiBold.ttf") format("truetype");
+  src: url("./assets/fonts/NotoSans-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "Noto Sans";
-  src: url("./assets/fonts/NotoSans-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/NotoSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -683,7 +683,12 @@ body.is-showcase-mode .button--solid {
 }
 
 .home-tile__face--front {
-  background-image: url("./assets/home/creation-of-adam.jpg");
+  background-image:
+    image-set(
+      url("./assets/optimized/creation-of-adam-900.jpg") 1x,
+      url("./assets/optimized/creation-of-adam-1400.jpg") 1.5x,
+      url("./assets/optimized/creation-of-adam-2000.jpg") 2x
+    );
   background-size: 900% 500%;
   background-position: var(--tile-bg-x) var(--tile-bg-y);
   background-repeat: no-repeat;
@@ -1288,9 +1293,14 @@ body:not(.is-top-of-page) .hero-dock {
   box-shadow: 0 34px 88px rgba(0, 0, 0, 0.34);
 }
 
+.showcase-tile picture,
 .showcase-tile img {
+  display: block;
   width: 100%;
   height: 100%;
+}
+
+.showcase-tile img {
   object-fit: cover;
 }
 

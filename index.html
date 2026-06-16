@@ -25,7 +25,9 @@
       content="Abhishek Raj is a product experience designer and builder shaping fintech, commerce, and growth products with calm, sharp, human-centered experiences."
     />
     <link rel="icon" href="./32x32.png" />
-    <link rel="stylesheet" href="./styles.css?v=tablet-mobile-first-1" />
+    <link rel="preload" as="image" href="./assets/optimized/creation-of-adam-900.jpg" media="(max-width: 1180px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./assets/optimized/creation-of-adam-2000.jpg" media="(min-width: 1181px)" fetchpriority="high" />
+    <link rel="stylesheet" href="./styles.css?v=pagespeed-1" />
   </head>
   <body>
     <div class="cursor-dot" aria-hidden="true"></div>
@@ -100,7 +102,7 @@
           <article class="experience-board" aria-label="Brands I have worked with">
             <picture class="experience-brand-artwork">
               <source media="(max-width: 840px)" srcset="./assets/showcase/brand-m.svg" />
-              <img src="./assets/showcase/brand-d.svg" alt="Brand wall featuring teams Abhishek has worked with" loading="lazy" />
+              <img src="./assets/showcase/brand-d.svg" alt="Brand wall featuring teams Abhishek has worked with" width="3319" height="825" loading="lazy" />
             </picture>
           </article>
         </div>
@@ -147,23 +149,38 @@
 
               <div class="showcase__grid">
                 <a class="showcase-tile showcase-tile--mint" href="./projects/udaan-live.html" data-cursor="open" aria-label="Open udaan live project page">
-                  <img src="./assets/showcase-curated/udaan-live.png" alt="udaan live work preview" loading="lazy" />
+                  <picture>
+                    <source type="image/webp" srcset="./assets/optimized/udaan-live-760.webp 760w, ./assets/optimized/udaan-live-1100.webp 1100w, ./assets/optimized/udaan-live-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
+                    <img src="./assets/showcase-curated/udaan-live.png" alt="udaan live work preview" width="2000" height="1125" loading="lazy" />
+                  </picture>
                 </a>
 
                 <a class="showcase-tile showcase-tile--navy" href="./projects/razorpay-live.html" data-cursor="open" aria-label="Open RazorpayX live project page">
-                  <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX live work preview" loading="lazy" />
+                  <picture>
+                    <source type="image/webp" srcset="./assets/optimized/rzpx-760.webp 760w, ./assets/optimized/rzpx-1100.webp 1100w, ./assets/optimized/rzpx-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
+                    <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX live work preview" width="2000" height="1125" loading="lazy" />
+                  </picture>
                 </a>
 
                 <a class="showcase-tile showcase-tile--azure" href="./projects/smallcase-live.html" data-cursor="open" aria-label="Open smallcase live project page">
-                  <img src="./assets/showcase-curated/smallcase.png" alt="smallcase live work preview" loading="lazy" />
+                  <picture>
+                    <source type="image/webp" srcset="./assets/optimized/smallcase-760.webp 760w, ./assets/optimized/smallcase-1100.webp 1100w, ./assets/optimized/smallcase-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
+                    <img src="./assets/showcase-curated/smallcase.png" alt="smallcase live work preview" width="3840" height="2160" loading="lazy" />
+                  </picture>
                 </a>
 
                 <a class="showcase-tile showcase-tile--gold" href="./projects/cuemath-archive.html" data-cursor="open" aria-label="Open Cuemath project page">
-                  <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" loading="lazy" />
+                  <picture>
+                    <source type="image/webp" srcset="./assets/optimized/cuemath-760.webp 760w, ./assets/optimized/cuemath-1100.webp 1100w, ./assets/optimized/cuemath-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
+                    <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" width="1920" height="1080" loading="lazy" />
+                  </picture>
                 </a>
 
                 <a class="showcase-tile showcase-tile--rose showcase-tile--pagarbook" href="./pagarbook.html" data-project-link="pagarbook" data-cursor="open" aria-label="Open Pagarbook project page">
-                  <img src="./assets/showcase-curated/pagarbook.png" alt="Pagarbook project preview" loading="lazy" />
+                  <picture>
+                    <source type="image/webp" srcset="./assets/optimized/pagarbook-760.webp 760w, ./assets/optimized/pagarbook-1100.webp 1100w, ./assets/optimized/pagarbook-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
+                    <img src="./assets/showcase-curated/pagarbook.png" alt="Pagarbook project preview" width="2000" height="1125" loading="lazy" />
+                  </picture>
                 </a>
               </div>
             </section>
@@ -192,6 +209,8 @@
                     class="research-card__image"
                     src="./assets/showcase/udaan-research-card.png"
                     alt="Shopkeepers and Homepage research preview"
+                    width="1600"
+                    height="1440"
                     loading="lazy"
                   />
                 </a>
@@ -206,6 +225,8 @@
                     class="research-card__image"
                     src="./assets/showcase/rzp-research-card.png"
                     alt="Razorpay research preview"
+                    width="1600"
+                    height="1440"
                     loading="lazy"
                   />
                 </a>
@@ -488,6 +509,6 @@
       </section>
     </main>
 
-    <script src="./script.js?v=tablet-mobile-first-1"></script>
+    <script src="./script.js?v=pagespeed-1"></script>
   </body>
 </html>
