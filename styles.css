@@ -3196,38 +3196,57 @@ body:not(.is-top-of-page) .hero-dock {
   }
 
   .hero.home-mosaic {
-    min-height: 315svh;
+    min-height: 300svh;
+  }
+
+  .home-mosaic__sticky {
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   .home-mosaic__grid {
-    top: clamp(86px, 9svh, 112px);
-    width: min(calc(100vw - 64px), calc((100svh - 146px) * 2.204));
-    gap: clamp(5px, 0.7vw, 8px);
+    top: 0;
+    left: 0;
+    width: 1040px;
+    max-width: none;
+    gap: 9px;
+    transform: translate3d(var(--home-grid-x, -310px), var(--home-grid-y, 120px), 0) scale(var(--home-grid-scale, 1));
+    transform-origin: top left;
   }
 
   .home-mosaic__copy--left {
-    left: max(6vw, 42px);
-    top: clamp(286px, 32svh, 360px);
+    left: 14vw;
+    top: 28svh;
+    color: #A2846C;
+    transform: translateY(calc((1 - var(--home-left-opacity, 0)) * 16px));
   }
 
   .home-mosaic__copy--left p {
-    font-size: clamp(2.55rem, 5.2vw, 3.8rem);
+    font-size: clamp(2.38rem, 10.4vw, 3.5rem);
+    line-height: 1.04;
   }
 
   .home-mosaic__copy--center {
-    left: 54%;
-    top: clamp(436px, 50svh, 530px);
-    width: min(620px, calc(100vw - 64px));
+    left: 10.5vw;
+    top: 49svh;
+    width: 92vw;
+    transform: translateY(calc((1 - var(--home-center-opacity, 0)) * 18px));
   }
 
   .home-mosaic__copy--center h1 {
-    font-size: clamp(4.6rem, 8.9vw, 6.4rem);
+    font-size: clamp(4.6rem, 22vw, 7.3rem);
+    color: #080808;
   }
 
   .home-mosaic__copy--center p {
-    margin-top: 28px;
-    max-width: 620px;
-    font-size: clamp(1.2rem, 2.45vw, 1.65rem);
+    margin-top: 24px;
+    max-width: min(78vw, 420px);
+    font-size: clamp(1.1rem, 5vw, 1.55rem);
+    line-height: 1.32;
+  }
+
+  .home-mosaic__scroll {
+    display: none;
   }
 
   .section--experience {

@@ -249,10 +249,11 @@ function getHomeMosaicProgress() {
 }
 
 function getTileTurn(tile, progress) {
+  const isCompactMosaic = window.innerWidth <= 1180;
   const firstSegment = progress <= 0.5;
   const segmentProgress = firstSegment ? progress / 0.5 : (progress - 0.5) / 0.5;
   const from = firstSegment
-    ? (window.innerWidth <= 720 ? tile.mobileInitial : 0)
+    ? (isCompactMosaic ? tile.mobileInitial : 0)
     : tile.levelTwo;
   const to = firstSegment ? tile.levelTwo : tile.levelThree;
 
@@ -269,7 +270,7 @@ function renderHomeMosaic(progress, copyProgress = progress) {
     return;
   }
 
-  if (window.innerWidth <= 720) {
+  if (window.innerWidth <= 1180) {
     const stageOne = { x: 48, y: 118, scale: 1.44 };
     const stageTwo = { x: 48, y: 118, scale: 1.44 };
     const stageThree = { x: -514, y: 148, scale: 1.48 };
