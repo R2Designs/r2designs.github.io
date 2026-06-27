@@ -161,8 +161,11 @@ function clamp(value, min, max) {
 
 const homeTileState = {
   current: 0,
+  duration: 1500,
   target: 0,
   frame: 0,
+  startedAt: 0,
+  start: 0,
   tiles: [],
 };
 
@@ -248,6 +251,18 @@ function getHomeMosaicProgress() {
   return clamp(-rect.top / scrollable, 0, 1);
 }
 
+function getHomeMosaicStep(progress) {
+  if (progress < 1 / 3) {
+    return 0;
+  }
+
+  if (progress < 2 / 3) {
+    return 0.5;
+  }
+
+  return 1;
+}
+
 function getTileTurn(tile, progress) {
   const isCompactMosaic = window.innerWidth <= 1180;
   const firstSegment = progress <= 0.5;
@@ -306,11 +321,14 @@ function renderHomeMosaic(progress, copyProgress = progress) {
 }
 
 function animateHomeMosaic() {
-  const easing = reduceMotion ? 1 : 0.22;
-  homeTileState.current += (homeTileState.target - homeTileState.current) * easing;
-  renderHomeMosaic(homeTileState.current, homeTileState.target);
+  const elapsed = performance.now() - homeTileState.startedAt;
+  const progress = reduceMotion ? 1 : clamp(elapsed / homeTileState.duration, 0, 1);
+  const eased = smoothstep(progress);
 
-  if (Math.abs(homeTileState.target - homeTileState.current) > 0.001 && !reduceMotion) {
+  homeTileState.current = lerp(homeTileState.start, homeTileState.target, eased);
+  renderHomeMosaic(homeTileState.current);
+
+  if (progress < 1 && !reduceMotion) {
     homeTileState.frame = window.requestAnimationFrame(animateHomeMosaic);
     return;
   }
@@ -325,7 +343,15 @@ function updateHomeMosaic() {
     return;
   }
 
-  homeTileState.target = getHomeMosaicProgress();
+  const nextTarget = getHomeMosaicStep(getHomeMosaicProgress());
+
+  if (nextTarget === homeTileState.target && homeTileState.frame) {
+    return;
+  }
+
+  homeTileState.target = nextTarget;
+  homeTileState.start = homeTileState.current;
+  homeTileState.startedAt = performance.now();
 
   if (reduceMotion) {
     homeTileState.current = homeTileState.target;
