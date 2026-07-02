@@ -13,6 +13,11 @@ const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches
 const personalProjectsList = document.getElementById("personal-projects-list");
 const sceneModeButtons = document.querySelectorAll("[data-scene-mode]");
 const projectNavLinks = document.querySelectorAll(".projects-showcase__nav a[href^='#']");
+const writingSection = document.getElementById("writing");
+const writingStack = writingSection?.querySelector(".writing__stack");
+const writingShowcase = writingSection?.querySelector(".writing-showcase");
+const writingListingShell = writingSection?.querySelector(".writing-listing-shell");
+const writingListing = writingSection?.querySelector(".writing-listing");
 
 const ctx = heroCanvas.getContext("2d");
 const heroState = {
@@ -353,6 +358,7 @@ function updateScrollProgress() {
   siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
   updateHomeMosaic();
   updateShowcaseMode();
+  updateWritingScrollSync();
 }
 
 function updateShowcaseMode() {
@@ -370,6 +376,55 @@ function updateShowcaseMode() {
   });
 
   document.body.classList.toggle("is-showcase-mode", active);
+}
+
+function resetWritingScrollSync() {
+  if (!writingSection || !writingListing || !writingListingShell) {
+    return;
+  }
+
+  writingSection.classList.remove("writing--scroll-sync");
+  writingSection.style.removeProperty("min-height");
+  writingSection.style.removeProperty("--writing-shell-height");
+  writingSection.style.removeProperty("--writing-sticky-top");
+  writingListing.style.removeProperty("transform");
+  writingListingShell.style.removeProperty("height");
+}
+
+function updateWritingScrollSync() {
+  if (!writingSection || !writingStack || !writingShowcase || !writingListingShell || !writingListing) {
+    return;
+  }
+
+  if (window.innerWidth <= 1180) {
+    resetWritingScrollSync();
+    return;
+  }
+
+  const items = Array.from(writingListing.querySelectorAll(".writing-listing__item"));
+  if (items.length <= 3) {
+    resetWritingScrollSync();
+    return;
+  }
+
+  const gap = parseFloat(getComputedStyle(writingListing).rowGap || getComputedStyle(writingListing).gap || "0");
+  const visibleItems = items.slice(0, 3);
+  const shellHeight =
+    visibleItems.reduce((total, item) => total + item.offsetHeight, 0) +
+    gap * Math.max(0, visibleItems.length - 1);
+  const scrollDistance = Math.max(0, writingListing.scrollHeight - shellHeight);
+  const stickyTop = Math.round(clamp(window.innerHeight * 0.12, 88, 132));
+  const stackHeight = Math.max(writingShowcase.offsetHeight, shellHeight);
+  const sectionHeight = stackHeight + stickyTop + scrollDistance;
+  const rect = writingSection.getBoundingClientRect();
+  const progress = scrollDistance > 0 ? clamp((stickyTop - rect.top) / scrollDistance, 0, 1) : 0;
+
+  writingSection.classList.add("writing--scroll-sync");
+  writingSection.style.setProperty("--writing-shell-height", `${shellHeight}px`);
+  writingSection.style.setProperty("--writing-sticky-top", `${stickyTop}px`);
+  writingSection.style.minHeight = `${sectionHeight}px`;
+  writingListingShell.style.height = `${shellHeight}px`;
+  writingListing.style.transform = `translateY(${-scrollDistance * progress}px)`;
 }
 
 function resizeHeroCanvas() {
