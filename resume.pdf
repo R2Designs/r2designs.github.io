@@ -1,109 +1,259 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 2
+/Kids [ 4 0 R 9 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://r2designs.github.io)
->> /Border [ 0 0 0 ] /Rect [ 90.352 671.4 178.4785 684 ] /Subtype /Link /Type /Annot
+/Contents 5 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 6 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://r2designs.github.io/resume.pdf)
->> /Border [ 0 0 0 ] /Rect [ 231.976 671.4 284.497 684 ] /Subtype /Link /Type /Annot
+/Length 4030
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+1 1 1 rg
+n 0 0 612 792 re f*
+.066667 .066667 .066667 rg
+BT /F2 22 Tf 26.4 TL ET
+BT 1 0 0 1 46 724 Tm (Abhishek Raj) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 701.5 Tm (Senior Product Designer | Enterprise UX | SaaS | Fintech | AI-driven Product Experiences) Tj T* ET
+BT 1 0 0 1 46 673.5 Tm (Portfolio: r2designs.github.io | Email: abhishekraj4300@gmail.com | Phone: +91 8092233430) Tj T* ET
+.85098 .85098 .85098 RG
+1 w
+n 46 642 m 566 642 l S
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 613 Tm (Professional Summary) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 584.5 Tm (Senior Product Designer with 7+ years of experience across fintech, enterprise SaaS, ecommerce, SME) Tj T* ET
+BT 1 0 0 1 46 568.5 Tm (finance, and edtech products. Specialized in designing scalable enterprise systems, onboarding workflows,) Tj T* ET
+BT 1 0 0 1 46 552.5 Tm (documentation journeys, task lifecycle frameworks, and platform experiences for complex multi-stakeholder) Tj T* ET
+BT 1 0 0 1 46 536.5 Tm (environments. Strong expertise in workflow design, information architecture, design systems, UX strategy,) Tj T* ET
+BT 1 0 0 1 46 520.5 Tm (interaction design, AI-assisted prototyping, AI-powered workflows, user research, and cross-functional) Tj T* ET
+BT 1 0 0 1 46 504.5 Tm (collaboration. Experienced in building 0-to-1 products, simplifying complex systems, and driving intuitive,) Tj T* ET
+BT 1 0 0 1 46 488.5 Tm (product-led user experiences.) Tj T* ET
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 461 Tm (Core Skills & Keywords) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 431.5 Tm (Enterprise UX \177 SaaS Platforms \177 Workflow Design \177 Design Systems \177 User Experience Design \177 Interaction) Tj T* ET
+BT 1 0 0 1 46 415.5 Tm (Design \177 Information Architecture \177 Product Strategy \177 User Research \177 UX Writing \177 Wireframing \177 Prototyping \177) Tj T* ET
+BT 1 0 0 1 46 399.5 Tm (Cross-functional Collaboration \177 Stakeholder Management \177 Leadership \177 Mentorship \177 Fintech UX \177 B2B SaaS \177) Tj T* ET
+BT 1 0 0 1 46 383.5 Tm (Mobile App Design \177 Responsive Design \177 Product-led Growth \177 AI Prototyping \177 AI-powered Workflows \177) Tj T* ET
+BT 1 0 0 1 46 367.5 Tm (Generative AI) Tj T* ET
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 338 Tm (Tools) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 308.5 Tm (Figma \177 FigJam \177 Framer \177 Jira \177 Confluence \177 Notion \177 Miro \177 AI-assisted Prototyping \177 Design Systems \177) Tj T* ET
+BT 1 0 0 1 46 292.5 Tm (Documentation Systems) Tj T* ET
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 265 Tm (Experience) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 242.5 Tm (Global Financial Services Firm \227 Senior Design Associate \(AVP\) | Present) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 214 Tm (\177 Designed SaaS-style enterprise onboarding systems for companies joining Global Financial Services) Tj T* ET
+BT 1 0 0 1 58 198 Tm (Firm Workplace Solutions.) Tj T* ET
+BT 1 0 0 1 58 176 Tm (\177 Built end-to-end task lifecycle frameworks including ownership, dependencies, visibility, workflow states,) Tj T* ET
+BT 1 0 0 1 58 160 Tm (and operational logic.) Tj T* ET
+BT 1 0 0 1 58 138 Tm (\177 Designed profile, documentation, and account journeys aligned with compliance-heavy operational) Tj T* ET
+BT 1 0 0 1 58 122 Tm (requirements and enterprise workflows.) Tj T* ET
+BT 1 0 0 1 58 100 Tm (\177 Collaborated closely with product, engineering, business, and leadership stakeholders across multiple) Tj T* ET
+BT 1 0 0 1 58 84 Tm (teams.) Tj T* ET
+BT 1 0 0 1 58 62 Tm (\177 Won the Global Financial Services Firm Hackathon by redesigning advisor prospecting) Tj T* ET
+BT 1 0 0 1 58 46 Tm (workflows and improving engagement visibility.) Tj T* ET
+ 
+
+endstream
 endobj
 6 0 obj
 <<
-/Annots [ 4 0 R 5 0 R ] /Contents 11 0 R /MediaBox [ 0 0 612 792 ] /Parent 10 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/F1 7 0 R
+/F2 8 0 R
 >>
 endobj
 7 0 obj
 <<
-/Contents 12 0 R /MediaBox [ 0 0 612 792 ] /Parent 10 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 9 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260510173747+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260510173747+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+/Contents 10 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 11 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
 >>
 endobj
 10 0 obj
 <<
-/Count 2 /Kids [ 6 0 R 7 0 R ] /Type /Pages
+/Length 4012
 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+1 1 1 rg
+n 0 0 612 792 re f*
+.133333 .133333 .133333 rg
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 735.5 Tm (Cuemath \227 Senior Product Designer | Feb 2023 \226 Aug 2024) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 713.5 Tm (\177 Built a 0-to-1 digital admissions platform replacing RM-led admissions with a product-led onboarding) Tj T* ET
+BT 1 0 0 1 58 697.5 Tm (journey.) Tj T* ET
+BT 1 0 0 1 58 675.5 Tm (\177 Improved referral and retention flows, reducing friction and strengthening product-led growth loops.) Tj T* ET
+BT 1 0 0 1 58 653.5 Tm (\177 Worked cross-functionally with engineering, product, and business teams to streamline enrollment) Tj T* ET
+BT 1 0 0 1 58 637.5 Tm (experiences.) Tj T* ET
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 606.5 Tm (Razorpay \227 Senior Product Designer | Sep 2022 \226 Feb 2023 \(Contract\)) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 584.5 Tm (\177 Bulk Payouts on Mobile: Made it easy for businesses to make many payments at once from their phones.) Tj T* ET
+BT 1 0 0 1 58 562.5 Tm (\177 Vendor Payments: Built a mobile feature for small business owners to pay suppliers on the go, creating a) Tj T* ET
+BT 1 0 0 1 58 546.5 Tm (differentiated mobile-first experience and doubling payment usage.) Tj T* ET
+BT 1 0 0 1 58 524.5 Tm (\177 Money Movements: Reworked the app to surface urgent actions in one place so busy business owners) Tj T* ET
+BT 1 0 0 1 58 508.5 Tm (could save time and use the product more often.) Tj T* ET
+BT 1 0 0 1 58 486.5 Tm (\177 Bulk Payouts: Improved the approval flow so businesses could review and approve multiple payments at) Tj T* ET
+BT 1 0 0 1 58 470.5 Tm (once.) Tj T* ET
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 439.5 Tm (Udaan \227 Product Designer II | June 2021 \226 Aug 2022) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 417.5 Tm (\177 Led product design initiatives for the food category including homepage strategy, vendor research, and) Tj T* ET
+BT 1 0 0 1 58 401.5 Tm (workflow improvements.) Tj T* ET
+BT 1 0 0 1 58 379.5 Tm (\177 Scaled the design system across teams with accessibility improvements and measurable component) Tj T* ET
+BT 1 0 0 1 58 363.5 Tm (adoption frameworks.) Tj T* ET
+BT 1 0 0 1 58 341.5 Tm (\177 Designed GTM touchpoints across app surfaces, WhatsApp campaigns, and ecommerce journeys.) Tj T* ET
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 310.5 Tm (smallcase gateway \227 Founding Product Designer | May 2019 \226 Dec 2020) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 288.5 Tm (\177 Created design system for the product smallcase Gateway.) Tj T* ET
+BT 1 0 0 1 58 266.5 Tm (\177 Created product touchpoints as first entry points at strategic places, merchant landing pages,) Tj T* ET
+BT 1 0 0 1 58 250.5 Tm (and single/multi-stock gateway flows for merchant sites.) Tj T* ET
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 222.5 Tm (smallcase \227 Founding Visual Designer | Dec 2018 \226 May 2019) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 58 200.5 Tm (\177 Created visual guides and illustration guides for the org.) Tj T* ET
+BT 1 0 0 1 58 178.5 Tm (\177 Created email templates and component guides; led a 2-person visual team across illustrations,) Tj T* ET
+BT 1 0 0 1 58 162.5 Tm (iconography, voice, and tone.) Tj T* ET
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 130 Tm (Education) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 106.5 Tm (VIT Vellore) Tj T* ET
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 100.2745 106.5 Tm ( \227 Information Technology major with Human Computer Interaction minor) Tj T* ET
+
+.066667 .066667 .066667 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 46 74 Tm (Certifications) Tj T* ET
+.133333 .133333 .133333 rg
+BT /F1 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 46 50.5 Tm (Product Development Accessibility \(Feb 2025\)) Tj T* ET
+BT 1 0 0 1 46 34.5 Tm (Introduction to Digital Accessibility \(Mar 2025\)) Tj T* ET
+BT 1 0 0 1 46 18.5 Tm (2024 IPB Cross Border Fundamentals \(Mar 2025\)) Tj T* ET
+ 
+
+endstream
 endobj
 11 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1770
+/F1 12 0 R
+/F2 13 0 R
 >>
-stream
-Gatm;9lo&I&A@sBm&?a:&kc+EQ?0(m3iUr6UKU9R6S8oV8[(L4!C/1%oZ).VnC+X&d59;(,XDEg\,1@C.0(I)Jc-Z:!1+Z"j_Xu`#b)h;'5mrApMdf+qf3I:1FFt<&*>hha#nj+T6#7'Q2<Am.&cm3_'[!H6O<(niS<c\=DSLA*U!U\Oo&4a\VJGU`meAjm?jAKbXurmfR2WAor5L$2g#<:Li;\nb06;Ze!(.F.k0I?ddS2UCnFT3s2&oYWQZVd'L$o]k;=Du]Y%f8*Za`fEANIuH_bAhqYFts-)50B<WDTKCVLaXL(72GjC-u,mZ-$+n1o/(XG#(b_3oNMp)jGT`YP!5p.QS!XiH*AJN3(raqIt)Zqk!Dn*152$"<`@O>8k[geYr(s6JMMH]^j<b3C*Igu@uq:]VZ^rJN?LO)\p<0.,Y!^6n]@(BGNGn+Otp:]623F>%k,c;M8$JSAf#*7iG<n5&--[,P[O[R>,j`#.sA;G<khc/_G_AC1Wu17t2YdD-8fB'Bn[$0SLcTL:7@4.nG5JOEBa"ZscV+jbtiL<;K+ThD>CkRc=glT/pnJ>?e=UbU6KP!*l@Pm?W67Z;<[%ul.:i)mtH4fF0UZK8H17hnYF6k)GX><ue9jrK/'fPtn1_qJQN,,AJDM+6sN]uXbW$XBNbH2u661b'^)GUH'Lc#VpkQ>qL%QUqQA_F6C,Y)Li5OQ9ZQOj`<A*X%P'X=_lmO\(ZRUBZq%qn:`RRr]gYlBim7+c[FEmYF8##DS8d\O8Zm)%B]L(.q5ol+UgbROC]>g#^bM=?m-I$CA`O_cl7J6PnDlR5e*$j,LYn<u>pN:MS*8(YB:[G'Rg]-G25Q$'*CEd[o'+'dam-D9fX#L-O*q'\)(^Jn!q)[O]SFb)J84A'n7<o+LTS9Oma2+I9Wu3#]&7D8jK[9pOu0REF^8hV=C0.N)U=@2N5UM:?u^S1F@@rh'Gk0((=0j4T8L3kKVk7D%sHF)ZTr3l\11WH)Jj.pfb+G(\oTg,[lHI4u^YimsNIdu^R&IeS9.eO>CsmVPrmeg3mlp?kOrPs_2%UVn9b\D>i+Ua?E6JQ5'@4&@$]l3T-&Wm/T44&'%uP,)Va9ffk0mjZ(]F^UVa?K)pOHEN]UjlstXdWrHGMP\r\X;d'KlZ`q+Ag16rh9PMi7Gi;e*-LM"`Q^>$gBh$e<-<&mUKF.F8J%EIbJE`88$o1R&A4@qiMi7pI(:92A_?m\8F17d;VmlE/`$@WPN@`ROm[I33Gb>f'Fb;5=G:OOf!XudG<_95%IZC'UR]cuLtUiZ34qi-?=T7^3E`>9:Rut#XZT\m\L6UR0Z4*7U7cVR67IJV=eh;gMn`>c?PujU\j`WG&*SeH*"[T(o^JRi/.A:F8F4&Z<ths:5hT9)SkW+;*W04t.k'+r9p/qsDgX]M$_EiDpNMprNqNEB2tG4fMr5R5`tIY`p/-h-@adg:o!2`@IMq\2U)(f!Pr>BW10fMQ6JOqQA;Xg3@_*C7ncRF#VQTYo5^dtZO\o1SZ+=t\B2QDg_NV;*PV?V%hdMpA2!mtYC4Sd8aK_[FRLW.Sg-o&P>(OMKfGkn[Gq>VBW=H;2?ZPKp<iS/Og2O#,8%mPN'B7mM]kM)7,iV-f?8t?L">XG5cVfW(_T99)Y4+`B$ApdUXX-\AV:Vh_7GUs*5Z<j<".Yr^A%i''8$&N_5iHmo]Ro$4oKY84^4U9Ro!;3k,Y#d_l69nq^C#'Qh-6g+-Ddqe&cGQbp_m4$pO7*!\DN'\p)i?n\]t~>endstream
 endobj
 12 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1212
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gatm:bAQ&o']%q&ma<-.),#E9b;Rh)JRgHO1i4&bd+#JIPRe3p3Fe^(hb-j*'K8ls^c%hj8Q"[?S9(Y<`q7U:OXksk"oS0[K.Mde%GCAo$H3Ie.k^h5aP)d*3@lLc0XY1uPOO4bZ`PinU?jT.luE;aU7$)D`o3BKSqi^=f*s4l2t/uV(N>.5(^p@G;`<FK?g'nSdDA\(O"8;lq':og_r#&Fm\[1\\;0()JF=0M+(:[HjelK3_KiR[R2r(#Sh1`I[LppiKCR$P;$NkqKP(p"WJ#?0BEtqUIVl.fMfd'pY2Jp=87L6moH8rBK0#-R]gf16ZR(Ug1E,&<`bO:7p/5.c,Qgo6oeTi&6FA+)(>!5:+K*,:8*pUEXJL2]6Y[b)J_\rd*]q4mk:PuADb*7\lI)`7Gp(D\R+h3HR[dTgYK$Pa"PapY7dEN6\4k%NP(<T@NG&XgE"@42frQ)^4jJUKVW_\;5Gf^6dUUj!WG#9AHK"l]9nSnp$P^_#7.Id0S=M0,s-AW.'W9i/Zs6LnDOCsma\nAkYRYl&+6M7(Eb8Hl8<\5-ToA2#B]0-d@Z(^E6U4,8ZQ\_'a3*$TNSq)K+b>VM=L/?e-D>WBKIuJPT!IRA=h]_:*lN=H(Bj2Y8-TUIouf28B4n)ha'$JMT[bf@46KHAMrni(QAPbl(HJ`5;Y]&mbgDjdR;4?X8H`p1D04BbX>G(BWauM>nJ@"A:Y#/m)Ub(VKFc$R`MVU`g5$"tnRQbO"Fn[Pit/qBR!3JIM)/-fHI/M`+Yco/3C6pUqcQUrVGF"&\i?[ZoVK\Z.N4g;HmVu\l&nu,ZI^O+kq4(PJt>Z^m'4I^UKV)/dY6&4-Qb+m.8ZQ\Kf.^@mAZn,MV)78i3Ggu0ll.?+$_:(NlB^t0O!6>H:=6,c-OW&ROYNh<fXI"r@\Ikghiu,,hW!o')^3l6,b(%+[sY`=aEL6M7o6KAgr$(j;+YNpHicGf7f<lM+*D#%mb009k@J@fqhdjnpY!-R^tC8.SPJcE+,qf/'M[6@G70s:M;q=,!piPU,egoDZRoAh]d.Jcm1Ao*>uR99j$"2:Edf_g35]KE:8Xj<o%FQ^[a)RZ7OoA8nfir=*@YnO>=JuiDV?(UHlQ@7[e&sMVZ`F''o&-7aY7_9l&V\Y^:+GVA+Ong=SB+@+.P%pic7Sq:n'hPZpT`/.VpFQ>*XBW9p:8UfKu9";efQfjQ@>~>endstream
+endobj
+13 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 13
+0 14
 0000000000 65535 f 
-0000000073 00000 n 
-0000000114 00000 n 
-0000000221 00000 n 
-0000000333 00000 n 
-0000000502 00000 n 
-0000000682 00000 n 
-0000000901 00000 n 
-0000001096 00000 n 
-0000001165 00000 n 
-0000001448 00000 n 
-0000001514 00000 n 
-0000003376 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000119 00000 n 
+0000000168 00000 n 
+0000000357 00000 n 
+0000004439 00000 n 
+0000004480 00000 n 
+0000004587 00000 n 
+0000004699 00000 n 
+0000004890 00000 n 
+0000008955 00000 n 
+0000008999 00000 n 
+0000009107 00000 n 
 trailer
 <<
-/ID 
-[<265214e08c94e4a5f3cc2ae8d0a21655><265214e08c94e4a5f3cc2ae8d0a21655>]
-% ReportLab generated PDF document -- digest (http://www.reportlab.com)
-
-/Info 9 0 R
-/Root 8 0 R
-/Size 13
+/Size 14
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-4680
+9220
 %%EOF
