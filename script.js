@@ -18,6 +18,7 @@ const writingStack = writingSection?.querySelector(".writing__stack");
 const writingShowcase = writingSection?.querySelector(".writing-showcase");
 const writingListingShell = writingSection?.querySelector(".writing-listing-shell");
 const writingListing = writingSection?.querySelector(".writing-listing");
+const monalisaStages = document.querySelectorAll("[data-monalisa-lab]");
 
 const ctx = heroCanvas.getContext("2d");
 const heroState = {
@@ -357,6 +358,7 @@ function updateScrollProgress() {
   document.body.classList.toggle("is-top-of-page", window.scrollY < 18);
   siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
   updateHomeMosaic();
+  updateMonalisaLabScroll();
   updateShowcaseMode();
   updateWritingScrollSync();
 }
@@ -1033,6 +1035,86 @@ function setupRevealObserver() {
   revealNodes.forEach((node) => observer.observe(node));
 }
 
+function getMonalisaStartDistance(stage) {
+  const width = stage.getBoundingClientRect().width || window.innerWidth;
+
+  if (window.innerWidth <= 720) {
+    return width * 0.64;
+  }
+
+  if (window.innerWidth <= 1180) {
+    return clamp(width * 0.29, 188, 290);
+  }
+
+  return clamp(width * 0.28, 260, 440);
+}
+
+function getMonalisaTargetX(startDistance) {
+  return window.innerWidth <= 720 ? 0 : startDistance * -1;
+}
+
+function updateMonalisaLabScroll() {
+  if (!monalisaStages.length) {
+    return;
+  }
+
+  monalisaStages.forEach((stage) => {
+    const section = stage.closest(".monalisa-lab");
+
+    if (!section) {
+      return;
+    }
+
+    const startDistance = getMonalisaStartDistance(stage);
+
+    if (reduceMotion) {
+      stage.style.setProperty("--monalisa-left-x", "0px");
+      stage.style.setProperty("--monalisa-center-x", "0px");
+      stage.style.setProperty("--monalisa-right-x", "0px");
+      stage.style.setProperty("--monalisa-target-x", "0px");
+      stage.style.setProperty("--monalisa-fuse-blur", "0px");
+      stage.style.setProperty("--monalisa-shadow-opacity", "0.28");
+      stage.style.setProperty("--monalisa-triptych-opacity", "0");
+      stage.style.setProperty("--monalisa-final-opacity", "1");
+      stage.style.setProperty("--monalisa-copy-opacity", "1");
+      stage.style.setProperty("--monalisa-copy-y", "0px");
+      return;
+    }
+
+    const rect = section.getBoundingClientRect();
+    const scrollDistance = Math.max(1, section.offsetHeight - window.innerHeight);
+    const rawProgress = clamp(-rect.top / scrollDistance, 0, 1);
+    const mergeProgress = smoothstep((rawProgress - 0.08) / 0.74);
+    const revealProgress = smoothstep((rawProgress - 0.42) / 0.38);
+    const targetX = getMonalisaTargetX(startDistance);
+    const leftX = lerp(startDistance * -1, targetX, mergeProgress);
+    const centerX = lerp(0, targetX, mergeProgress);
+    const rightX = lerp(startDistance, targetX, mergeProgress);
+    const fuseBlur = Math.sin(mergeProgress * Math.PI) * 2.2;
+    const triptychOpacity = 1 - revealProgress;
+
+    stage.style.setProperty("--monalisa-progress", mergeProgress.toFixed(4));
+    stage.style.setProperty("--monalisa-left-x", `${leftX.toFixed(2)}px`);
+    stage.style.setProperty("--monalisa-center-x", `${centerX.toFixed(2)}px`);
+    stage.style.setProperty("--monalisa-right-x", `${rightX.toFixed(2)}px`);
+    stage.style.setProperty("--monalisa-target-x", `${targetX.toFixed(2)}px`);
+    stage.style.setProperty("--monalisa-fuse-blur", `${fuseBlur.toFixed(2)}px`);
+    stage.style.setProperty("--monalisa-shadow-opacity", (0.3 - mergeProgress * 0.12).toFixed(4));
+    stage.style.setProperty("--monalisa-triptych-opacity", triptychOpacity.toFixed(4));
+    stage.style.setProperty("--monalisa-final-opacity", revealProgress.toFixed(4));
+    stage.style.setProperty("--monalisa-copy-opacity", revealProgress.toFixed(4));
+    stage.style.setProperty("--monalisa-copy-y", `${(18 * (1 - revealProgress)).toFixed(2)}px`);
+  });
+}
+
+function setupMonalisaLab() {
+  if (!monalisaStages.length) {
+    return;
+  }
+
+  updateMonalisaLabScroll();
+}
+
 function setupProjectNav() {
   if (!projectNavLinks.length) {
     return;
@@ -1613,16 +1695,6 @@ function renderPersonalProjects() {
         poster: "./assets/personal-projects/rideos-grid/rideos_main.jpg",
       },
     },
-    {
-      layout: "figma-plugin",
-      title: "Design Guardian",
-      ctaLink:
-        "https://www.figma.com/files/team/1496706296472899329/resources/community/plugin/1613133647814585684?q_id=f575a261-1ce0-44bc-9021-dd78bca0c5c5",
-      assets: {
-        desktop: "./assets/showcase/figma-community-desktop.png",
-        mobile: "./assets/showcase/figma-community-mobile.png",
-      },
-    },
   ];
 
   personalProjectsList.innerHTML = projects.map(PersonalProject).join("");
@@ -1964,6 +2036,7 @@ setupCursor();
 setupAmbientProjectVideos();
 setupPersonalProjects();
 setupProjectNav();
+setupMonalisaLab();
 
 if (homeMosaic) {
   updateHomeMosaic();
