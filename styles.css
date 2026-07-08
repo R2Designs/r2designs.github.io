@@ -2860,6 +2860,16 @@ body:not(.is-top-of-page) .hero-dock {
   text-wrap: balance;
 }
 
+.monalisa-lab__copy h2 span {
+  display: inline-block;
+  margin-top: -0.04em;
+  padding: 0 0.08em 0.06em;
+  background: rgba(168, 151, 123, 0.9);
+  color: var(--monalisa-copy);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .monalisa-lab__copy p {
   margin: 0;
   max-width: 45ch;
@@ -2930,6 +2940,10 @@ body:not(.is-top-of-page) .hero-dock {
 
   .monalisa-lab__copy h2 {
     font-size: clamp(2rem, 9.7vw, 3rem);
+  }
+
+  .monalisa-lab__copy h2 span {
+    padding-inline: 0.06em;
   }
 
   .monalisa-lab__copy p {
