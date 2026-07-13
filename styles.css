@@ -2924,8 +2924,8 @@ body:not(.is-top-of-page) .hero-dock {
   align-items: stretch;
   gap: 0;
   width: 100%;
-  min-height: 100vh;
-  padding: clamp(0px, 0.5vw, 2px) clamp(44px, 8vw, 132px) clamp(64px, 7vw, 92px);
+  min-height: auto;
+  padding: 0 clamp(44px, 8vw, 132px) clamp(40px, 5vw, 64px);
   margin: 0 auto;
   background: var(--persona-bg);
 }
@@ -2940,18 +2940,20 @@ body:not(.is-top-of-page) .hero-dock {
 .persona-feature__media img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .persona-feature__copy {
   display: grid;
-  align-content: start;
+  align-content: center;
   gap: 20px;
   max-width: 560px;
   justify-self: start;
   align-self: stretch;
   width: 100%;
-  padding: clamp(82px, 8vw, 132px) clamp(36px, 5vw, 72px) clamp(36px, 5vw, 72px);
+  padding: clamp(36px, 5vw, 72px);
   background: var(--persona-card-bg);
 }
 
