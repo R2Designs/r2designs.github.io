@@ -2945,13 +2945,13 @@ body:not(.is-top-of-page) .hero-dock {
 
 .persona-feature__copy {
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: 20px;
   max-width: 560px;
   justify-self: start;
   align-self: stretch;
   width: 100%;
-  padding: clamp(36px, 5vw, 72px);
+  padding: clamp(82px, 8vw, 132px) clamp(36px, 5vw, 72px) clamp(36px, 5vw, 72px);
   background: var(--persona-card-bg);
 }
 
