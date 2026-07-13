@@ -2901,6 +2901,7 @@ body:not(.is-top-of-page) .hero-dock {
 
 .persona-feature {
   --persona-bg: #07013a;
+  --persona-card-bg: #080713;
   --persona-copy: #f7f4ff;
   --persona-muted: rgba(247, 244, 255, 0.82);
   --persona-accent: #b994ff;
@@ -2920,8 +2921,8 @@ body:not(.is-top-of-page) .hero-dock {
 .persona-feature__inner {
   display: grid;
   grid-template-columns: minmax(280px, 0.82fr) minmax(320px, 1fr);
-  align-items: center;
-  gap: clamp(44px, 8vw, 118px);
+  align-items: stretch;
+  gap: 0;
   width: 100%;
   min-height: 100vh;
   padding: clamp(0px, 0.5vw, 2px) clamp(44px, 8vw, 132px) clamp(64px, 7vw, 92px);
@@ -2933,7 +2934,7 @@ body:not(.is-top-of-page) .hero-dock {
   justify-self: end;
   width: min(100%, 560px);
   overflow: hidden;
-  background: rgba(5, 5, 22, 0.66);
+  background: var(--persona-card-bg);
 }
 
 .persona-feature__media img {
@@ -2944,9 +2945,14 @@ body:not(.is-top-of-page) .hero-dock {
 
 .persona-feature__copy {
   display: grid;
+  align-content: center;
   gap: 20px;
   max-width: 560px;
   justify-self: start;
+  align-self: stretch;
+  width: 100%;
+  padding: clamp(36px, 5vw, 72px);
+  background: var(--persona-card-bg);
 }
 
 .persona-feature__eyebrow {
