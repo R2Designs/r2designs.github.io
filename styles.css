@@ -39,6 +39,22 @@
 }
 
 @font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Noto Sans";
   src: url("./assets/fonts/NotoSans-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -2908,7 +2924,7 @@ body:not(.is-top-of-page) .hero-dock {
   gap: clamp(44px, 8vw, 118px);
   width: 100%;
   min-height: 100vh;
-  padding: clamp(22px, 4.5vw, 62px) clamp(44px, 8vw, 132px) clamp(64px, 7vw, 92px);
+  padding: clamp(0px, 0.5vw, 2px) clamp(44px, 8vw, 132px) clamp(64px, 7vw, 92px);
   margin: 0 auto;
   background: var(--persona-bg);
 }
@@ -2944,7 +2960,7 @@ body:not(.is-top-of-page) .hero-dock {
 
 .persona-feature__copy h2 {
   margin: 0;
-  font-family: "Noe Display", Georgia, serif;
+  font-family: "PP Editorial New", Georgia, serif;
   font-size: clamp(2.4rem, 3.3vw, 4rem);
   font-style: italic;
   font-weight: 400;
@@ -3000,6 +3016,19 @@ body:not(.is-top-of-page) .hero-dock {
   transform: translateY(-2px);
 }
 
+.persona-feature__button--primary {
+  border-color: rgba(247, 244, 255, 0.94);
+  background: rgba(247, 244, 255, 0.94);
+  color: var(--persona-bg);
+}
+
+.persona-feature__button--primary:hover,
+.persona-feature__button--primary:focus-visible {
+  border-color: var(--persona-copy);
+  background: var(--persona-copy);
+  color: var(--persona-bg);
+}
+
 .persona-feature__button:focus-visible {
   outline: 2px solid var(--persona-accent);
   outline-offset: 4px;
@@ -3040,7 +3069,7 @@ body:not(.is-top-of-page) .hero-dock {
   .persona-feature__inner {
     grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
     gap: clamp(28px, 5vw, 56px);
-    padding: clamp(44px, 7vw, 72px) clamp(28px, 6vw, 72px);
+    padding: clamp(0px, 1.2vw, 12px) clamp(28px, 6vw, 72px) clamp(44px, 7vw, 72px);
   }
 
   .persona-feature__media {
