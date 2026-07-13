@@ -2925,7 +2925,7 @@ body:not(.is-top-of-page) .hero-dock {
   gap: 0;
   width: 100%;
   min-height: auto;
-  padding: 0 clamp(44px, 8vw, 132px) clamp(40px, 5vw, 64px);
+  padding: 0 clamp(44px, 8vw, 132px) 100px;
   margin: 0 auto;
   background: var(--persona-bg);
 }
@@ -2933,6 +2933,7 @@ body:not(.is-top-of-page) .hero-dock {
 .persona-feature__media {
   justify-self: end;
   width: min(100%, 560px);
+  padding: 24px;
   overflow: hidden;
   background: var(--persona-card-bg);
 }
