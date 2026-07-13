@@ -2954,7 +2954,7 @@ body:not(.is-top-of-page) .hero-dock {
   justify-self: start;
   align-self: stretch;
   width: 100%;
-  padding: clamp(36px, 5vw, 72px);
+  padding: 60px;
   background: var(--persona-card-bg);
 }
 
