@@ -46,24 +46,30 @@ body.project-body--razorpay-gallery {
 }
 
 .razorpay-gallery-page {
-  width: min(1600px, calc(100% - 56px));
-  padding: 26px 0 120px;
+  width: min(1920px, calc(100% - 48px));
+  min-height: 100svh;
+  padding: 24px 0 34px;
+}
+
+.razorpay-gallery-page .project-back {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  z-index: 20;
+  background: rgba(9, 11, 18, 0.72);
+  opacity: 0.62;
+  transition:
+    background 180ms ease,
+    opacity 180ms ease;
+}
+
+.razorpay-gallery-page .project-back:hover {
+  background: rgba(9, 11, 18, 0.96);
+  opacity: 1;
 }
 
 .razorpay-gallery-hero {
-  position: relative;
-  padding: clamp(42px, 7vw, 96px) 0 clamp(28px, 3vw, 42px);
-  text-align: left;
-}
-
-.razorpay-gallery-hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--rz-line) 12%, var(--rz-line) 88%, transparent 100%);
+  display: none;
 }
 
 .razorpay-gallery-title {
@@ -78,41 +84,81 @@ body.project-body--razorpay-gallery {
   text-transform: uppercase;
 }
 
+.razorpay-carousel {
+  --slide-index: 0;
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: calc(100svh - 58px);
+  padding: clamp(34px, 5vw, 72px) clamp(70px, 9vw, 148px) 72px;
+  overflow: hidden;
+}
+
+.razorpay-carousel::before,
+.razorpay-carousel::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  z-index: 0;
+  width: min(33vw, 430px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  opacity: 0;
+  filter: blur(10px);
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.82);
+  transition:
+    opacity 180ms ease,
+    transform 260ms ease;
+}
+
+.razorpay-carousel::before {
+  left: -12vw;
+  background: radial-gradient(circle, rgba(39, 162, 255, 0.3), transparent 64%);
+}
+
+.razorpay-carousel::after {
+  right: -12vw;
+  background: radial-gradient(circle, rgba(66, 230, 175, 0.22), transparent 64%);
+}
+
+.razorpay-carousel.is-accent-left::before,
+.razorpay-carousel.is-accent-right::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.razorpay-carousel__viewport {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1530px);
+  overflow: hidden;
+  border-radius: clamp(32px, 4vw, 70px);
+  box-shadow:
+    0 34px 120px rgba(0, 0, 0, 0.44),
+    0 0 0 1px rgba(246, 242, 235, 0.06);
+}
+
 .razorpay-gallery-sequence {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(28px, 4vw, 46px);
-  padding-top: clamp(28px, 3vw, 42px);
+  align-items: stretch;
+  width: 100%;
+  padding: 0;
+  transform: translateX(var(--slide-offset, 0%));
+  transition: transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .story-frame {
   position: relative;
-  width: min(100%, 1240px);
-  margin-inline: auto;
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 0;
   isolation: isolate;
 }
 
 .story-frame::before {
-  content: "";
-  position: absolute;
-  inset: 8% 10%;
-  z-index: 0;
-  filter: blur(70px);
-  opacity: 0.68;
-  transform: translateY(12px);
-}
-
-.story-frame:nth-child(3n + 1)::before {
-  background: radial-gradient(circle, rgba(38, 98, 255, 0.24), transparent 62%);
-}
-
-.story-frame:nth-child(3n + 2)::before {
-  background: radial-gradient(circle, rgba(112, 232, 140, 0.18), transparent 62%);
-}
-
-.story-frame:nth-child(3n)::before {
-  background: radial-gradient(circle, rgba(255, 149, 53, 0.18), transparent 62%);
+  content: none;
 }
 
 .story-frame img {
@@ -120,26 +166,111 @@ body.project-body--razorpay-gallery {
   z-index: 1;
   width: 100%;
   height: auto;
-  border-radius: 34px;
-  box-shadow:
-    0 24px 80px rgba(0, 0, 0, 0.34),
-    0 0 0 1px rgba(246, 242, 235, 0.06);
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease;
+  border-radius: inherit;
+  user-select: none;
 }
 
-.story-frame:hover img {
-  transform: translateY(-6px);
-  box-shadow:
-    0 32px 92px rgba(0, 0, 0, 0.42),
-    0 0 0 1px rgba(246, 242, 235, 0.08);
+.carousel-arrow {
+  position: fixed;
+  top: 50%;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: clamp(44px, 4.6vw, 68px);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    color 160ms ease,
+    opacity 160ms ease,
+    transform 180ms ease;
+}
+
+.carousel-arrow svg {
+  width: clamp(32px, 3.3vw, 48px);
+  height: clamp(32px, 3.3vw, 48px);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carousel-arrow:hover,
+.carousel-arrow:focus-visible,
+.carousel-arrow.is-pulsing {
+  color: #47c9ff;
+  opacity: 0.92;
+}
+
+.carousel-arrow:focus-visible {
+  outline: none;
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-arrow--previous {
+  left: clamp(14px, 3vw, 58px);
+}
+
+.carousel-arrow--next {
+  right: clamp(14px, 3vw, 58px);
+}
+
+.razorpay-carousel__progress {
+  position: fixed;
+  left: 50%;
+  bottom: clamp(22px, 4vw, 46px);
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: min(620px, calc(100% - 64px));
+  transform: translateX(-50%);
+}
+
+.carousel-count {
+  min-width: 46px;
+  color: #32bdf6;
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.86rem, 1.05vw, 1.02rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.carousel-meter {
+  position: relative;
+  flex: 1;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(246, 242, 235, 0.3);
+}
+
+.carousel-meter__fill {
+  display: block;
+  width: var(--progress, 5.88%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #04adff, #46e0bc);
+  transition: width 460ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @media (max-width: 1180px) {
   .razorpay-gallery-page {
-    width: min(100% - 28px, 100%);
-    padding-bottom: 96px;
+    width: 100%;
+    padding: 18px 0 30px;
+  }
+
+  .razorpay-carousel {
+    padding-inline: clamp(54px, 8vw, 92px);
   }
 
   .story-frame {
@@ -149,21 +280,69 @@ body.project-body--razorpay-gallery {
 
 @media (max-width: 760px) {
   .razorpay-gallery-page {
-    width: min(100% - 20px, 100%);
-    padding-top: 20px;
+    width: 100%;
+    padding-top: 16px;
     padding-bottom: 72px;
+  }
+
+  .razorpay-gallery-page .project-back {
+    top: 14px;
+    left: 14px;
+    padding: 9px 11px;
+    font-size: 0.58rem;
+  }
+
+  .razorpay-carousel {
+    display: block;
+    min-height: 0;
+    padding: 86px 0 0;
+    overflow: visible;
+  }
+
+  .razorpay-carousel::before,
+  .razorpay-carousel::after,
+  .carousel-arrow,
+  .razorpay-carousel__progress {
+    display: none;
   }
 
   .razorpay-gallery-title {
     font-size: clamp(3.2rem, 15vw, 5rem);
   }
 
+  .razorpay-carousel__viewport {
+    width: 100%;
+    overflow: visible;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .razorpay-gallery-sequence {
-    gap: 20px;
-    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: none !important;
+    transition: none;
+  }
+
+  .story-frame {
+    flex: none;
+    width: 100%;
   }
 
   .story-frame img {
-    border-radius: 22px;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .razorpay-gallery-sequence,
+  .carousel-meter__fill,
+  .carousel-arrow,
+  .razorpay-carousel::before,
+  .razorpay-carousel::after {
+    transition-duration: 1ms;
   }
 }

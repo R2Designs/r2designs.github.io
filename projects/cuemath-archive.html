@@ -15,10 +15,18 @@
         <h1 class="cuemath-gallery-title">cuemath. learning surfaces.</h1>
       </header>
 
-      <section class="cuemath-gallery-sequence" aria-label="Cuemath project image sequence">
-        <figure class="story-frame">
-          <img src="./media/cuemath/1.png" alt="Cuemath product frame 01" loading="eager" />
-        </figure>
+      <section class="cuemath-carousel" data-project-carousel aria-label="Cuemath project slideshow">
+        <button class="carousel-arrow carousel-arrow--previous" type="button" aria-label="Previous slide">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="cuemath-carousel__viewport">
+          <div class="cuemath-gallery-sequence" data-carousel-track aria-live="polite">
+            <figure class="story-frame">
+              <img src="./media/cuemath/1.png" alt="Cuemath product frame 01" loading="eager" />
+            </figure>
         <figure class="story-frame">
           <img src="./media/cuemath/2.png" alt="Cuemath product frame 02" loading="eager" />
         </figure>
@@ -61,7 +69,23 @@
         <figure class="story-frame">
           <img src="./media/cuemath/15.png" alt="Cuemath product frame 15" loading="lazy" />
         </figure>
+          </div>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next slide">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m9 6 6 6-6 6" />
+          </svg>
+        </button>
+
+        <div class="cuemath-carousel__progress" aria-label="Slide progress">
+          <span class="carousel-count" data-carousel-count>1/15</span>
+          <div class="carousel-meter" aria-hidden="true">
+            <span class="carousel-meter__fill" data-carousel-meter></span>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./razorpay-carousel.js"></script>
   </body>
 </html>
