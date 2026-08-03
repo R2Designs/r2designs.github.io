@@ -196,6 +196,17 @@ body.project-body--udaan-gallery {
   }
 }
 
+body.project-body--udaan-gallery {
+  color: #182033;
+  background:
+    linear-gradient(rgba(24, 32, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 32, 51, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 10% 4%, rgba(255, 76, 67, 0.14), transparent 0 26%),
+    radial-gradient(circle at 90% 10%, rgba(75, 108, 255, 0.16), transparent 0 28%),
+    linear-gradient(180deg, #fff9f7 0%, #f2f6ff 100%);
+  background-size: 24px 24px, 24px 24px, auto, auto, auto;
+}
+
 .udaan-gallery-page {
   width: min(1920px, calc(100% - 48px));
   min-height: 100svh;
@@ -207,7 +218,11 @@ body.project-body--udaan-gallery {
   top: 22px;
   left: 24px;
   margin: 0;
-  opacity: 0.72;
+  color: rgba(24, 32, 51, 0.72);
+  border-color: rgba(24, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 34px rgba(24, 32, 51, 0.08);
+  opacity: 0.82;
 }
 
 .udaan-gallery-page .project-back:hover {
@@ -265,10 +280,12 @@ body.project-body--udaan-gallery {
   z-index: 1;
   width: min(100%, 1530px);
   overflow: hidden;
-  border-radius: clamp(32px, 4vw, 70px);
+  border: 1px solid rgba(24, 32, 51, 0.1);
+  border-radius: clamp(22px, 3.2vw, 42px);
+  background: #ffffff;
   box-shadow:
-    0 34px 120px rgba(0, 0, 0, 0.44),
-    0 0 0 1px rgba(247, 242, 234, 0.06);
+    0 34px 100px rgba(24, 32, 51, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
 .udaan-gallery-sequence {
@@ -312,7 +329,7 @@ body.project-body--udaan-gallery {
   aspect-ratio: 1;
   padding: 0;
   border: 0;
-  color: var(--udaan-cream);
+  color: rgba(24, 32, 51, 0.78);
   background: transparent;
   cursor: pointer;
   transform: translateY(-50%);
@@ -382,7 +399,7 @@ body.project-body--udaan-gallery {
   height: 6px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(247, 242, 234, 0.3);
+  background: rgba(24, 32, 51, 0.18);
 }
 
 .udaan-carousel .carousel-meter__fill {
@@ -417,7 +434,9 @@ body.project-body--udaan-gallery {
   .udaan-carousel__viewport {
     width: 100%;
     overflow: visible;
+    border: 0;
     border-radius: 0;
+    background: transparent;
     box-shadow: none;
   }
 
