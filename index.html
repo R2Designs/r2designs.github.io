@@ -3,462 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abhishek Raj | Product Experience Designer and Builder</title>
+    <title>Abhishek Raj | Portfolio v3</title>
     <meta
       name="description"
-      content="Abhishek Raj is a product experience designer and builder shaping fintech, commerce, and growth products with calm, sharp, human-centered experiences."
-    />
-    <meta
-      property="og:title"
-      content="Abhishek Raj | Product Experience Designer and Builder"
-    />
-    <meta
-      property="og:description"
-      content="Abhishek Raj is a product experience designer and builder shaping fintech, commerce, and growth products with calm, sharp, human-centered experiences."
-    />
-    <meta
-      property="twitter:title"
-      content="Abhishek Raj | Product Experience Designer and Builder"
-    />
-    <meta
-      property="twitter:description"
-      content="Abhishek Raj is a product experience designer and builder shaping fintech, commerce, and growth products with calm, sharp, human-centered experiences."
+      content="Abhishek Raj is a product experience designer and builder shaping work, research, and personal projects across fintech, commerce, and design systems."
     />
     <link rel="icon" href="./32x32.png" />
-    <link rel="preload" as="image" href="./assets/optimized/creation-of-adam-900.jpg" media="(max-width: 1180px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="./assets/optimized/creation-of-adam-2000.jpg" media="(min-width: 1181px)" fetchpriority="high" />
-    <link rel="stylesheet" href="./styles.css?v=persona-card-6" />
+    <link rel="stylesheet" href="./portfolio-v3.css" />
   </head>
-  <body>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
-    <div class="grain-layer" aria-hidden="true"></div>
+  <body class="portfolio-mode portfolio-mode--work">
+    <div class="cursor-haze" aria-hidden="true"></div>
 
-    <header class="site-header" id="top">
-      <div class="site-header__inner">
-        <a class="brand" href="#top" aria-label="Abhishek Raj portfolio home">
-          <span class="brand__mark">AR</span>
-          <span class="brand__copy">
+    <header class="local-header" aria-label="Portfolio navigation">
+      <div class="local-header__inner">
+        <a class="local-brand" href="./index.html" aria-label="Abhishek Raj portfolio home">
+          <span class="local-brand__mark">AR</span>
+          <span class="local-brand__copy">
             <strong>Abhishek Raj</strong>
             <small>Product experience designer and builder</small>
           </span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#experience">Experience</a>
-          <a href="#work">Showcase</a>
+        <button class="mode-switch" type="button" data-mode-switch>
+          <span class="mode-switch__work">Check my personal projects?</span>
+          <span class="mode-switch__personal">Check my work portfolio?</span>
+        </button>
+
+        <nav class="local-actions" aria-label="Quick links">
+          <a href="./resume/" target="_blank" rel="noreferrer">Resume</a>
+          <a class="local-actions__primary" href="mailto:abhishekraj4300@gmail.com">Let's build</a>
         </nav>
-
-        <div class="site-header__actions">
-          <a class="nav-link" href="./resume/" target="_blank" rel="noreferrer">
-            Resume
-          </a>
-          <a class="nav-link nav-link--solid" href="mailto:abhishekraj4300@gmail.com">
-            Let's build
-          </a>
-        </div>
-
-        <details class="mobile-menu">
-          <summary>Menu</summary>
-          <div class="mobile-menu__panel">
-            <a href="#experience">Experience</a>
-            <a href="#work">Showcase</a>
-            <a href="mailto:abhishekraj4300@gmail.com">Let's build</a>
-          </div>
-        </details>
       </div>
     </header>
 
-    <main class="page">
-      <section class="hero home-mosaic" id="home">
-        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <main>
+      <section class="local-hero" aria-labelledby="local-hero-title">
+        <p class="local-hero__kicker">I am</p>
+        <h1 id="local-hero-title">Abhishek Raj</h1>
+        <span class="local-hero__scribble" aria-hidden="true"></span>
 
-        <div class="home-mosaic__sticky">
-          <div class="home-mosaic__grid" data-home-grid aria-hidden="true"></div>
+        <div class="logo-board" data-work-only aria-label="Teams I have worked with">
+          <picture class="logo-board__artwork">
+            <source media="(max-width: 840px)" srcset="./assets/showcase/brand-m.svg" />
+            <img src="./assets/showcase/brand-d.svg" alt="Teams I have worked with" width="3319" height="825" loading="lazy" />
+          </picture>
+        </div>
+      </section>
 
-          <div class="home-mosaic__copy home-mosaic__copy--left" aria-hidden="true">
-            <p>Connecting<br />Business<br />needs with<br />user needs</p>
+      <section class="local-showcase" aria-labelledby="showcase-title">
+        <div class="showcase-title" aria-hidden="true">
+          <span>Showcase</span>
+          <strong id="showcase-title">Showcase</strong>
+          <span>Showcase</span>
+        </div>
+
+        <div class="showcase-set showcase-set--work" data-work-view>
+          <div class="project-grid project-grid--work" aria-label="Work and research projects">
+            <a class="project-card" href="./projects/razorpay-live.html">
+              <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX project preview" loading="lazy" />
+              <span>RazorpayX</span>
+            </a>
+            <a class="project-card project-card--light" href="./projects/smallcase-live.html">
+              <img src="./assets/showcase-curated/smallcase.png" alt="smallcase project preview" loading="lazy" />
+              <span>smallcase</span>
+            </a>
+            <a class="project-card project-card--light" href="./projects/udaan-live.html">
+              <img src="./assets/showcase-curated/udaan-live.png" alt="udaan project preview" loading="lazy" />
+              <span>udaan</span>
+            </a>
+            <a class="project-card" href="./projects/cuemath-archive.html">
+              <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" loading="lazy" />
+              <span>Cuemath</span>
+            </a>
+            <a class="project-card project-card--research" href="./projects/rzp-research.html">
+              <img src="./assets/showcase/local-research2.png" alt="Razorpay research preview" loading="lazy" />
+              <span>Razorpay Research</span>
+            </a>
+            <a class="project-card project-card--research" href="./projects/udaan-research.html">
+              <img src="./assets/showcase/local-research1.png" alt="udaan research preview" loading="lazy" />
+              <span>udaan Research</span>
+            </a>
           </div>
+        </div>
 
-          <div class="home-mosaic__copy home-mosaic__copy--center">
-            <div class="home-mosaic__tags" aria-label="Past companies">
-              <span>Ex-RazorpayX</span>
-              <span>Ex-udaan</span>
-              <span>Ex-smallcase</span>
+        <div class="showcase-set showcase-set--personal" data-personal-view>
+          <div class="project-grid project-grid--personal" aria-label="Personal projects">
+            <a class="project-card project-card--personal" href="https://r2designs.github.io/persona/" target="_blank" rel="noreferrer">
+              <img src="./assets/personal-projects/local/design-system.png" alt="Persona design system for AI project preview" loading="lazy" />
+              <span>Persona Design System</span>
+            </a>
+            <a class="project-card project-card--personal" href="./projects/mutual-funds-marketplace.html">
+              <img src="./assets/personal-projects/local/mutual-funds.png" alt="Mutual fund for social media project preview" loading="lazy" />
+              <span>Mutual fund for social media</span>
+            </a>
+            <div class="project-card project-card--personal">
+              <img src="./assets/personal-projects/local/conversational-design.png" alt="Conversational design project preview" loading="lazy" />
+              <span>Conversational design</span>
             </div>
-            <h1>Abhishek Raj</h1>
-            <p>
-              I like turning messy product problems into simple, thoughtful experiences that feel easy for people to use.
-            </p>
+            <a class="project-card project-card--personal" href="https://ynay.com" target="_blank" rel="noreferrer">
+              <img src="./assets/personal-projects/local/terrarium.png" alt="Terrarium project preview" loading="lazy" />
+              <span>Buy Terrariums</span>
+            </a>
+            <a class="project-card project-card--personal" href="https://docs.google.com/document/d/1qDOsXFViSpL8yFTL3-omnCEYsEzVg_gB5dsn9bAOFY0/edit?tab=t.0" target="_blank" rel="noreferrer">
+              <img src="./assets/personal-projects/local/digital-almaari.png" alt="Digital Almaari project preview" loading="lazy" />
+              <span>Digital Almaari</span>
+            </a>
+            <a class="project-card project-card--personal" href="https://www.figma.com/community/plugin/1613133647814585684" target="_blank" rel="noreferrer">
+              <img src="./assets/personal-projects/local/figma-plugin.png" alt="Figma plugin project preview" loading="lazy" />
+              <span>Figma plugin</span>
+            </a>
           </div>
-
-          <span class="home-mosaic__scroll">Scroll</span>
         </div>
       </section>
 
-      <section class="section section--ink section--experience section--dark-viewport reveal" id="experience">
-        <div class="experience">
-          <article class="experience-board" aria-label="Brands I have worked with">
-            <picture class="experience-brand-artwork">
-              <source media="(max-width: 840px)" srcset="./assets/showcase/brand-m.svg" />
-              <img src="./assets/showcase/brand-d.svg" alt="Brand wall featuring teams Abhishek has worked with" width="3319" height="825" loading="lazy" />
-            </picture>
-          </article>
-        </div>
-      </section>
+      <section class="local-writing" id="writing" aria-label="Writing and essays">
+        <a
+          class="writing-showcase"
+          href="https://medium.com/@abhishekraj4300"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open Abhishek Raj Medium profile"
+        >
+          <span class="writing-showcase__label">Design blogs</span>
+          <img class="writing-showcase__art" src="./assets/writing/medium-transparent.png" alt="Medium artwork" width="1926" height="1084" loading="lazy" />
+        </a>
 
-      <section class="rail section reveal" aria-label="Practice areas">
-        <div class="rail__track">
-          <span>Fintech</span>
-          <span>B2B Commerce</span>
-          <span>Embedded Investing</span>
-          <span>Admissions</span>
-          <span>Growth Journeys</span>
-          <span>Mobile Banking</span>
-          <span>Design Systems</span>
-          <span>Retention</span>
-          <span>Conversion</span>
-          <span>Operational UX</span>
-          <span>Fintech</span>
-          <span>B2B Commerce</span>
-          <span>Embedded Investing</span>
-          <span>Admissions</span>
-          <span>Growth Journeys</span>
-          <span>Mobile Banking</span>
-          <span>Design Systems</span>
-          <span>Retention</span>
-          <span>Conversion</span>
-          <span>Operational UX</span>
-        </div>
-      </section>
-
-      <section class="section monalisa-lab reveal" id="ai-workflow" aria-label="AI workflow experiment">
-        <div class="monalisa-lab__stage" data-monalisa-lab>
-          <div class="monalisa-lab__visual" aria-hidden="true">
-            <div class="monalisa-lab__triptych">
-              <img class="monalisa-lab__image monalisa-lab__image--left" src="./assets/monalisa/image-1.png" alt="" width="732" height="1092" loading="eager" decoding="async" />
-              <img class="monalisa-lab__image monalisa-lab__image--center" src="./assets/monalisa/image-2.png" alt="" width="732" height="1092" loading="eager" decoding="async" />
-              <img class="monalisa-lab__image monalisa-lab__image--right" src="./assets/monalisa/image-3.png" alt="" width="732" height="1092" loading="eager" decoding="async" />
-              <img class="monalisa-lab__final" src="./assets/monalisa/final-image.png" alt="AI-generated Mona Lisa-inspired portrait" width="732" height="1092" loading="eager" decoding="async" />
+        <div class="writing-listing" aria-label="Selected writing links">
+          <a class="writing-listing__item" href="https://medium.com/@abhishekraj4300/imds-guide-to-interaction-frameworks-7b092a26b1ae" target="_blank" rel="noreferrer">
+            <div class="writing-listing__copy">
+              <h3>[IMDs] Guide to Interaction Frameworks</h3>
+              <p>Creating and documenting interaction models for products that feel intuitive and easy to use.</p>
             </div>
-          </div>
-
-          <div class="monalisa-lab__copy">
-            <h2>Mastering my <span>AI workflow</span></h2>
-            <p>
-              I now build faster by adapting AI into my workflow right from the inception stage. Tools like ChatGPT and Gemini help a lot with ideation and market research. The next step involves creating faster prototypes using Figma MCP and Copilot to create live-code prototypes that serve as a source of truth for engineering (real-time data handling, UI state transitions, complex interaction patterns) which ultimately leads to faster development. This involves the entire triad - product, design, and development - working faster together towards a problem statement.
-            </p>
-            <p>
-              I also introduced this workflow for the whole design team to maintain a more consistent style, change how we work, and improve overall efficiency. The model is currently being considered for adoption by other LOBs as well.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="persona-feature section--dark-viewport reveal" id="persona-mcp" aria-labelledby="persona-feature-title">
-        <div class="persona-feature__inner">
-          <div class="persona-feature__media">
-            <img src="./assets/persona/persona-v1.png" alt="Persona V1 design system preview showing motion, interaction, and color tokens" width="840" height="722" loading="lazy" decoding="async" />
-          </div>
-
-          <div class="persona-feature__copy">
-            <p class="persona-feature__eyebrow">Persona V1</p>
-            <h2 id="persona-feature-title">Design system for artificial intelligence</h2>
-            <p>
-              Persona MCP gives AI a design language to work with. It packages color, type, spacing, motion, radius, elevation, and component behavior into personality-led tokens, so screens can keep the same mood and rules as they grow.
-            </p>
-            <div class="persona-feature__actions" aria-label="Persona MCP links">
-              <a class="persona-feature__button persona-feature__button--primary" href="https://r2designs.github.io/persona/" target="_blank" rel="noreferrer" data-cursor="open">
-                <span class="persona-feature__button-mark" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img" focusable="false">
-                    <path d="M13.3 5.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.4-1.4l4.3-4.3H4a1 1 0 1 1 0-2h13.6l-4.3-4.3a1 1 0 0 1 0-1.4Z" />
-                  </svg>
-                </span>
-                <span>Learn more</span>
-              </a>
-              <a class="persona-feature__button" href="https://github.com/R2Designs/persona-mcp" target="_blank" rel="noreferrer" data-cursor="open">
-                <span class="persona-feature__button-mark" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img" focusable="false">
-                    <path d="M12 .5a12 12 0 0 0-3.8 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.82c1.02 0 2.04.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
-                  </svg>
-                </span>
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects-showcase section--dark-viewport reveal" id="work">
-        <div class="projects-showcase__title" aria-hidden="true">Showcase</div>
-
-        <div class="projects-showcase__layout">
-          <nav class="projects-showcase__nav" aria-label="Project categories">
-            <a class="is-active" href="#work">Live projects</a>
-            <a href="#personal-projects">Personal</a>
-            <a href="#research">Research</a>
-          </nav>
-
-          <div class="projects-showcase__content">
-            <section class="projects-panel projects-panel--live" aria-labelledby="live-projects-title">
-              <h2 class="projects-panel__label" id="live-projects-title">Live projects</h2>
-
-              <div class="showcase__grid">
-                <a class="showcase-tile showcase-tile--navy" href="./projects/razorpay-live.html" data-cursor="open" aria-label="Open RazorpayX live project page">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/rzpx-760.webp 760w, ./assets/optimized/rzpx-1100.webp 1100w, ./assets/optimized/rzpx-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/showcase-curated/rzpx.png" alt="RazorpayX live work preview" width="2000" height="1125" loading="lazy" />
-                  </picture>
-                </a>
-
-                <a class="showcase-tile showcase-tile--azure" href="./projects/smallcase-live.html" data-cursor="open" aria-label="Open smallcase live project page">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/smallcase-760.webp 760w, ./assets/optimized/smallcase-1100.webp 1100w, ./assets/optimized/smallcase-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/showcase-curated/smallcase.png" alt="smallcase live work preview" width="3840" height="2160" loading="lazy" />
-                  </picture>
-                </a>
-
-                <a class="showcase-tile showcase-tile--mint" href="./projects/udaan-live.html" data-cursor="open" aria-label="Open udaan live project page">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/udaan-live-760.webp 760w, ./assets/optimized/udaan-live-1100.webp 1100w, ./assets/optimized/udaan-live-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/showcase-curated/udaan-live.png" alt="udaan live work preview" width="2000" height="1125" loading="lazy" />
-                  </picture>
-                </a>
-
-                <a class="showcase-tile showcase-tile--gold" href="./projects/cuemath-archive.html" data-cursor="open" aria-label="Open Cuemath project page">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/cuemath-760.webp 760w, ./assets/optimized/cuemath-1100.webp 1100w, ./assets/optimized/cuemath-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/showcase-curated/cuemath.png" alt="Cuemath project preview" width="1920" height="1080" loading="lazy" />
-                  </picture>
-                </a>
-
-                <a class="showcase-tile showcase-tile--neutral" href="./projects/jpmorgan-case-study.html" data-project-link="jpmorgan" data-cursor="open" aria-label="Open JPMorganChase case study">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/jpmorgan-live-760.webp 760w, ./assets/optimized/jpmorgan-live-1100.webp 1100w, ./assets/optimized/jpmorgan-live-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/optimized/jpmorgan-live-1500.webp" alt="JPMorganChase enterprise product systems preview" width="1500" height="844" loading="lazy" />
-                  </picture>
-                </a>
-
-                <a class="showcase-tile showcase-tile--rose showcase-tile--pagarbook" href="./pagarbook.html" data-project-link="pagarbook" data-cursor="open" aria-label="Open Pagarbook project page">
-                  <picture>
-                    <source type="image/webp" srcset="./assets/optimized/pagarbook-760.webp 760w, ./assets/optimized/pagarbook-1100.webp 1100w, ./assets/optimized/pagarbook-1500.webp 1500w" sizes="(max-width: 720px) calc(100vw - 32px), (max-width: 1180px) calc((100vw - 66px) / 2), 44vw" />
-                    <img src="./assets/showcase-curated/pagarbook.png" alt="Pagarbook project preview" width="2000" height="1125" loading="lazy" />
-                  </picture>
-                </a>
-
-              </div>
-            </section>
-
-            <section class="projects-panel projects-panel--personal" id="personal-projects" aria-labelledby="personal-projects-title">
-              <div class="personal-projects__header">
-                <span class="projects-panel__label" id="personal-projects-title">Personal projects</span>
-                <h2>Products I am building from ground up.</h2>
-              </div>
-              <div class="personal-projects__list" id="personal-projects-list"></div>
-            </section>
-
-            <section class="projects-panel projects-panel--research" id="research" aria-labelledby="research-projects-title">
-              <div class="research__header">
-                <span class="projects-panel__label" id="research-projects-title">Research</span>
-              </div>
-
-              <div class="research__grid" aria-label="UX research documents">
-                <a
-                  class="research-card"
-                  href="./projects/udaan-research.html"
-                  data-cursor="open"
-                  aria-label="Open Shopkeepers and Homepage research document"
-                >
-                  <img
-                    class="research-card__image"
-                    src="./assets/showcase/udaan-research-card.png"
-                    alt="Shopkeepers and Homepage research preview"
-                    width="1600"
-                    height="1440"
-                    loading="lazy"
-                  />
-                </a>
-
-                <a
-                  class="research-card"
-                  href="./projects/rzp-research.html"
-                  data-cursor="open"
-                  aria-label="Open Razorpay research document"
-                >
-                  <img
-                    class="research-card__image"
-                    src="./assets/showcase/rzp-research-card.png"
-                    alt="Razorpay research preview"
-                    width="1600"
-                    height="1440"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal writing" id="writing">
-        <div class="writing__stack writing__stack--editorial" aria-label="Writing and essays">
-          <a
-            class="writing-showcase"
-            href="https://medium.com/@abhishekraj4300"
-            target="_blank"
-            rel="noreferrer"
-            data-cursor="open"
-            aria-label="Open Abhishek Raj Medium profile"
-          >
-            <span class="writing-showcase__label">Design blogs</span>
-            <img
-              class="writing-showcase__art"
-              src="./assets/writing/medium.png"
-              alt="Medium artwork"
-              width="1926"
-              height="1084"
-              loading="lazy"
-            />
-            <span class="writing-showcase__corner" aria-hidden="true"></span>
+            <span class="writing-listing__arrow" aria-hidden="true">
+              <img src="./assets/writing/right.svg" alt="" loading="lazy" />
+            </span>
           </a>
-
-          <div class="writing-listing-shell">
-            <div class="writing-listing" aria-label="Selected writing links">
-              <a
-                class="writing-listing__item"
-                href="https://medium.com/@abhishekraj4300/imds-guide-to-interaction-frameworks-7b092a26b1ae"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="open"
-                aria-label="Open IMDs Guide to Interaction Frameworks article"
-              >
-                <div class="writing-listing__copy">
-                  <h3>[IMDs] Guide to Interaction Frameworks</h3>
-                  <p>
-                    Creating and documenting interaction models is key to designing
-                    products that feel intuitive and easy to use.
-                  </p>
-                </div>
-                <span class="writing-listing__arrow" aria-hidden="true">
-                  <img src="./assets/writing/right.svg" alt="" loading="lazy" />
-                </span>
-              </a>
-
-              <a
-                class="writing-listing__item"
-                href="https://medium.com/@abhishekraj4300/stitching-research-and-product-7f8b562ef789"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="open"
-                aria-label="Open Stitching Research and Product article"
-              >
-                <div class="writing-listing__copy">
-                  <h3>Stitching Research and product</h3>
-                  <p>
-                    Product and research strategy need to move together so decisions
-                    stay grounded in user and market reality.
-                  </p>
-                </div>
-                <span class="writing-listing__arrow" aria-hidden="true">
-                  <img src="./assets/writing/right.svg" alt="" loading="lazy" />
-                </span>
-              </a>
-
-              <a
-                class="writing-listing__item"
-                href="https://medium.com/@abhishekraj4300/from-insight-to-impact-687a8c6e8ae0"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="open"
-                aria-label="Open Understanding Qualitative Insights article"
-              >
-                <div class="writing-listing__copy">
-                  <h3>Understanding Qualitative Insights</h3>
-                  <p>
-                    A practical guide to turning user research into clearer
-                    understanding of needs, behaviors, and motivations.
-                  </p>
-                </div>
-                <span class="writing-listing__arrow" aria-hidden="true">
-                  <img src="./assets/writing/right.svg" alt="" loading="lazy" />
-                </span>
-              </a>
-
-              <a
-                class="writing-listing__item"
-                href="https://medium.com/design-bootcamp/articulating-design-value-80ee54fcdeac"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="open"
-                aria-label="Open Articulating Design Value article"
-              >
-                <div class="writing-listing__copy">
-                  <h3>Articulating Design Value</h3>
-                  <p>
-                    Dive into how one can effectively articulate the value of design,
-                    especially when explaining it to non-designers.
-                  </p>
-                </div>
-                <span class="writing-listing__arrow" aria-hidden="true">
-                  <img src="./assets/writing/right.svg" alt="" loading="lazy" />
-                </span>
-              </a>
-
-              <a
-                class="writing-listing__item"
-                href="https://medium.com/@abhishekraj4300/5-ways-to-make-product-design-more-efficient-0260471d81ac"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="open"
-                aria-label="Open 5 Ways to Make Product Design More Efficient article"
-              >
-                <div class="writing-listing__copy">
-                  <h3>5 WAYS TO MAKE PRODUCT DESIGN MORE EFFICIENT</h3>
-                  <p>
-                    Five practical strategies for streamlining design work without
-                    trading off the quality of the outcome.
-                  </p>
-                </div>
-                <span class="writing-listing__arrow" aria-hidden="true">
-                  <img src="./assets/writing/right.svg" alt="" loading="lazy" />
-                </span>
-              </a>
+          <a class="writing-listing__item" href="https://medium.com/@abhishekraj4300/stitching-research-and-product-7f8b562ef789" target="_blank" rel="noreferrer">
+            <div class="writing-listing__copy">
+              <h3>Stitching Research and product</h3>
+              <p>Product and research strategy need to move together so decisions stay grounded in reality.</p>
             </div>
-          </div>
+            <span class="writing-listing__arrow" aria-hidden="true">
+              <img src="./assets/writing/right.svg" alt="" loading="lazy" />
+            </span>
+          </a>
+          <a class="writing-listing__item" href="https://medium.com/@abhishekraj4300/from-insight-to-impact-687a8c6e8ae0" target="_blank" rel="noreferrer">
+            <div class="writing-listing__copy">
+              <h3>Understanding Qualitative Insights</h3>
+              <p>A practical guide to turning user research into clearer understanding of needs and behaviors.</p>
+            </div>
+            <span class="writing-listing__arrow" aria-hidden="true">
+              <img src="./assets/writing/right.svg" alt="" loading="lazy" />
+            </span>
+          </a>
+          <a class="writing-listing__item" href="https://medium.com/design-bootcamp/articulating-design-value-80ee54fcdeac" target="_blank" rel="noreferrer">
+            <div class="writing-listing__copy">
+              <h3>Articulating Design Value</h3>
+              <p>How to communicate the value of design clearly, especially to non-designers.</p>
+            </div>
+            <span class="writing-listing__arrow" aria-hidden="true">
+              <img src="./assets/writing/right.svg" alt="" loading="lazy" />
+            </span>
+          </a>
         </div>
       </section>
 
-      <section class="section section--ink section--dark-viewport reveal" id="contact">
-        <div class="contact">
-          <div class="section-heading section-heading--contact">
-            <div>
-              <span class="section-label">Open channel</span>
-              <h2>Have an idea? Want to make it happen? lets discuss</h2>
-            </div>
-            <p>
-              I’m most at home in products where the UX has to carry confidence,
-              consequence, and commercial clarity all at once.
-            </p>
-          </div>
-
-          <a class="contact__email" href="mailto:abhishekraj4300@gmail.com">
-            abhishekraj4300@gmail.com
-          </a>
-
-          <div class="contact__links">
-            <a href="https://dribbble.com/theslueth" target="_blank" rel="noreferrer">Dribbble</a>
-            <a href="https://www.linkedin.com/in/abhishekraj-r2" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="./resume/" target="_blank" rel="noreferrer">Resume</a>
-          </div>
-
-          <div class="contact__footer">
-            <p>R2 designs | Abhishek Raj | Portfolio | 2026</p>
-            <span>© <span id="year"></span></span>
-          </div>
+      <section class="local-contact" id="contact">
+        <p class="local-contact__label">Open channel</p>
+        <h2>Have an idea? Want to make it happen? lets discuss</h2>
+        <a class="local-contact__email" href="mailto:abhishekraj4300@gmail.com">abhishekraj4300@gmail.com</a>
+        <div class="local-contact__links">
+          <a href="https://dribbble.com/theslueth" target="_blank" rel="noreferrer">Dribbble</a>
+          <a href="https://www.linkedin.com/in/abhishekraj-r2" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="./resume/" target="_blank" rel="noreferrer">Resume</a>
         </div>
+        <footer class="local-footer">
+          <p>R2 designs | Abhishek Raj | Portfolio | 2026</p>
+          <span>© 2026</span>
+        </footer>
       </section>
     </main>
 
-    <script src="./script.js?v=monalisa-copy-1"></script>
+    <script src="./portfolio-v3.js"></script>
   </body>
 </html>

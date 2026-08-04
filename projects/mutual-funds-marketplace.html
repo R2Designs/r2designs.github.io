@@ -5,21 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mutual Funds Marketplace | Abhishek Raj</title>
     <link rel="stylesheet" href="./project.css" />
+    <link rel="stylesheet" href="./razorpay.css" />
   </head>
-  <body>
-    <main class="project-page">
-      <a class="project-back" href="../index.html#work">Back to showcase</a>
-      <section class="project-hero">
-        <div>
-          <span class="project-status">P3 showcase / coming soon</span>
-          <h1 class="project-title">Mutual Funds Marketplace</h1>
+  <body class="project-body--razorpay-gallery">
+    <main class="project-page razorpay-gallery-page">
+      <a class="project-back" href="../index.html">Back to showcase</a>
+      <header class="razorpay-gallery-hero">
+        <h1 class="razorpay-gallery-title">Mutual funds for social media.</h1>
+      </header>
+
+      <section class="razorpay-carousel" data-project-carousel aria-label="Mutual funds project slideshow">
+        <button class="carousel-arrow carousel-arrow--previous" type="button" aria-label="Previous slide">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="razorpay-carousel__viewport">
+          <div class="razorpay-gallery-sequence" data-carousel-track aria-live="polite">
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/0.png" alt="Mutual funds project slide 01" loading="eager" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/3.png" alt="Mutual funds project slide 02" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/12.png" alt="Mutual funds project slide 03" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/13.png" alt="Mutual funds project slide 04" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/14.png" alt="Mutual funds project slide 05" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/15.png" alt="Mutual funds project slide 06" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/16.png" alt="Mutual funds project slide 07" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/17.png" alt="Mutual funds project slide 08" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/18.png" alt="Mutual funds project slide 09" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/19.png" alt="Mutual funds project slide 10" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/20.png" alt="Mutual funds project slide 11" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/21.png" alt="Mutual funds project slide 12" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/22.png" alt="Mutual funds project slide 13" loading="lazy" />
+            </figure>
+            <figure class="story-frame">
+              <img src="./media/mutual-funds/23.png" alt="Mutual funds project slide 14" loading="lazy" />
+            </figure>
+          </div>
         </div>
-        <p class="project-copy">The full version can unpack the social-learning layer, discovery model, and interaction patterns behind the concept.</p>
-      </section>
-      <section class="project-frame">
-        <img src="../assets/showcase/mf.png" alt="Mutual Funds marketplace preview" />
-        <p class="project-note">Set up as a standalone landing point now, ready for a deeper narrative later.</p>
+
+        <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next slide">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m9 6 6 6-6 6" />
+          </svg>
+        </button>
+
+        <div class="razorpay-carousel__progress" aria-label="Slide progress">
+          <span class="carousel-count" data-carousel-count>1/14</span>
+          <div class="carousel-meter" aria-hidden="true">
+            <span class="carousel-meter__fill" data-carousel-meter></span>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./razorpay-carousel.js"></script>
   </body>
 </html>
