@@ -1,0 +1,207 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  color: #595b62;
+  font-family: Inter, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #075fd8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.2px;
+}
+
+.resume-sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 16mm 10mm;
+  background: #ffffff;
+}
+
+.resume-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52mm;
+  gap: 15mm;
+  align-items: start;
+  margin-bottom: 9mm;
+}
+
+.resume-header h1 {
+  margin: 0;
+  color: #070b12;
+  font-size: 28pt;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.resume-header p {
+  margin: 4mm 0 0;
+  color: #595b62;
+  font-size: 15pt;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.resume-header address {
+  display: grid;
+  gap: 2.2mm;
+  margin: 1.5mm 0 0;
+  font-style: normal;
+  font-size: 10.2pt;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52mm;
+  gap: 15mm;
+  align-items: start;
+}
+
+h2 {
+  margin: 0 0 4mm;
+  color: #263243;
+  font-size: 10pt;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  color: #070b12;
+  font-size: 10.8pt;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+  color: #595b62;
+  font-size: 9.4pt;
+  line-height: 1.14;
+}
+
+.role {
+  margin-bottom: 4.2mm;
+}
+
+.role-meta {
+  margin-top: 1.1mm;
+  color: #595b62;
+  font-size: 9.4pt;
+}
+
+ul {
+  display: grid;
+  gap: 2.1mm;
+  margin: 3mm 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 5.5mm;
+  color: #595b62;
+  font-size: 9.1pt;
+  line-height: 1.13;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: 0.52em;
+  left: 0;
+  width: 1.7mm;
+  height: 1.7mm;
+  border-radius: 999px;
+  background: #b7b7b7;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.5mm;
+  font-size: 9.4pt;
+  font-weight: 700;
+}
+
+.resume-footer-link {
+  display: grid;
+  gap: 1.2mm;
+  margin-top: 2.6mm;
+  font-size: 9.7pt;
+  line-height: 1.12;
+}
+
+.resume-side {
+  display: grid;
+  gap: 5.2mm;
+}
+
+.resume-side h2 {
+  margin-bottom: 2.8mm;
+}
+
+.resume-side section {
+  display: grid;
+  gap: 2.4mm;
+}
+
+.resume-side p {
+  font-size: 8.9pt;
+}
+
+.skill-group {
+  display: grid;
+  gap: 1.9mm;
+}
+
+.role--consulting {
+  margin-bottom: 4mm;
+}
+
+@media screen and (max-width: 900px) {
+  .resume-sheet {
+    width: 100%;
+    min-height: 0;
+    padding: 32px 22px;
+  }
+
+  .resume-header,
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

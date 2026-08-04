@@ -1,0 +1,100 @@
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #595b62;
+  background: #ffffff;
+  font-family: Inter, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.2pt;
+  line-height: 1.28;
+}
+
+a {
+  color: #075fd8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.2px;
+}
+
+.resume {
+  max-width: 184mm;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 7mm;
+}
+
+h1 {
+  margin: 0 0 2mm;
+  color: #070b12;
+  font-size: 24pt;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+header p {
+  margin: 1.5mm 0 0;
+  color: #595b62;
+}
+
+h2 {
+  margin: 6mm 0 2.2mm;
+  padding-bottom: 1.2mm;
+  color: #263243;
+  border-bottom: 1px solid #d9e0ea;
+  font-size: 11.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 3.6mm 0 1.2mm;
+  color: #070b12;
+  font-size: 11.2pt;
+}
+
+p {
+  margin: 0 0 2.2mm;
+}
+
+.meta {
+  margin-bottom: 2mm;
+  color: #595b62;
+  font-weight: 700;
+}
+
+ul {
+  margin: 0 0 2.2mm 5mm;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.4mm;
+}
