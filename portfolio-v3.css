@@ -347,7 +347,7 @@ img {
 }
 
 .portfolio-mode--personal .local-hero {
-  min-height: 470px;
+  min-height: 300px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 65%);
 }
 
