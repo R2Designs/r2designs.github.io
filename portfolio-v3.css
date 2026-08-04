@@ -947,8 +947,11 @@ img {
   }
 
   .logo-board {
-    width: min(72%, 360px);
+    width: 100%;
+    max-width: none;
     margin-top: 84px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .local-showcase {
