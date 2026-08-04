@@ -835,13 +835,23 @@ img {
     scroll-snap-type: none;
   }
 
+  body.portfolio-mode--work {
+    background: #edf4fd;
+  }
+
+  body.portfolio-mode--work main {
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    background: #ffffff;
+  }
+
   .local-header {
     position: relative;
     top: auto;
     left: auto;
     right: auto;
-    width: 100%;
-    margin: 0;
+    width: calc(100% - 48px);
+    margin: 0 auto;
     padding: 16px 0 0;
     background: #ffffff;
   }
