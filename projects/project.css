@@ -58,6 +58,10 @@ img {
   max-width: 100%;
 }
 
+picture {
+  display: block;
+}
+
 .project-page {
   width: min(1380px, calc(100% - 40px));
   margin: 0 auto;
