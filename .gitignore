@@ -1,0 +1,18 @@
+
+# Local-only archive of full-resolution originals (not deployed)
+_originals/
+
+# Full-res originals kept locally, superseded online by .webp
+assets/personal-projects/local/conversational-design.png
+assets/personal-projects/local/design-system.png
+assets/personal-projects/local/digital-almaari.png
+assets/personal-projects/local/figma-plugin.png
+assets/personal-projects/local/mutual-funds.png
+assets/personal-projects/local/terrarium.png
+assets/showcase-curated/cuemath.png
+assets/showcase-curated/rzpx.png
+assets/showcase-curated/smallcase.png
+assets/showcase-curated/udaan-live.png
+assets/showcase/local-research1.png
+assets/showcase/local-research2.png
+assets/writing/medium-transparent.png
