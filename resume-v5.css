@@ -14,11 +14,8 @@ p { margin: 0; color: var(--text-gray); font-size: 8.75pt; line-height: 1.25; }
 strong { color: #313640; font-weight: 700; }
 h2 { margin: 0 0 2.3mm; color: #263243; font-size: 8.9pt; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
 h3 { margin: 0; color: #070b12; font-size: 10.15pt; line-height: 1.1; letter-spacing: -.02em; }
-.intro { display: grid; gap: 1.4mm; max-width: 131mm; margin-bottom: 4.3mm; }
+.intro { display: grid; gap: 1.4mm; max-width: 131mm; margin-bottom: 5mm; }
 .intro p { font-size: 8.8pt; line-height: 1.25; }
-.systems { margin: 0 0 5mm; max-width: 131mm; }
-.systems h2 { margin-bottom: 1.2mm; }
-.systems p { font-size: 8.65pt; line-height: 1.25; }
 .resume-grid { display: grid; grid-template-columns: minmax(0, 1fr) 52mm; gap: 15mm; align-items: start; }
 .role { margin-bottom: 3.2mm; }
 .role-heading { display: grid; gap: .9mm; }
